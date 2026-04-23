@@ -1,0 +1,62 @@
+// ============================================================
+// Glossary terms — used by both the interactive hover system
+// and the end-of-document glossary page.
+// ============================================================
+window.GLOSSARY = [
+  // Core Lorwyn/Shadowmoor terms
+  { term: "Aurora", also: ["Great Aurora"], def: "The magical transformation that turns Lorwyn into Shadowmoor (and back). Wipes all memory across the plane. Triggered by Oona's manipulation." },
+  { term: "Blessed Nation", def: "The collective elf civilization, organized by caste. Ruled by the High Perfects of the Gilt Leaf." },
+  { term: "Cenn", def: "The kithkin equivalent of a mayor or chief — the clachan's leader, anchor of the thoughtweft." },
+  { term: "Cervin", def: "The elegant deer-like mounts of the elf nobility. Certain bloodlines are reserved for high caste." },
+  { term: "Cinder", def: "The Shadowmoor form of flamekin — half-dead coal and ash creatures, living embodiments of destruction." },
+  { term: "Clachan", def: "A Lorwyn kithkin fortified village-town. Warm and communal." },
+  { term: "Clique", def: "A faerie trio bonded for life, sharing an empathic connection that verges on telepathy." },
+  { term: "Crannog", def: "A merrow village at the river's edge, extending far below the waterline — a small dock above may conceal ten times its population below." },
+  { term: "Daen", def: "Commander of an elf hunting pack." },
+  { term: "Doun", def: "A Shadowmoor kithkin fortified village. Paranoid, defensive, ever-watchful." },
+  { term: "Dreamstuff", def: "Tangible thoughts and dreams, visible only to fae. Harvested for Oona — the fuel, it turns out, of the Aurora itself." },
+  { term: "Eyeblight", def: "An elf stripped of caste status through disfigurement, deformity, or disgrace. Considered lower than a boggart." },
+  { term: "Gilt Leaf", def: "The greatest elf tribe, masters of the Gilt Leaf Wood. Its hunters enforce elven order across Lorwyn." },
+  { term: "Glamer", def: "Illusion magic — used by faeries for concealment and by merrow to modulate their appearance and voice for landwalkers." },
+  { term: "Glen Elendra", def: "Oona's hidden home, concealed by glamers so strong that non-fae who approach simply forget why they came." },
+  { term: "Lanamnas", def: "A kithkin concept: any unequal relationship bound together by mutual obligation rather than raw power." },
+  { term: "Mindweft", also: ["Thoughtweft"], def: "The kithkin psychic bond connecting an entire village. Warm and communal in Lorwyn; paranoid and defensive in Shadowmoor." },
+  { term: "Moonglove", def: "The flowering plant that is the source of elf poison and the philosophy that beauty conceals lethality." },
+  { term: "Oona", def: "Queen of the Fae. Ancient, vast, and the secret architect of the Aurora cycle." },
+  { term: "Perfect", def: "The highest caste of the Blessed Nation. The most beautiful and powerful elves." },
+  { term: "Pilgrim", def: "A flamekin on the Path — a lifetime spiritual journey to find and commune with their elemental spirit." },
+  { term: "Shapewater", def: "Merrow magic that forms water into solid, navigable structures." },
+  { term: "Springjack", def: "The large horned rabbit-like mounts and pack animals of the kithkin." },
+  { term: "Taercenn", def: "The highest elf military rank — supreme commander over multiple packs." },
+  { term: "Vendilion Clique", def: "Iliona, Veesa, and Endry — three faerie siblings bonded for life. Spies, guides, and reluctant allies throughout the cycle." },
+  { term: "Vinebred", def: "Living creatures altered and controlled through nettlevine implants. Elf shock troops — and, in elf eyes, works of art." },
+  { term: "Wilt-Leaf", def: "The Shadowmoor mirror of the Gilt Leaf. Vigilant protectors of beauty, not because they've grown kinder but because beauty is desperately rare." },
+  { term: "Scarblade", def: "A specialized elf assassin trained to maim rather than kill — disfigurement, to elves, is a worse fate than death." },
+
+  // Eclipsed terms
+  { term: "Bloomseeker", def: "A near-religious Shadowmoor elf who studies the beauty of Lorwyn — one of the few permitted to carry a Reliquary of Twilight." },
+  { term: "Calciform", def: "A creature destroyed by prolonged exposure to an eclipsed realm — dual memories cancel, leaving an empty husk." },
+  { term: "Dawnglow", also: ["Dawnglove"], def: "Shadowmoor's mirror of moonglove. Distilled into dawnglow, it can cure nearly any ailment — including death itself." },
+  { term: "Eclipsed Realm", def: "A third state between Lorwyn and Shadowmoor where both sun and moon hang motionless. Strange, disorienting, and ultimately fatal." },
+  { term: "Eirdu", def: "The twin worldsoul of Lorwyn, six-legged and sun-dragging, gentle until threatened." },
+  { term: "Isilu", def: "The twin worldsoul of Shadowmoor. Presence feels like autumn silence; threatened, it drowns the will to live in void-darkness." },
+  { term: "Firdoch", def: "Stone creatures that appeared with Eirdu and Isilu, carving and wrestling boundaries between the aspects." },
+  { term: "Flicker", def: "A flamekin settlement — small, impermanent, nomadic by nature." },
+  { term: "Inneal ionnsaigh", def: "The boggart term for the Phyrexian Invasion. Translates as 'the metal invasion.'" },
+  { term: "Inslintur", def: "Towers in Shadowmoor douns where the monthly-elected Sul is locked in to watch for threats." },
+  { term: "Name Sleep", def: "The deep slumber a giant enters on sudden trauma or sudden abundance. Giants derive surnames from what they dream there." },
+  { term: "Pendulum Year", def: "The chaotic period immediately after Oona's defeat, when Lorwyn and Shadowmoor began to bleed into each other." },
+  { term: "Reliquary", def: "Rare artifacts made of Eirdu or Isilu's bodies. Let the bearer cross an aurora without transforming." },
+  { term: "Rimekin", def: "Flamekin who turned their heat inward after the Phyrexian Invasion, burning cold blue-white in place of the old pilgrim's fire. The scars of the invasion are not on their bodies but in the long silences before they speak." },
+  { term: "Wild Magic", def: "Chaotic power inherent to Shadowmoor's land. Anyone can draw on it; any use risks catastrophic backlash." },
+
+  // Characters
+  { term: "Rhys", def: "Daen of the Hemlock Pack, disgraced Gilt Leaf hunter, protagonist of the cycle. In the Eclipsed era: Rhys the Evermore, bound to Maralen, carrying a moonglove dagger for the day he may have to use it." },
+  { term: "Maralen", def: "Created by Oona as a vessel to absorb the shock of an early Aurora. Developed free will, took the Crescent of Morningtide, and by Eventide has become queen of the fae in her own right." },
+  { term: "Ashling", def: "A flamekin pilgrim whose ten-year quest for her elemental consumes the entire cycle. Becomes the Destroyer, then the Extinguisher, and finally — a lifetime later — returns as Ashling Rekindled, a rimekin of cold blue flame." },
+  { term: "Colfenor", def: "The Red Yew. An ancient treefolk sage who knows the Aurora is coming and has been quietly preparing for it. Mentor to Rhys and the axis of the plot's deep time." },
+  { term: "Sygg", def: "Captain of the Wander. A seasoned merrow ferryman with shapewater magic and a knack for knowing exactly when an offer has become acceptable." },
+  { term: "Brigid Baeli", def: "Hero of Kinsbaile, kithkin archer and tracker. Later carries the Crescent of Morningtide." },
+  { term: "Rosheen Meanderer", def: "The oracular giantess who sleeps in a valley, muttering prophecy. Her cloudgoat Mr. Choppers grazes among the clouds." },
+  { term: "Oko", def: "Revealed in the Eclipsed era as Oona's first avatar — a trickster who rebelled, Planeswalked, and caused chaos across the Multiverse. Maralen's elder sibling, in effect." },
+];

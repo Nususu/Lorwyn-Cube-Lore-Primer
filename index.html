@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Lorwyn / Shadowmoor Cube — A Lore Primer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Unicase:wght@500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="primer.css?v=4" />
+</head>
+<body class="mode-lorwyn">
+
+<!-- ============ COVER ============ -->
+<section class="cover" data-screen-label="01 Cover">
+  <div class="cover-frame">
+    <div class="cover-rule top"></div>
+    <div class="cover-sun" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="44" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width=".5"/><g stroke="currentColor" stroke-width=".75" fill="none"><path d="M100 8 V38"/><path d="M100 162 V192"/><path d="M8 100 H38"/><path d="M162 100 H192"/><path d="M35 35 L56 56"/><path d="M144 144 L165 165"/><path d="M165 35 L144 56"/><path d="M56 144 L35 165"/></g></svg>
+    </div>
+    <p class="cover-eyebrow">A Lore Primer for</p>
+    <h1 class="cover-title">
+      <span class="word-the">The</span>
+      <span class="word-lorwyn">Lorwyn</span>
+      <span class="word-amp">&amp;</span>
+      <span class="word-shadowmoor">Shadowmoor</span>
+      <span class="word-cube">Cube</span>
+    </h1>
+    <p class="cover-sub">The World, Its People, and Its Story</p>
+
+    <figure class="cover-epigraph">
+      <blockquote>
+        One day, night will come to these mountains. Our days of idle pleasure winnow down; their sweetness doubles as their numbers dwindle. Here and there an oracle who sees the night ahead: the rude glimmer of it, tucked into the corners of our sky. From crag to creekside and past all points beyond, the evening falls. Night gathers where the flamekin wail, its fingers at their throats. One day, the night will find this place, and breach it. On that day, then, night will come to Lorwyn.
+      </blockquote>
+      <figcaption>— Narvek Riag, kithkin prophet</figcaption>
+    </figure>
+
+    <nav class="cover-toc" aria-label="Contents">
+      <p class="toc-heading">— Contents —</p>
+      <ol>
+        <li><a href="#intro"><span class="toc-num">I</span><span class="toc-name">Introduction · Two Worlds, One Plane</span></a></li>
+        <li><a href="#world"><span class="toc-num">II</span><span class="toc-name">The World of Lorwyn</span></a></li>
+        <li><a href="#tribes"><span class="toc-num">III</span><span class="toc-name">The Six Tribes</span></a></li>
+        <li><a href="#familiar"><span class="toc-num">IV</span><span class="toc-name">Familiar Faces, Made Strange</span></a></li>
+        <li><a href="#creatures"><span class="toc-num">V</span><span class="toc-name">The Creatures Between</span></a></li>
+        <li><a href="#map"><span class="toc-num">VI</span><span class="toc-name">A Map of the Plane</span></a></li>
+        <li><a href="#timeline"><span class="toc-num">VII</span><span class="toc-name">A Timeline of the Cycle</span></a></li>
+        <li><a href="#lorwyn-story"><span class="toc-num">VIII</span><span class="toc-name">The Story of Lorwyn</span></a></li>
+        <li><a href="#shadowmoor"><span class="toc-num">IX</span><span class="toc-name">The World of Shadowmoor</span></a></li>
+        <li><a href="#eventide"><span class="toc-num">X</span><span class="toc-name">Eventide · The Reckoning</span></a></li>
+        <li><a href="#eclipsed"><span class="toc-num">XI</span><span class="toc-name">Lorwyn Eclipsed · The New Age</span></a></li>
+        <li><a href="#draft"><span class="toc-num">XII</span><span class="toc-name">At the Draft Table</span></a></li>
+        <li><a href="#glossary"><span class="toc-num">XIII</span><span class="toc-name">Glossary</span></a></li>
+      </ol>
+    </nav>
+    <div class="cover-rule bottom"></div>
+    <p class="cover-footer">Drawn from the <em>Lorwyn</em> &amp; <em>Shadowmoor</em> novels, and the <em>Lorwyn Eclipsed</em> planeswalker's guide.</p>
+  </div>
+</section>
+
+<!-- Mode toggle removed: sections intentionally flip palette to mirror the world turning -->
+
+<main class="primer">
+
+<!-- load content partials via JS -->
+<div id="content"></div>
+
+</main>
+
+<footer class="site-footer">
+  <p>A cube primer. Fan-made; not affiliated with Wizards of the Coast.</p>
+</footer>
+
+<!-- Glossary tooltip layer -->
+<div id="gloss-tip" role="tooltip" aria-hidden="true"></div>
+
+<script src="glossary-data.js?v=7"></script>
+<script src="content.js?v=50"></script>
+<script src="primer.js?v=5"></script>
+</body>
+</html>
