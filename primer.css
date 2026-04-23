@@ -824,28 +824,69 @@ h4.subheading {
 }
 
 @media (max-width: 1100px) {
-  /* Stack timeline vertically on small screens */
-  .timeline { padding: 20px 0; }
+  /* Vertical timeline on small screens — proper left-rail layout */
+  .timeline {
+    padding: 20px 0;
+    margin: 40px 0 60px;
+    position: relative;
+  }
   .tl-track {
-    width: 4px; height: auto;
-    min-height: 800px;
-    margin: 20px auto;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 22px;
+    width: 2px;
+    height: auto;
+    min-height: 0;
+    margin: 0;
     background: linear-gradient(180deg,
       var(--lw-gilt) 0%,
-      oklch(0.55 0.2 310) 45%,
+      oklch(0.55 0.2 310) 42%,
       var(--sm-silver) 55%,
       var(--sm-silver) 85%,
       var(--lw-gilt) 100%);
+    border-radius: 2px;
   }
-  .tl-node { left: 50% !important; }
-  .tl-item { position: relative !important;
-    width: 90% !important; max-width: 360px;
-    margin: 0 auto 24px !important;
-    top: auto !important; bottom: auto !important; left: auto !important;
+  /* Original dots become invisible; each item paints its own dot on the left rail */
+  .tl-node { display: none !important; }
+  .tl-item {
+    position: relative !important;
+    width: auto !important;
+    max-width: none;
+    margin: 0 0 26px !important;
+    padding: 2px 0 0 56px !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
     transform: none !important;
-    padding: 0 20px;
+    text-align: left !important;
+  }
+  /* Dot on the rail */
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 6px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent-deep);
+    z-index: 2;
+  }
+  .tl-item::after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent-deep);
+    transform: translate(-50%, -50%);
+    z-index: 3;
   }
   .tl-item .tl-connector { display: none; }
+  .tl-item .tl-era { text-align: left; }
+  .tl-item .tl-title { text-align: left; font-size: 20px; }
+  .tl-item .tl-blurb { text-align: left; font-size: 13.5px; }
 }
 
 /* ============ MAP ============ */
@@ -1339,6 +1380,30 @@ h4.subheading {
   border-radius: 11px;
   background: #1a1a1a;
   min-height: 340px;
+}
+.cube-tip.tap-hint::after {
+  content: 'Tap again to open on Scryfall';
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-family: var(--caps, var(--serif));
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 10.5px;
+  color: oklch(1 0 0 / .9);
+  padding: 8px 12px;
+  background: oklch(0.2 0.02 60 / .85);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cube-card.is-previewed {
+  background: color-mix(in oklch, var(--accent-deep) 18%, transparent);
+  color: var(--accent-deep);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--accent-deep) 50%, transparent);
 }
 
 @media (max-width: 1100px) {

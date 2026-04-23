@@ -52,6 +52,8 @@
       tipImg.dataset.src = url;
       tipImg.src = url;
     }
+    const isTouchViewport = window.matchMedia('(hover: none)').matches;
+    tipEl.classList.toggle('tap-hint', isTouchViewport);
     positionTooltip(x, y);
     tipEl.classList.add('visible');
     clearTimeout(tipHideTimer);
@@ -62,8 +64,17 @@
   }
   function positionTooltip(x, y) {
     if (!tipEl) return;
+    const isTouchViewport = window.matchMedia('(hover: none)').matches;
     const W = 244, H = 340; // approx card size
     const pad = 16;
+    if (isTouchViewport) {
+      // Center horizontally in viewport, anchor near top
+      const left = Math.max(8, (window.innerWidth - W) / 2);
+      const top = Math.max(16, Math.min(60, window.innerHeight * 0.08));
+      tipEl.style.left = left + 'px';
+      tipEl.style.top = top + 'px';
+      return;
+    }
     let left = x + pad;
     let top = y + pad;
     if (left + W > window.innerWidth - 8) left = x - W - pad;
@@ -210,28 +221,76 @@
 
     // Tooltip events via delegation
     const grid = document.getElementById('cube-grid');
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    let pendingCard = null; // touch-preview state: the card currently shown in tap-preview
+
+    function dismissPreview() {
+      if (pendingCard) {
+        const prev = grid && grid.querySelector('.cube-card.is-previewed');
+        if (prev) prev.classList.remove('is-previewed');
+      }
+      pendingCard = null;
+      hideTooltip();
+    }
+
     if (grid) {
-      grid.addEventListener('mouseover', e => {
-        const li = e.target.closest('.cube-card');
-        if (!li) return;
-        const card = { s: li.dataset.set, cn: li.dataset.cn, n: li.dataset.name };
-        showTooltip(card, e.clientX, e.clientY);
-      });
-      grid.addEventListener('mousemove', e => {
-        if (!currentHoverCard) return;
-        positionTooltip(e.clientX, e.clientY);
-      });
-      grid.addEventListener('mouseout', e => {
-        const li = e.target.closest('.cube-card');
-        if (!li) return;
-        if (e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest('.cube-card') === li) return;
-        hideTooltip();
-      });
+      if (!isTouch) {
+        grid.addEventListener('mouseover', e => {
+          const li = e.target.closest('.cube-card');
+          if (!li) return;
+          const card = { s: li.dataset.set, cn: li.dataset.cn, n: li.dataset.name };
+          showTooltip(card, e.clientX, e.clientY);
+        });
+        grid.addEventListener('mousemove', e => {
+          if (!currentHoverCard) return;
+          positionTooltip(e.clientX, e.clientY);
+        });
+        grid.addEventListener('mouseout', e => {
+          const li = e.target.closest('.cube-card');
+          if (!li) return;
+          if (e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest('.cube-card') === li) return;
+          hideTooltip();
+        });
+      }
+
       grid.addEventListener('click', e => {
         const li = e.target.closest('.cube-card');
         if (!li) return;
+
+        const cardKey = li.dataset.set + '/' + li.dataset.cn;
+
+        if (isTouch) {
+          // Two-tap pattern: first tap previews, second tap (same card) opens Scryfall.
+          if (pendingCard === cardKey) {
+            dismissPreview();
+            const url = `https://scryfall.com/card/${encodeURIComponent(li.dataset.set)}/${encodeURIComponent(li.dataset.cn)}`;
+            window.open(url, '_blank', 'noopener');
+            return;
+          }
+          e.preventDefault();
+          // Clear any previously-previewed card
+          const prev = grid.querySelector('.cube-card.is-previewed');
+          if (prev) prev.classList.remove('is-previewed');
+          pendingCard = cardKey;
+          li.classList.add('is-previewed');
+          const card = { s: li.dataset.set, cn: li.dataset.cn, n: li.dataset.name };
+          const rect = li.getBoundingClientRect();
+          showTooltip(card, rect.left + rect.width / 2, rect.top);
+          return;
+        }
+
         const url = `https://scryfall.com/card/${encodeURIComponent(li.dataset.set)}/${encodeURIComponent(li.dataset.cn)}`;
         window.open(url, '_blank', 'noopener');
+      });
+    }
+
+    // Dismiss touch preview when tapping anywhere else
+    if (isTouch) {
+      document.addEventListener('click', e => {
+        if (!pendingCard) return;
+        if (e.target.closest('.cube-card')) return;
+        if (e.target.closest('.cube-tip')) return;
+        dismissPreview();
       });
     }
   }
