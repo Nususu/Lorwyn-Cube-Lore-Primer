@@ -97,9 +97,10 @@ body.mode-shadowmoor .sect.sun {
 
 /* ------ Base ------ */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--serif);
@@ -1148,4 +1149,204 @@ h4.subheading {
   font-family: var(--mono); font-size: .85em;
   padding: 1px 6px; border: 1px solid var(--rule); border-radius: 3px;
   background: var(--panel); color: var(--ink-soft);
+}
+
+
+/* ============ THE CUBE ============ */
+#cube .sect-inner { max-width: 1400px; }
+
+.cube-controls {
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cube-search {
+  width: 100%;
+  max-width: 520px;
+  font-family: var(--serif);
+  font-size: 16px;
+  padding: 10px 14px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  color: var(--ink);
+}
+.cube-search:focus {
+  outline: none;
+  border-color: var(--accent-deep);
+}
+.cube-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cube-chip {
+  font-family: var(--caps);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 10.5px;
+  padding: 5px 11px;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all .15s;
+}
+.cube-chip span {
+  opacity: .55;
+  margin-left: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.cube-chip:hover {
+  color: var(--ink);
+  border-color: var(--accent-deep);
+}
+.cube-chip.active {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  color: var(--bg);
+}
+.cube-chip.active span { opacity: .75; }
+
+.cube-totals {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Grid of color columns */
+.cube-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+@media (min-width: 1100px) {
+  .cube-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+.cube-col {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 12px 10px 14px;
+  min-width: 0;
+}
+.cube-col-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+.cube-col-head h3 {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: .02em;
+}
+.cube-col-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Per-color tint on column headers */
+.col-w .cube-col-head h3 { color: oklch(0.58 0.07 85); }
+.col-u .cube-col-head h3 { color: oklch(0.55 0.13 250); }
+.col-b .cube-col-head h3 { color: oklch(0.36 0.04 290); }
+.col-r .cube-col-head h3 { color: oklch(0.56 0.17 28); }
+.col-g .cube-col-head h3 { color: oklch(0.5 0.13 150); }
+.col-c .cube-col-head h3 { color: oklch(0.5 0.02 260); }
+.col-m .cube-col-head h3 { color: oklch(0.55 0.12 65); }
+.col-l .cube-col-head h3 { color: oklch(0.45 0.04 40); }
+
+.cube-sub {
+  margin: 10px 0 12px;
+}
+.cube-sub h4 {
+  font-family: var(--caps);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 10px;
+  color: var(--ink-soft);
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+.cube-sub h4 span {
+  opacity: .5;
+  font-variant-numeric: tabular-nums;
+}
+.cube-sub ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cube-card {
+  display: block;
+  padding: 2px 4px;
+  font-family: var(--serif);
+  font-size: 12.5px;
+  line-height: 1.25;
+  color: var(--ink);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background .1s;
+}
+.cube-card:hover {
+  background: color-mix(in oklch, var(--accent-deep) 10%, transparent);
+  color: var(--accent-deep);
+}
+.cube-divider {
+  list-style: none;
+  height: 1px;
+  margin: 5px 6px;
+  background: color-mix(in oklch, var(--rule), transparent 40%);
+  padding: 0;
+  pointer-events: none;
+}
+.cube-name {
+  display: inline;
+}
+
+/* Hover card preview tooltip */
+.cube-tip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(.96);
+  transition: opacity .12s, transform .12s;
+  width: 244px;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,.35));
+}
+.cube-tip.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.cube-tip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 11px;
+  background: #1a1a1a;
+  min-height: 340px;
+}
+
+@media (max-width: 1100px) {
+  .cube-col { padding: 10px 8px 12px; }
+  .cube-col-head h3 { font-size: 14px; }
+  .cube-card { font-size: 12px; }
+}
+@media (max-width: 700px) {
+  .cube-tip { width: 200px; }
+  .cube-tip img { min-height: 280px; }
 }
