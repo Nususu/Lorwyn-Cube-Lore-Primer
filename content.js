@@ -90,7 +90,7 @@ const CONTENT = `
   <div class="sect-inner wide">
     <header class="part-head">
       <p class="roman">Part III</p>
-      <h2>The Six <em>Tribes</em></h2>
+      <h2>The Eight <em>Tribes</em></h2>
       <p class="kicker">Each tribe is not merely a species — it is a culture, a philosophy, a way of being.</p>
     </header>
 
@@ -784,10 +784,10 @@ const CONTENT = `
           <g stroke="var(--merrow)" opacity=".32" stroke-width="9" filter="url(#soft)">
             <!-- main trunk: west coast -> central -> south-east mire -->
             <path d="M 40 340 C 140 330, 200 380, 270 370 S 430 360, 520 395 S 720 430, 860 470"/>
-            <!-- north-west descent from Endless Peaks -->
-            <path d="M 120 130 C 160 210, 200 260, 240 330"/>
-            <!-- Wren's Run tributary (NE -> central) -->
-            <path d="M 520 110 C 500 200, 460 280, 430 360"/>
+            <!-- north-west foothill feeder (stays below the Endless Peaks) -->
+            <path d="M 200 310 C 220 320, 240 330, 260 345"/>
+            <!-- Wren's Run tributary (emerges from the Gilt-Leaf edge, not the crags) -->
+            <path d="M 560 300 C 530 330, 490 350, 450 375"/>
             <!-- Gilt-Leaf feed (E -> central) -->
             <path d="M 820 180 C 760 230, 680 300, 580 385"/>
             <!-- Goldmeadow oxbow loop -->
@@ -802,8 +802,8 @@ const CONTENT = `
           <!-- crisp strand on top -->
           <g stroke="var(--merrow-ink)" opacity=".85" stroke-width="1.8">
             <path d="M 40 340 C 140 330, 200 380, 270 370 S 430 360, 520 395 S 720 430, 860 470"/>
-            <path d="M 120 130 C 160 210, 200 260, 240 330"/>
-            <path d="M 520 110 C 500 200, 460 280, 430 360"/>
+            <path d="M 200 310 C 220 320, 240 330, 260 345"/>
+            <path d="M 560 300 C 530 330, 490 350, 450 375"/>
             <path d="M 820 180 C 760 230, 680 300, 580 385"/>
             <path d="M 380 380 C 420 430, 480 440, 520 400"/>
             <path d="M 540 400 C 540 470, 520 520, 500 575"/>
@@ -927,7 +927,7 @@ const CONTENT = `
         <div class="lg-item"><span class="lg-swatch" style="background:var(--elf)"></span>Gilt Leaf / Elf lands</div>
         <div class="lg-item"><span class="lg-swatch" style="background:var(--kithkin)"></span>Kithkin clachans</div>
         <div class="lg-item"><span class="lg-swatch" style="background:var(--faerie)"></span>Faerie (concealed)</div>
-        <div class="lg-item"><span class="lg-swatch" style="background:var(--merrow)"></span>Merrow river</div>
+        <div class="lg-item"><span class="lg-swatch" style="background:var(--merrow)"></span>Wanderwine</div>
         <div class="lg-item"><span class="lg-swatch" style="background:var(--flamekin)"></span>Flamekin heights</div>
         <div class="lg-item"><span class="lg-swatch" style="background:var(--treefolk)"></span>Treefolk forest</div>
         <div class="lg-item"><span class="lg-swatch" style="background:var(--boggart)"></span>Boggart mire</div>
@@ -1292,69 +1292,99 @@ const CONTENT = `
       <p class="kicker">The cube is tribal through-and-through. Pick a people; commit.</p>
     </header>
 
+    <div class="callout">
+      <p class="cal-head"><span class="dot"></span>A note on the cube</p>
+      <p>This cube is a love letter to the block many consider Magic's most beloved limited environment — and a welcome-back party for a plane we hadn't seen in nearly twenty years. <em>Eclipsed</em> was a joy to open, but it committed to only five of the block's archetypes; iconic tribes like Faeries were left on the sidelines. This 360 restores all eight tribes and nearly every viable color-pair archetype (only black-white sits out; its Lorwyn-era identity never quite coalesced), pulling from <em>Lorwyn</em>, <em>Morningtide</em>, <em>Shadowmoor</em>, <em>Eventide</em>, and <em>Eclipsed</em> so every pairing has a lane to draft and a distinct game plan to win with.</p>
+    </div>
+
     <div class="archetype-grid">
-      <article class="arch-card tribe elf">
-        <div class="arch-head"><span class="arch-tribe">Elves</span><span class="arch-color-id">B / G</span></div>
-        <p class="arch-archetype">Token swarm → lord payoffs</p>
-        <p>Elves want numbers <em>and</em> quality. Flood the board with tokens (Imperious Perfect, Rhys the Redeemed) and pump with elf-matters lords. Moonglove removal plugs gaps.</p>
-        <p class="arch-tip">Watch for: non-elf anthems and reach against faeries.</p>
-      </article>
       <article class="arch-card tribe kithkin">
-        <div class="arch-head"><span class="arch-tribe">Kithkin</span><span class="arch-color-id">W / G</span></div>
+        <div class="arch-head"><span class="arch-tribe">Kithkin</span><span class="arch-color-id">G / W</span></div>
         <p class="arch-archetype">Go-wide aggro + anthems</p>
-        <p>Kithkin drop cheap bodies and stack anthems. Every new villager multiplies the rest. Wizened Cenn, Ballyrush Banneret, and Goldmeadow Stalwart want to run at you by turn three.</p>
-        <p class="arch-tip">Watch for: single-target removal eats your lords.</p>
+        <p>Kithkin curve out and swarm. Cheap one- and two-drops, stacked anthems, and every new villager multiplies the ones already on the board. Small bodies stay relevant into the late game as long as you keep layering lords on top of them.</p>
+        <p class="arch-tip">Watch for: single-target removal, which eats your lords and collapses the swarm.</p>
+      </article>
+      <article class="arch-card tribe merrow">
+        <div class="arch-head"><span class="arch-tribe">Merrow</span><span class="arch-color-id">W / U</span></div>
+        <p class="arch-archetype">Tap-matters + islandwalk</p>
+        <p>Merrow thrive on tap-and-untap. Lock down opposing creatures to slip through for damage, and squeeze extra value from tapping your own creatures as well — life gain, card selection, trigger chains. Islandwalk gives the tribe natural reach against any deck on blue sources.</p>
+        <p class="arch-tip">Watch for: opponents who don't care about creature combat — the engine needs targets to tap.</p>
       </article>
       <article class="arch-card tribe faerie">
         <div class="arch-head"><span class="arch-tribe">Faeries</span><span class="arch-color-id">U / B</span></div>
-        <p class="arch-archetype">Tempo, flash, hand hate</p>
-        <p>Faerie decks play almost entirely on their opponent's turn. Flash-in threats, counter their spells, strip their hand, win with tiny flying clocks. Scion of Oona turns your dudes uncounterable.</p>
-        <p class="arch-tip">Watch for: wrath effects — you run out of threats fast.</p>
+        <p class="arch-archetype">Flash tempo + hand hate</p>
+        <p>Faerie decks play almost entirely on their opponent's turn. Flash in threats, counter their spells, strip their hand, and ride tiny flying clocks to the finish. The game is about denying them the thing they most want to do, not about racing.</p>
+        <p class="arch-tip">Watch for: wraths. You run thin on threats fast.</p>
       </article>
-      <article class="arch-card tribe merrow">
-        <div class="arch-head"><span class="arch-tribe">Merrow</span><span class="arch-color-id">U / G</span></div>
-        <p class="arch-archetype">Tap-control + card draw</p>
-        <p>Merrow tap, untap, and draw. Lock their board (Sygg, Merrow Reejerey) and grind them into oblivion while you draw two a turn.</p>
-        <p class="arch-tip">Watch for: decks that don't care about creature combat.</p>
-      </article>
-      <article class="arch-card tribe flamekin">
-        <div class="arch-head"><span class="arch-tribe">Flamekin / Elementals</span><span class="arch-color-id">R</span></div>
-        <p class="arch-archetype">Elemental tempo + burn</p>
-        <p>Flamekin decks run big elementals cheated out early and burn to clear the way. Smokebraider is the engine; Incandescent Soulstoke is the accelerant.</p>
-        <p class="arch-tip">Watch for: lifegain and 4+ toughness walls.</p>
-      </article>
-      <article class="arch-card tribe treefolk">
-        <div class="arch-head"><span class="arch-tribe">Treefolk</span><span class="arch-color-id">B / G</span></div>
-        <p class="arch-archetype">Big, slow, inevitable</p>
-        <p>Treefolk are a ramp/value deck: expensive but game-ending. Leaf-Crowned Elder accelerates; Colfenor engines you into his graveyard.</p>
-        <p class="arch-tip">Watch for: faeries and burn ending the game before you cast your 7-drop.</p>
+      <article class="arch-card tribe elf">
+        <div class="arch-head"><span class="arch-tribe">Elves</span><span class="arch-color-id">B / G</span></div>
+        <p class="arch-archetype">Tokens + graveyard recursion</p>
+        <p>Elves want numbers <em>and</em> quality. Flood the board with tokens, pump with elf-matters lords, and loop value through the graveyard. Cheap creatures fuel later, more expensive payoffs; a single anthem on a wide board wins the race.</p>
+        <p class="arch-tip">Watch for: non-elf anthems on the other side, and anything with reach against faeries.</p>
       </article>
       <article class="arch-card tribe boggart">
-        <div class="arch-head"><span class="arch-tribe">Boggarts</span><span class="arch-color-id">R / B</span></div>
-        <p class="arch-archetype">Feral aggro + sacrifice</p>
-        <p>Boggarts come in swinging and keep swinging. Cheap, numerous, disposable. Sacrifice outlets turn your creatures into the final four points of damage.</p>
-        <p class="arch-tip">Watch for: sweepers. A single Infest wipes the warren.</p>
+        <div class="arch-head"><span class="arch-tribe">Boggarts</span><span class="arch-color-id">B / R</span></div>
+        <p class="arch-archetype">Recursive attrition <em>— not aggro</em></p>
+        <p>The common trap: Boggarts <em>look</em> like a red-deck swarm, but this archetype grinds. Sacrifice creatures for value, bring them back from the graveyard, and trade one-for-one until their hand is empty and yours still isn't. You win on resources, not on the clock.</p>
+        <p class="arch-tip">Watch for: lifegain and exile effects. Drawing pure haste-lord cards? Wrong deck — reroute.</p>
+      </article>
+      <article class="arch-card tribe flamekin">
+        <div class="arch-head"><span class="arch-tribe">Flamekin / Cinders / Rimekin</span><span class="arch-color-id">U / R</span></div>
+        <p class="arch-archetype">Evoke tempo, burn, and combos</p>
+        <p>The Elemental-people tribe has changed colors across the block — Flamekin were mono-red in Lorwyn, Cinders turned BR in Shadowmoor, and the Rimekin of <em>Eclipsed</em> settled into UR — but the UR shell is where the archetype cashes in. Cheap mana-fixing enables big evoke plays, and cost reducers let you cheat fatties onto the table ahead of curve.</p>
+        <p class="arch-tip">Watch for: graveyard hate (shuts evoke loops) and 4+ toughness walls on the ground.</p>
+      </article>
+      <article class="arch-card tribe flamekin">
+        <div class="arch-head"><span class="arch-tribe">Elementals (open)</span><span class="arch-color-id">WUBRG</span></div>
+        <p class="arch-archetype">Five-color toolbox</p>
+        <p>Elementals are a creature type in <em>every</em> color, so "elemental deck" is distinct from the Flamekin tribe. Most individual elementals get drafted for their effects, but a dedicated shell strings them together with Elemental-specific mana fixing, tribal tutors, and cost reducers. Evoke lets you pay a cheaper alternate cost (at the same speed the creature would normally allow), so every creature doubles as a cheap effect. Green usually anchors the build for ramp, but the shell can flex whichever way your pool pushes.</p>
+        <p class="arch-tip">Watch for: color-greed. Without enough fixing, the deck stalls on lands.</p>
       </article>
       <article class="arch-card tribe giant">
         <div class="arch-head"><span class="arch-tribe">Giants</span><span class="arch-color-id">R / W</span></div>
-        <p class="arch-archetype">Midrange haymakers</p>
-        <p>Giants are midrange beef with utility. Stronghold Rats is not in this cube, but Hamletback Goliath is. Play fair, play big, hit hard.</p>
-        <p class="arch-tip">Watch for: bounce and -1/-1 counters.</p>
+        <p class="arch-archetype">Midrange haymakers + reach</p>
+        <p>Giants play fair, play big, and hit hard. A mass-damage effect keyed to small creatures punishes every go-wide deck in the format. Giant-matters lords reward you for drawing a critical mass of the tribe, and sacrificing a big body for reach closes out games the ground can't. You're not the fastest deck, but you're the heaviest.</p>
+        <p class="arch-tip">Watch for: bounce and counterspells. Your best threats are chunky enough to cost you the game if they don't stick.</p>
+      </article>
+      <article class="arch-card tribe treefolk">
+        <div class="arch-head"><span class="arch-tribe">Treefolk</span><span class="arch-color-id">B / G  ·  G / W</span></div>
+        <p class="arch-archetype">High-toughness wall → Doran</p>
+        <p>Treefolk stall the ground with huge toughness, then flip a toughness-matters lord to turn every wall into a finisher. Ramp and card advantage carry you through the midgame; your late-game permanents are big enough to end games single-handedly once stabilized.</p>
+        <p class="arch-tip">Watch for: faeries, burn, and anything that ends the game before your six- and seven-drops land.</p>
       </article>
     </div>
 
     <div class="callout">
       <p class="cal-head"><span class="dot"></span>General advice</p>
-      <p>Commit to a tribe early. Hybrid mana in this set lets you drift a color later, but the tribal payoffs demand a critical mass of creatures with the right type line. Count your tribesmen in the pack before you count your playables.</p>
+      <p><strong>New to the cube?</strong> Pick a tribe you like and commit early. Hybrid mana lets you drift colors later, but the payoffs demand a critical mass of the right type line. <strong>Read signals</strong>: a late tribal lord or archetype engine means the lane is open. <strong>Changelings are glue</strong> — they count as every tribe, filling your ranks to cash in on tribal payoffs.</p>
     </div>
   </div>
 </section>
 
-<!-- ========= GLOSSARY ========= -->
-<section class="sect sun" id="glossary" data-screen-label="23 Glossary">
+<!-- ========= CUBE ========= -->
+<section class="sect sun" id="cube" data-screen-label="23 Cube">
   <div class="sect-inner wide">
     <header class="part-head">
       <p class="roman">Part XIV</p>
+      <h2>The <em>Cube</em></h2>
+      <p class="kicker">All 360 cards. Hover any name to see the card. Click to open on Scryfall.</p>
+    </header>
+
+    <div class="cube-controls">
+      <input type="search" id="cube-search" class="cube-search" placeholder="Search — a card name, a word in a type line…" aria-label="Search cube" />
+      <div id="cube-chips" class="cube-chips" role="toolbar" aria-label="Filter by tribe"></div>
+      <p id="cube-totals" class="cube-totals"></p>
+    </div>
+
+    <div id="cube-grid" class="cube-grid"></div>
+  </div>
+</section>
+
+<!-- ========= GLOSSARY ========= -->
+<section class="sect sun" id="glossary" data-screen-label="24 Glossary">
+  <div class="sect-inner wide">
+    <header class="part-head">
+      <p class="roman">Part XV</p>
       <h2>A <em>Glossary</em></h2>
       <p class="kicker">Anything you saw marked <span class="term" data-term="Aurora">like this</span> earlier is defined below, and will fire a tooltip when hovered.</p>
     </header>
