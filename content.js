@@ -47,9 +47,9 @@ const CONTENT = `
 
     ${ART_BLEED('art/lorwyn/places/forest_sunbeams.png')}
 
-    <p>But Lorwyn has a secret. Every few centuries a turning called the ${TERM('Aurora')} inverts the world. In one night it transforms from a summer idyll into a nightmare of endless winter twilight. The same tribes persist, but their natures flip. The beautiful become cruel. The cruel become wretched. The curious become paranoid. And almost no one remembers what came before.</p>
+    <p>But Lorwyn has a secret. Every three hundred years or so a turning called the ${TERM('Aurora')} inverts the world. In one night it transforms from a summer idyll into a nightmare of endless winter twilight. The same tribes persist, but their natures flip. The beautiful become cruel. The cruel become wretched. The curious become paranoid. And almost no one remembers what came before.</p>
 
-    <p>The cycle is natural; its length is not. ${TERM('Oona')}, Queen of the Fae, stretched each phase to last centuries, and she remembers through every turning. A hundred years before the next was due she felt a disaster from beyond the plane that would bring it early — and she began to prepare.</p>
+    <p>The cycle is natural; its length is not. ${TERM('Oona')}, Queen of the Fae, stretched each phase to last centuries, and she remembers through every turning. Then something happened far beyond the plane — the Great Mending, which healed the Multiverse's old wounds — and a hundred years before the next turning was due, Oona felt it coming early. For the first time she feared the change might touch her, and she began to prepare.</p>
 
     <div class="callout warn">
       <p class="cal-head"><span class="dot"></span>A note on spoilers</p>
@@ -128,7 +128,7 @@ const CONTENT = `
         <div class="gc-head"><span class="tribe-sigil">${SIGIL.flamekin}</span><h4>Flamekin<small>Walkers on the Path</small></h4></div>
         <p class="gc-tagline">"The Path of Flame is a flamekin's most personal journey."</p>
         <dl><dt>Magic</dt><dd>Living fire; spirit-binding; elemental summoning.</dd>
-        <dt>Home</dt><dd>Scattered flickers and mountain shrines; no fixed cities.</dd>
+        <dt>Home</dt><dd>Flickers and forge-villages on the slopes of Mount Tanufel; festivals in calderas.</dd>
         <dt>Mood</dt><dd>Spiritual, questing → cold, calculating cinders.</dd></dl>
       </article>
       <article class="glance-card tribe treefolk">
@@ -383,7 +383,7 @@ const CONTENT = `
 
     ${ART_PORTRAIT('art/lorwyn/creatures/flamekin/ashling/ashling_leaping.png', 'right')}
 
-    <p>Flamekin have no fixed cities — only small camps and roadside shrines called <em>flickers</em>. Their fires burn cool until they decide otherwise; a peaceful flamekin can cradle a child's hand without harm. An angry one can ignite a forest.</p>
+    <p>Flamekin build no great cities, but they are not homeless. They gather in small, ever-shifting towns called <em>flickers</em> that never grow large because flamekin wander, and in forge-villages whose smithies supply iron tools and weapons to the rest of Lorwyn — Flamekin Village on the slopes of Mount Tanufel, the birthplace of their kind, is the best known. Between towns they meet at festivals in calderas and burnt-out pits, drawn to the places where the plane itself is shifting. Their fires burn cool until they decide otherwise; a peaceful flamekin can cradle a child's hand without harm. An angry one can ignite a forest.</p>
 
     <p><strong>Ashling.</strong> The cycle's central flamekin. Her long ${TERM('Pilgrim','pilgrimage')} to find her elemental consumes the entire narrative. The Path of Flame has four stages — red, yellow, white, and a blue flame that consumes anyone who nears it; whoever reaches it and survives 'would become the stuff of legend.' Ashling will, over the course of the books, become the Destroyer the cinders hail as their Extinguisher — and, eventually, something new.</p>
 
@@ -436,7 +436,7 @@ const CONTENT = `
 
     <div class="pull">
       "Changes far greater than the turning of the leaves await us at season's end."
-      <cite>Colfenor, the red yew</cite>
+      <cite>Colfenor, the Last Yew</cite>
     </div>
 
     <h4 class="subheading">In Shadowmoor</h4>
@@ -1044,7 +1044,7 @@ const CONTENT = `
 
     <p>Strip away the court, the glamers, the cliques, the dreamstuff, the avatars — and what is Oona? The books are careful never quite to answer. She is older than the current Aurora cycle; she may be older than Lorwyn's current plane-shape; she may not be, strictly, <em>of</em> Lorwyn at all. The Vendilion Clique, who have served her longest, describe her in terms that sound less like a monarch and more like a weather. Kithkin lore names her <em>the Queen Beneath</em> — meaning beneath the world, beneath the dream, beneath the sentence you are currently thinking.</p>
 
-    <p>By the end of Eventide Oona is dead and Maralen sits in her chair with what was left of Oona's power inside her. The fae of the Eclipsed age will tell you that is not quite the same as Oona being gone. Maralen's strength grows toward the queen's a little every day, and Rhys stands beside her with a moonglove dagger for the day it grows too far.</p>
+    <p>By the end of Eventide Oona's body is destroyed and Maralen sits in her chair with what was left of Oona's power inside her. But the fae of the Eclipsed age will tell you a body is not the whole of a queen. Where her flower was buried in the Creakwood, a forest of blossoming trees grew up — the Grove of the Aurora Queen — and her consciousness, the Planeswalker's Guide says plainly, remains hidden, slowly recovering strength in secret while she searches for a way back to her throne. Maralen's power grows toward the queen's a little every day, and Rhys stands beside her with a moonglove dagger for the day it grows too far.</p>
 
     ${ART_BLEED('art/lorwyn/creatures/faeries/oona/oona_queen.png', 'center 15%')}
   </div>
@@ -1192,7 +1192,7 @@ const CONTENT = `
 
     <p>In shadow she goes cold, and she has her own word for it. Stepping into Shadowmoor her flame turns blue and she says it plainly: <em>"By night, I'm what we call 'rimekin.'"</em> It is the same person with her conscience on the outside. This is not the nihilism of The Extinguisher, and it is not a return to the cinder horde — she has no interest in burning the world. The cold face is what her guilt looks like when it has to stand up and walk around. She goes where she thinks a reckoning is owed, and she pays it.</p>
 
-    <p>The Path of Flame ended at a blue flame that consumed anyone who came near it, and one way to read that old prophecy is that the blue stage and the cold new word name the same thing: ${TERM('Rimekin','rimekin')} as the fourth path, flamekin who have turned their heat inward and burn blue-white and slow. That reading is ours, not the flamekin's. What is not in dispute is that the caste became visible. A generation after Eventide, the <strong>Phyrexian Invasion</strong> made it permanent for many: many flamekin who survived that war did so only because they learned to pull their fire in behind a cold shell, and when the war ended they discovered they could not turn their heat back out again. A rimekin's scars are not on the skin. They're in the pauses before the rimekin speaks. Ashling reached the cold early, and by choice — but her passage through it gave the others a figure to study, and her Rekindled face is the proof most of them quietly hold onto: that the cold, in time and with honest work, does not have to be the last word.</p>
+    <p>The Path of Flame ended at a blue flame that consumed anyone who came near it, and one way to read that old prophecy is that the blue stage and the cold new word name the same thing: ${TERM('Rimekin','rimekin')} as the fourth path, flamekin who have turned their heat inward and burn blue-white and slow. The Planeswalker's Guide records that many flamekin of the modern era assume exactly this — that rimekin are the formerly unknown fourth path — though the old texts never said so. What is not in dispute is that the faction became visible. A generation after Eventide, the <strong>Phyrexian Invasion</strong> made it permanent for many: many flamekin who survived that war did so only because they learned to pull their fire in behind a cold shell, and when the war ended they discovered they could not turn their heat back out again. A rimekin's scars are not on the skin. They're in the pauses before the rimekin speaks. Ashling reached the cold early, and by choice — but her passage through it gave the others a figure to study, and her Rekindled face is the proof most of them quietly hold onto: that the cold, in time and with honest work, does not have to be the last word.</p>
 
     <p>In the Eclipsed era she wanders the Wanderwine corridor, carrying stories and settling old debts, guiding travellers who have no idea who she is. She fights when she has to. The Extinguisher is laid down, and she does not apologise for it. She carries the memory of it the way other people carry a scar — and she dances anyway.</p>
 
