@@ -401,7 +401,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     <p>Craft is honored among them. Few flamekin have the patience to weave goldenglow moth silk, and those who do are highly revered and highly rewarded.${FN('Flavor text, <em>Flamekin Gildweaver</em>')}</p>
 
-    <p><strong>Ashling.</strong> The cycle's central flamekin. Her long ${TERM('Pilgrim','pilgrimage')} to find her elemental consumes the entire narrative. The Path of Flame has four stages: red, yellow, white, and a blue flame that consumes anyone who nears it; whoever reaches it and survives 'would become the stuff of legend.' Ashling will, over the course of the books, become the Destroyer the cinders hail as their Extinguisher, and eventually something new.</p>
+    <p><strong>Ashling.</strong> The cycle's central flamekin. Her long ${TERM('Pilgrim','pilgrimage')} to find her elemental consumes the entire narrative. The Path of Flame is marked in colors of fire: red, then yellow, then white, and a fourth stage, blue, that no one understands, because those who come close are consumed by their own inner fires. Whoever reaches it and survives would become the stuff of legend.${FN('Rei Nakazawa, <em>In the Early Morningtide</em>, Wizards of the Coast, January 7, 2008')} Ashling will, over the course of the books, become the Destroyer the cinders hail as their Extinguisher, and eventually something new.</p>
 
     <h4 class="subheading">In Shadowmoor: the Cinder</h4>
 
@@ -1251,7 +1251,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <p>In shadow she goes cold, and she has her own word for it. Stepping into Shadowmoor her flame turns blue and she says it plainly: <em>"By night, I'm what we call 'rimekin.'"</em></p>
 
-    <p>The Path of Flame ended at a blue flame that consumed anyone who came near it. Many flamekin of the modern era assume that ${TERM('Rimekin','rimekin')} are the formerly unknown fourth path, though the old texts never said so.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Rimekin and Cinders')} The <strong>Phyrexian Invasion</strong> made the faction permanent for many: flamekin whose emotions had grown too hot to contain their flames turned inward, went cold, and did not turn back.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Rimekin and Cinders')}</p>
+    <p>The older account of the Path of Flame ended at a blue flame that consumed those who came near it.${FN('Rei Nakazawa, <em>In the Early Morningtide</em>, Wizards of the Coast, January 7, 2008')} The modern account gives the Path three states, incindiator, blazeform and soulstoke, and treats a fourth path as an old rumor.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Flamekin (Path of Flame)')} Many flamekin of the modern era assume that ${TERM('Rimekin','rimekin')} are that fourth path, though the old texts never said so. The two accounts meet at the same danger. Rimekin are flamekin whose emotions grew too hot to contain, who turned inward and put out their own heat instead of being consumed by it, and the <strong>Phyrexian Invasion</strong> made the change permanent for many.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Rimekin and Cinders')}</p>
 
     <p>In the Eclipsed era she runs the length of the Wanderwine and back again, carrying stories and secrets to the mountain, and she is glad to help strangers find their way. She fights when she has to.</p>
 
