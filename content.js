@@ -541,7 +541,7 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/boggarts/boggart_hobgoblin_farm.jpg', '
         <span class="tribe-sigil">${SIGIL.giant}</span>
         <div>
           <p class="tribe-label">Tribe VIII · Wanderers of the Heights</p>
-          <h3>The Giants <em>of the Cloud Crags</em></h3>
+          <h3>The Giants <em>of the High Peaks</em></h3>
         </div>
         <span class="tribe-tag">Red · White</span>
       </div>
@@ -578,7 +578,7 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/boggarts/boggart_hobgoblin_farm.jpg', '
 
     ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_ladybug_palm.png', 'right')}
 
-    <p>A giant with time on their hands, though, is a different creature. Curiosity runs deep in the Cloud Crags. Many a giant will scoop up a handful of something small (beetles, moonberries, a particularly confused faerie) and study it for a whole afternoon, perfectly still, brow furrowed in enormous concentration. The faerie may or may not be released. The beetles, in the giants' defence, are usually eaten.</p>
+    <p>A giant with time on their hands, though, is a different creature. Curiosity runs deep in the high country. Many a giant will scoop up a handful of something small (beetles, moonberries, a particularly confused faerie) and study it for a whole afternoon, perfectly still, brow furrowed in enormous concentration. The faerie may or may not be released. The beetles, in the giants' defence, are usually eaten.</p>
 
 ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left')}
 
@@ -911,7 +911,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
                 fill="var(--giant)" opacity=".20" stroke="var(--giant-ink)" stroke-width=".8"/>
           <path d="M 300 45 q 10 -8 22 0 q 12 -6 20 2" stroke="var(--giant-ink)" stroke-width=".8" fill="none" opacity=".55"/>
           <path d="M 420 25 q 10 -6 20 0 q 10 -4 18 2" stroke="var(--giant-ink)" stroke-width=".8" fill="none" opacity=".5"/>
-          <text x="390" y="120" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="15" fill="var(--giant-ink)">Cloud Crags</text>
+          <text x="390" y="120" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="15" fill="var(--giant-ink)">The High Peaks</text>
           <text x="390" y="140" text-anchor="middle" font-family="Cormorant Unicase" font-size="8" fill="var(--giant-ink)" opacity=".7">(Boldwyr · Knollridge)</text>
         </g>
 
