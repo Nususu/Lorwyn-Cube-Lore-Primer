@@ -201,7 +201,7 @@ const CONTENT = `
 
     <div class="callout">
       <p class="cal-head"><span class="dot"></span>In Shadowmoor: the Wilt-Leaf</p>
-      <p>After the Aurora, the Gilt Leaf becomes the ${TERM('Wilt-Leaf')}, vigilant protectors of beauty.${FN('<em>Eventide</em>, Scott McGough')} They have not grown kinder; beauty has become desperately rare. Where a Lorwyn elf hunts the ugly for pleasure, a Wilt-Leaf elf guards the beautiful out of fear of loss. Same philosophy, inverted stance.</p>
+      <p>After the Aurora, the Gilt Leaf becomes the ${TERM('Wilt-Leaf')}, vigilant protectors of beauty.${FN('<em>Eventide</em>, Scott McGough')} They have not grown kinder; beauty has become desperately rare. Where a Lorwyn elf hunts the ugly for pleasure, a Wilt-Leaf elf guards the beautiful out of fear of loss.</p>
     </div>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/elves/elf_moon_sorceress.png', 'left')}
@@ -258,7 +258,7 @@ const CONTENT = `
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_sul_hooded.png', 'left')}
 
-    <p>After the Aurora, the clachan becomes the ${TERM('Doun')}, an armed fortress behind wrought-iron gates and stone ramparts, forever braced for attack. The thoughtweft survives, but it now broadcasts only the paranoia of every kithkin in the doun. A Shadowmoor kithkin is still bound to their kin, but the bond feels like a noose they cannot cut. Each month a tribunal elects a watcher called a ${TERM('Sul')}, the eyes of the people, who is locked into a tower called an ${TERM('Inslintur','inslintur')} with a view of the whole village, watching for any sign of crime or treason. Isolation becomes a sacred duty.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Kithkin: Society')}</p>
+    <p>After the Aurora, the clachan becomes the ${TERM('Doun')}, an armed fortress behind wrought-iron gates and stone ramparts, forever braced for attack. The thoughtweft survives, but it now broadcasts only the paranoia of every kithkin in the doun. A Shadowmoor kithkin is still bound to their kin, but the bond feels like a noose they cannot cut. Each month a tribunal elects a watcher called a ${TERM('Sul')}, the eyes of the people, who is locked into a tower called an ${TERM('Inslintur','inslintur')} with a view of the whole village, watching for any sign of crime or treason.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Kithkin: Society')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_doun_band.png', 'right')}
 
@@ -290,7 +290,7 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_whiteclay_priests.jpg',
 
     ${ART_BLEED('art/lorwyn/creatures/faeries/faerie_glamour.png', 'center 35%')}
 
-    <p class="lede">Lorwyn's faeries are not Tinkerbell. They are chittering, amoral sprites whose favorite amusements include deranging travelers, stealing dreams, and driving kithkin villages to quiet madness. They have no conscience at all, a fact they do not regard as a flaw.</p>
+    <p class="lede">Lorwyn's faeries are vain, chittering, amoral sprites, nothing like the gentle fairies of storybooks. Their favorite amusements include deranging travelers, stealing dreams, and driving kithkin villages to quiet madness, and they have no conscience at all, a fact they do not regard as a flaw.</p>
 
     <p>Faeries organize themselves into ${TERM('Clique','cliques')}: three or more bonded for life, most often a pair of twins and one odd sibling out, nearly always of a single sex. A clique functions as a single organism, several bodies with one emotional state. Break one faerie of a clique and the rest will find you. They live very short lives, which is why consequences never seem to apply to them.</p>
 
@@ -299,14 +299,14 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_whiteclay_priests.jpg',
       <cite>Oona, Queen of the Fae</cite>
     </div>
 
-    <p>The queen of the fae is ${TERM('Oona')}: ancient, vast, and the secret engine of the entire Aurora cycle. Her home, ${TERM('Glen Elendra')}, is hidden by glamers so strong that non-fae who approach simply forget why they came. She harvests <strong>${TERM('Dreamstuff','dreamstuff')}</strong> (tangible dreams and rumors) from across the plane. What mortals don't know is that dreamstuff is not just Oona's food: it sustains the queen and powers the glamers that hide her glen. The fae sustain themselves on dreamstuff too, and do not care for jobs.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')}</p>
+    <p>The queen of the fae is ${TERM('Oona')}: ancient, vast, and the secret engine of the entire Aurora cycle. Her home, ${TERM('Glen Elendra')}, is hidden by glamers so strong that non-fae who approach simply forget why they came. She harvests <strong>${TERM('Dreamstuff','dreamstuff')}</strong> (tangible dreams and rumors) from across the plane. Dreamstuff also sustains the queen and powers the glamers that hide her glen. The fae sustain themselves on dreamstuff too, and do not care for jobs.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')}</p>
 
     <p>Their favorite targets are the biggest creatures they can find. A pestermite will perch on a giant's nose and cut at it with a barbed stick until the blood sprays, and then it is gone before the giant gets a hand up. <em>The fae know when they're not wanted. That's precisely why they show up.</em>${FN('Flavor text, <em>Pestermite</em>')} Gaddock Teeg, a kithkin, calls most faeries harmless pranksters.${FN('Flavor text, <em>Nightshade Stinger</em>')}</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/faeries/vendilion_clique/vendilion_clique_b.png', 'right')}
 
     <h4 class="subheading">Key faeries</h4>
-    <p><strong>The ${TERM('Vendilion Clique')}.</strong> Iliona, Veesa, and Endry: twin sisters and a brother, a mixed clique rare enough to be remarked on. Spies, guides, tormentors, and reluctant allies throughout the cycle. They will end the novels changed forever.</p>
+    <p><strong>The ${TERM('Vendilion Clique')}.</strong> Iliona, Veesa, and Endry: twin sisters and a brother, a mixed clique rare enough to be remarked on. Spies, guides, tormentors, and reluctant allies throughout the cycle. By Eventide the clique has split: Endry goes with the Sapling of Colfenor, while Veesa and Iliona serve Maralen.</p>
     <p><strong>Oona.</strong> Everywhere, and addressed directly in <a href="#oona">Part VIII: The Queen Beneath</a>.</p>
 
     <h4 class="subheading">In Shadowmoor</h4>
@@ -317,7 +317,7 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_whiteclay_priests.jpg',
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/faeries/faerie_witch_staff.png', 'right')}
 
-    <p>And many of them, now, ride. Shadowmoor fae look older and gaunter, and some grow horns like a stag beetle's, in keeping with their insect look. Witches on gnarled staves pick their way across the twilight sky as if the wind owed them a favor. A clique in Lorwyn was siblings who finished each other's sentences. A clique in Shadowmoor is witches who finish each other's <em>curses</em>.</p>
+    <p>And many of them, now, ride. Shadowmoor fae look older and gaunter, and some grow horns like a stag beetle's, in keeping with their insect look. Witches on gnarled staves pick their way across the twilight sky. Faerie cliques are tight groups of three or more, usually siblings, who grow desperate if separated.</p>
 
 
 
@@ -345,7 +345,7 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_whiteclay_priests.jpg',
 
     ${ART_PORTRAIT('art/lorwyn/creatures/merrow/sygg/sygg_a.png', 'right')}
 
-    <p>A crannog is the visible tip of a merrow settlement, a half-submerged trading post whose below-water city may be many times the size. When merrow deal with landwalkers they use ${TERM('Glamer','glamers')} to modulate voice and appearance, to put the customer at ease and quietly to tilt the mood of the bargain. Merrow are not liars; they are simply ruthless about the <em>terms</em>.</p>
+    <p>A crannog is the visible tip of a merrow settlement, a half-submerged trading post whose below-water city may be many times the size. When merrow deal with landwalkers they use ${TERM('Glamer','glamers')} to modulate voice and appearance, to put the customer at ease and tilt the mood of the bargain.</p>
 
 ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'left')}
 
@@ -362,11 +362,11 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/merrow/merrow_rune_etched.png', 'left')}
 
-    <p>The Wanderwine becomes the Wanderbrine after the Aurora.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Major Locations')} Where Lorwyn's merrow were mercantile, Shadowmoor's merrow are <em>territorial</em>, and they use their glamers almost exclusively to run cons.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Merrow')} Their shapewater now carries old runes along their flanks like second skin. The schools no longer <em>negotiate</em>; they take. What was a trading fleet is a set of criminal gangs working the same water, and a Shadowmoor merrow will steal anything that is not held down: cargo, tackle, boots, the coin out of a drowned pocket. <em>What the current doesn't take, they do.</em>${FN('Flavor text, <em>Cache Raiders</em>')}</p>
+    <p>The Wanderwine becomes the Wanderbrine after the Aurora.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Major Locations')} Where Lorwyn's merrow were mercantile, Shadowmoor's merrow are <em>territorial</em>, and they use their glamers almost exclusively to run cons.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Merrow')} Their shapewater now carries old runes along their flanks like second skin. The schools take what they want. What was a trading fleet is a set of criminal gangs working the same water, and a Shadowmoor merrow will steal anything that is not held down: cargo, tackle, boots, the coin out of a drowned pocket. <em>What the current doesn't take, they do.</em>${FN('Flavor text, <em>Cache Raiders</em>')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/merrow/merrow_horned_plunge.png', 'right')}
 
-    <p>The river itself has gone rougher. Shadowmoor merrow plunge through white-water cataracts where Lorwyn merrow would have carved a lane, horns laid flat to the current, the hunt on. A Lorwyn crannog was a trading post with a price list. A Shadowmoor crannog is a fortress full of other people's property. There is no toll and no bargain; there is what you can carry past them, which is usually less than you were carrying before.</p>
+    <p>The river itself has gone rougher. Shadowmoor merrow plunge through white-water cataracts where Lorwyn merrow would have carved a lane, horns laid flat to the current, the hunt on. A Lorwyn crannog was a trading post. In Shadowmoor the merrow schools work the water as criminal gangs, defending their turf and their loot, and take what they want from anyone who passes.</p>
 
     ${ART_BLEED('art/shadowmoor/creatures/merrow/merrow_bone_witch.png')}
   </div>
@@ -388,7 +388,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_BLEED('art/lorwyn/creatures/flamekin/flamekin_immolation.png')}
 
-    <p class="lede">Flamekin are living fire, humanoid shapes of flame and living stone who take the world as a place to be understood rather than commanded. Their defining tradition is the <strong>${TERM('Pilgrim','Path of Flame')}</strong>: a lifetime spiritual journey to find and commune with one's personal elemental spirit. A flamekin without a pilgrimage is an ember without purpose.</p>
+    <p class="lede">Flamekin are living fire, humanoid shapes of flame and living stone who take the world as a place to be understood rather than commanded. Their defining tradition is the <strong>${TERM('Pilgrim','Path of Flame')}</strong>: a lifetime spiritual journey to find and commune with one's personal elemental spirit.</p>
 
     <div class="pull">
       "The Path of Flame is a flamekin's most personal journey. You must walk it for yourself, but you'll never walk alone."
@@ -407,7 +407,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/cinder_walker.png', 'left')}
 
-    <p>After the Aurora, flamekin become ${TERM('Cinder','cinders')}: half-dead creatures of coal and guttering ember, cold-hearted and cruel. The warm embers that once lit a pilgrim's way now smoulder in skeletal joints. A cinder that lays a hand on a child does not cradle; it <em>burns through.</em> Where a flamekin's fire was a search, a cinder's fire is a weapon.</p>
+    <p>After the Aurora, flamekin become ${TERM('Cinder','cinders')}: half-dead creatures of coal and guttering ember, cold-hearted and cruel. The warm embers that once lit a pilgrim's way now smoulder in skeletal joints. A cinder's fire is a weapon now, and a cinder that lays a hand on a child burns it.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/cinder_flailing_heads.png', 'right')}
 
@@ -491,11 +491,11 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_BLEED('art/lorwyn/creatures/boggarts/boggart_birth_rite.png', 'center 25%')}
 
-    <p class="lede">Boggarts are filthy, stupid, and genuinely having the best time on Lorwyn. They are a riot of appetite and curiosity, roaming the plane in warrens that feel less like tribes and more like delighted mobs. A boggart is not malicious the way an elf can be; it simply hasn't yet been convinced that the thing in front of it is not, in fact, food.</p>
+    <p class="lede">Boggarts are filthy, stupid, and genuinely having the best time on Lorwyn. They are a riot of appetite and curiosity, roaming the plane in warrens that feel less like tribes and more like delighted mobs. A boggart's cruelty is mostly appetite and curiosity, and anything in front of it might be food.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/boggarts/boggart_warren.png', 'right')}
 
-    <p>The fundamental boggart worldview: there are two kinds of thing in the world. <em>Things you can eat,</em> and <em>things you have to chase down and pummel before you can eat them.</em> Everything (giants, elves, weather, rocks) falls into one category or the other. That is their operating principle.</p>
+    <p>The fundamental boggart worldview: there are two kinds of thing in the world. <em>Things you can eat,</em> and <em>things you have to chase down and pummel before you can eat them.</em> Everything (giants, elves, weather, rocks) falls into one category or the other.</p>
 
     <div class="pull">
       Boggarts revel in discovering new sensations, from the texture of an otter pellet to the squeak of a dying warrenmate.
@@ -572,7 +572,7 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/boggarts/boggart_hobgoblin_farm.jpg', '
 
     ${ART_BLEED('art/lorwyn/creatures/giants/giants_destroy_village.png', 'center 10%')}
 
-    <p>Most giants are indifferent to smaller tribes the way a storm is indifferent to a puddle: not cruel, merely scaled wrong. A giant crossing the moors will flatten six boggart burrows and a kithkin orchard without noticing, not because they don't care (many giants care quite a lot) but because by the time they've looked down, the damage is already old news. Clachans that sit near giant pathways post watchers for this exact reason, and the cenn's thoughtweft will ripple with the message <em>move the children, a slow one is coming</em> sometimes hours before the first footfall.</p>
+    <p>Most giants pay little attention to smaller tribes. A giant crossing the moors can flatten six boggart burrows and a kithkin orchard without noticing; by the time it looks down, the damage is done. Clachans that sit near giant pathways post watchers for this exact reason, and the cenn's thoughtweft will ripple with the message <em>move the children, a slow one is coming</em> sometimes hours before the first footfall.</p>
 
     <p>Some giants take an interest in the small folk instead of overlooking them. <em>Sometimes a curious giant singles out a "little one" to follow for a few days, never realizing the effect it will have on the little one's life.</em>${FN('Flavor text, <em>Kithkin Greatheart</em>')} The effect lands on the little one; the giant never learns of it.</p>
 
@@ -597,7 +597,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_axe.png', 'right')}
 
-    <p>Their weapons are scaled to match: axes hewn from whole oaks, mauls tipped with boulders, chains long enough to drag a crannog off its moorings. A few giants, the so-called <strong>Hearthcage</strong> lineage, have learned to carry flame the way a flamekin does, swinging a burning fist that is equal parts cudgel and meteor. They are, by giant standards, hotheads. By anyone else's standards they are a natural disaster with opinions.</p>
+    <p>Their weapons are scaled to match: axes hewn from whole oaks, mauls tipped with boulders, chains long enough to drag a crannog off its moorings. A few giants, the so-called <strong>Hearthcage</strong> lineage, have learned to carry flame the way a flamekin does, swinging a burning fist. They are hotheads even by giant standards.</p>
 
     ${ART_BLEED('art/lorwyn/creatures/giants/giant_chained_firefist.png', 'center 5%')}
 
@@ -620,7 +620,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       </div>
       <div>
         <p><strong>The Arbiters of Knollridge.</strong> Giant arbiters are trusted by the smaller races to settle hard disputes from their lofty perspective; the greatest, Galanda Feudkiller, holds court in a mountain amphitheater, and her judgment is swift and absolute. Their verdicts are not always wise. They are always final.</p>
-        <p><strong>The Hearthcage line.</strong> A line of fire-handed giants, red giants whose feelings go outward. Brief of fuse, large of fist, short of retirement plan.</p>
+        <p><strong>The Hearthcage line.</strong> A line of fire-handed giants, red giants whose feelings go outward.</p>
       </div>
     </div>
 
@@ -635,7 +635,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/giants/giant_purpleflame_rage.png', 'left')}
 
-    <p>Shadowmoor fire runs wrong-colored. On the giants it burns as a bruise-violet flame that does not warm, does not cook, does not comfort, and an enraged giant is a natural disaster with a grudge.</p>
+    <p>Shadowmoor fire runs wrong-colored. On the giants it burns as a bruise-violet flame that gives no warmth.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/giants/giant_hex_cursed.png', 'right')}
 
@@ -667,7 +667,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
         <h4 class="subheading">Halflings, weaponized</h4>
         <p>Kithkin are small round folk from the Shire, but this Shire keeps a militia, forges the best weapons around, and wires every neighbor's moods together through an empathic bond.</p>
         <h4 class="subheading">Elves, unrecognizable</h4>
-        <p>Forget Tolkien's wistful moral paragons. Lorwyn elves have <em>horns</em> and <em>cloven hooves</em>. They are aristocrats of aesthetics to the point of lunacy: beauty is moral worth, ugliness is the worst thing a person can be, and the ugly, called eyeblights, are shunned at best and hunted, enslaved, or poisoned with moonglove at worst. They are the plane's apex predators and they know it.</p>
+        <p>Forget Tolkien's wistful moral paragons. Lorwyn elves have <em>horns</em> and <em>cloven hooves</em>. They are aristocrats of aesthetics to the point of lunacy: beauty is moral worth, ugliness is the worst thing a person can be, and the ugly, called eyeblights, are shunned at best and hunted, enslaved, or poisoned with moonglove at worst. </p>
       </div>
       <div>
         <h4 class="subheading">Elementals, personal</h4>
@@ -1161,7 +1161,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/ashling/ashling_extinguisher.png', 'left')}
 
-    <p>${TERM('Maralen')}, meanwhile, has stopped running. She has the Vendilion Clique as her agents, the <em>Crescent of Morningtide</em> by way of Brigid, and a rebellion of fae who have turned from their queen. She carries three forms of power that were never meant to coexist in one vessel: her own nature as Oona's construct, a fragment of Ashling's elemental fire imprisoned in her body, and the Crescent's binding to the Source of the Wanderbrine. She is barely holding together, and she is done hiding.</p>
+    <p>${TERM('Maralen')}, meanwhile, has stopped running. She has the Vendilion Clique as her agents, the <em>Crescent of Morningtide</em> by way of Brigid, and a rebellion of fae who have turned from their queen. She carries three forms of power that were never meant to coexist in one vessel: her own nature as Oona's construct, a fragment of Ashling's elemental fire imprisoned in her body, and the Crescent's binding to the Source of the Wanderbrine. She is barely holding together.</p>
 
     <h4 class="subheading">Cayr Ulios</h4>
 
@@ -1311,7 +1311,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <article class="now-card">
         <h4>High Perfect Morcant</h4>
         <p class="now-role">Lys Alana · Tyrant</p>
-        <p>De facto ruler of the elves, carrying the full weight of her people's fall. Harbours a covert ambition to yoke Lorwyn under elvish rule again. Her methods of bribery, assassination and misdirection bear little fruit, and her circle grows smaller every year. When outworlders arrive, she smells leverage.</p>
+        <p>De facto ruler of the elves, carrying the full weight of her people's fall. Harbours a covert ambition to yoke Lorwyn under elvish rule again. Her methods of bribery, assassination and misdirection bear little fruit, and her circle grows smaller every year. When outworlders arrive, she sees a chance to use them.</p>
       </article>
       <article class="now-card">
         <h4>Trystan</h4>
