@@ -699,7 +699,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/lorwyn/creatures/changelings/changeling_traveler_spyglass.png', 'left')}
 
-    <p>In Shadowmoor the play drops away. A changeling that enters Shadowmoor becomes a mimic: a cruel creature that mocks its victims by taking the appearance of their loved ones before ending their lives.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')}</p>
+    <p>In Shadowmoor the play drops away. A changeling that enters Shadowmoor becomes a mimic: a cruel creature that mocks its victims by taking the appearance of their loved ones before ending their lives.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} No changeling appears in the Shadowmoor or Eventide novels, so the Guide is the only account of what becomes of one there.${FN('<em>Shadowmoor</em> and <em>Eventide</em>, novels: neither mentions changelings')}</p>
 
     <p>Two plain facts sit under all this. First, changelings are poor at disguise: their opalescent, translucent skin gives them away at once.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} Second, since Oona's fall they stay in Lorwyn unless they are driven into Shadowmoor against their will. You will rarely see one, in any case. When Rhys finds Rosheen in <em>Morningtide</em> there are dozens, maybe hundreds of them settled on the sleeping giantess, blank-eyed and shimmering blue, and he notes that very few in Lorwyn had ever seen a changeling at all.${FN('<em>Morningtide</em>, Cory J. Herndon and Scott McGough')}</p>
 
