@@ -790,14 +790,21 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
   <div class="sect-inner wide">
     <header class="part-head">
       <p class="roman">Part VI</p>
-      <h2>A Map <em>of Lorwyn</em></h2>
-      <p class="kicker">A sketched survey of the plane in its sunlit aspect. The sources agree on the broad layout and differ on the details.</p>
+      <h2>Maps <em>of the Plane</em></h2>
+      <p class="kicker">Two sketched surveys on one layout: Lorwyn in its sunlit aspect, and Shadowmoor under the long dusk. The sources agree on the broad layout and differ on the details.</p>
     </header>
 
     <div class="map-wrap">
       <figure class="map-figure">
         <a href="art/maps/lorwyn_map.jpg" target="_blank" rel="noopener"><img class="map-img" src="art/maps/lorwyn_map.jpg" alt="Hand-sketched map of Lorwyn with washes of color: the Wanderwine running south from the waterfalls below Mount Tanufel, kithkin clachans to the west, the Gilt-Leaf Wood to the east, the Great Forest to the south." loading="lazy"></a>
-        <figcaption>Lorwyn in its sunlit aspect, not to scale. The Wanderwine runs south from the waterfalls beneath Mount Tanufel, kithkin country lies to the west of the river, the Gilt-Leaf Wood to the east, and the Great Forest across the south. Select the map to open it full size.</figcaption>
+        <figcaption><strong>Lorwyn</strong>, in its sunlit aspect. The Wanderwine runs south from the waterfalls beneath Mount Tanufel, kithkin country lies to the west of the river, the Gilt-Leaf Wood to the east, and the Great Forest across the south. Select a map to open it full size.</figcaption>
+      </figure>
+    </div>
+
+    <div class="map-wrap">
+      <figure class="map-figure">
+        <a href="art/maps/shadowmoor_map.jpg" target="_blank" rel="noopener"><img class="map-img" src="art/maps/shadowmoor_map.jpg" alt="Hand-sketched map of Shadowmoor on dark parchment: the Wanderbrine running south from beneath Mount Kulrath, walled douns to the west, the palisaded Wilt-Leaf Wood to the east, and the Creakwood in the northeast." loading="lazy"></a>
+        <figcaption><strong>Shadowmoor</strong>, in its darkened aspect, drawn on the same layout so each place sits where it did in Lorwyn. The Wanderbrine runs south from beneath Mount Kulrath, the douns stand behind palisades and gates to the west of the river, and the Wilt-Leaf Wood, fenced by its palisade, holds Caer Ulios to the east. Places that exist only in Shadowmoor, such as Caer Flur and the Grove of the Aurora Queen in the Creakwood, are marked.</figcaption>
       </figure>
     </div>
   </div>

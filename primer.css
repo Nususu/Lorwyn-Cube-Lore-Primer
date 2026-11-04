@@ -920,6 +920,7 @@ h4.subheading {
   box-shadow: var(--shadow);
 }
 .map-figure { margin: 0; }
+.map-wrap + .map-wrap { margin-top: 28px; }
 .map-img { width: 100%; height: auto; display: block; border-radius: 3px; border: 1px solid var(--rule); }
 .map-figure figcaption { margin-top: 14px; font-size: 13.5px; font-style: italic; color: var(--ink-soft, inherit); opacity: .85; line-height: 1.5; }
 .map-legend {
