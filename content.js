@@ -4,6 +4,9 @@
 
 const TERM = (t, label) => `<span class="term" tabindex="0" data-term="${t}">${label || t}</span>`;
 
+// Footnote marker: ${FN('Source, section')}. primer.js numbers these per part and builds a Notes list.
+const FN = (note) => `<sup class="fn"><span hidden>${note}</span></sup>`;
+
 const SIGIL = {
   elf:      `<svg viewBox="0 0 40 40" fill="none"><path d="M20 4 C14 14, 14 26, 20 36 C26 26, 26 14, 20 4 Z M20 12 L20 28 M13 18 L27 18 M14 24 L26 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
   kithkin:  `<svg viewBox="0 0 40 40" fill="none"><polygon points="20,5 33,12 33,28 20,35 7,28 7,12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><polygon points="20,13 27,17 27,23 20,27 13,23 13,17" stroke="currentColor" stroke-width="1.2"/></svg>`,
@@ -43,20 +46,20 @@ const CONTENT = `
       <p class="kicker">Lorwyn is unlike any other plane in the Multiverse.</p>
     </header>
 
-    <p class="lede">The plane of Lorwyn exists in a perpetual golden afternoon — the sun sinks low but never sets, and the sky never goes dark. It is a world of eternal summer and gentle magic, where eight tribes live in uneasy coexistence.</p>
+    <p class="lede">The plane of Lorwyn exists in a perpetual golden afternoon. The sun sinks low but never sets, and the sky never goes dark. It is a world of eternal summer and gentle magic, where eight tribes live in uneasy coexistence.</p>
 
     ${ART_BLEED('art/lorwyn/places/forest_sunbeams.png')}
 
     <p>But Lorwyn has a secret. Every three hundred years or so a turning called the ${TERM('Aurora')} inverts the world. In one night it transforms from a summer idyll into a nightmare of endless winter twilight. The same tribes persist, but their natures flip. The beautiful become cruel. The cruel become wretched. The curious become paranoid. And almost no one remembers what came before.</p>
 
-    <p>The cycle is natural; its length is not. ${TERM('Oona')}, Queen of the Fae, stretched each phase to last centuries, and she remembers through every turning. Then something happened far beyond the plane — the Great Mending, which healed the Multiverse's old wounds — and a hundred years before the next turning was due, Oona felt it coming early. For the first time she feared the change might touch her, and she began to prepare.</p>
+    <p>The cycle is natural; its length is not. ${TERM('Oona')}, Queen of the Fae, stretched each phase to last centuries, and she remembers through every turning. Then something happened far beyond the plane, the Great Mending, which healed the Multiverse's old wounds, and a hundred years before the next turning was due, Oona felt it coming early. For the first time she feared the change might touch her, and she began to prepare.</p>
 
     <div class="callout warn">
       <p class="cal-head"><span class="dot"></span>A note on spoilers</p>
-      <p>This primer discusses the plots of the Lorwyn/Shadowmoor novels (<em>Shadowmoor</em> is a short-story anthology) in full, including their endings. The novels are ~20 years old; read them unspoiled first if you'd like. Reading order: <em>Lorwyn → Morningtide → Shadowmoor</em> (a short-story anthology) <em>→ Eventide</em>.</p>
+      <p>This primer discusses the plots of the Lorwyn/Shadowmoor novels (<em>Shadowmoor</em> is a short-story anthology) in full, including their endings. The novels are ~20 years old; read them unspoiled first if you'd like. Reading order: <em>Lorwyn → Morningtide → Shadowmoor → Eventide</em>.</p>
     </div>
 
-    <p>Reading this before drafting will enrich the cards in your pile. The elves pursuing you, the faeries meddling in your affairs, the boggarts raiding your villages — they are characters with histories. We hope this makes them come alive at the table.</p>
+    <p>Reading this before drafting will enrich the cards in your pile. The elves pursuing you, the faeries meddling in your affairs, the boggarts raiding your villages are characters with histories, and knowing those histories brings them to life at the table.</p>
 
     <div class="orn">${SIGIL.kithkin}</div>
   </div>
@@ -74,14 +77,14 @@ const CONTENT = `
 
     <p class="lede">Lorwyn is pastoral and sun-drenched: ancient forests, winding rivers, rolling meadows. The sky glows rose-gold, the sun forever hanging warm and low. The forests are vast and alive with magic. The rivers are swift and filled with secrets. The hills shelter kithkin villages; the crags above shelter the flamekin.</p>
 
-    <p>The <em>Wanderwine River</em> is Lorwyn's great artery, lined with ${TERM('Crannog','crannogs')} — floating merrow village-structures whose above-water docks conceal a population many times larger beneath. Above the treeline, fire-elementals walk in search of meaning. In the deepest wood, ancient treefolk dispense slow wisdom to anyone patient enough to wait for it.</p>
+    <p>The <em>Wanderwine River</em>, called the Wanderbrine in Shadowmoor,${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Major Locations')} is Lorwyn's great artery, lined with ${TERM('Crannog','crannogs')}: floating merrow village-structures whose above-water docks conceal a population many times larger beneath. Above the treeline, fire-elementals walk in search of meaning. In the deepest wood, ancient treefolk dispense slow wisdom to anyone patient enough to wait for it.</p>
 
     <div class="pull">
       "One day, night will come to these mountains. From crag to creekside and past all points beyond, the evening falls."
       <cite>Narvek Riag, kithkin prophet, from the Lorwyn basic Mountains</cite>
     </div>
 
-    <p>This is a world that feels safe and ordered on the surface. The elves maintain that order through force and hierarchy. The kithkin maintain it through community and shared thought. The merrow maintain the river lanes. Everyone knows their place — or is made to know it.</p>
+    <p>This is a world that feels safe and ordered on the surface. The elves maintain that order through force and hierarchy. The kithkin maintain it through community and shared thought. The merrow maintain the river lanes. Everyone knows their place, or is made to know it.</p>
   </div>
 </section>
 
@@ -91,14 +94,14 @@ const CONTENT = `
     <header class="part-head">
       <p class="roman">Part III</p>
       <h2>The Eight <em>Tribes</em></h2>
-      <p class="kicker">Each tribe is not merely a species — it is a culture, a philosophy, a way of being.</p>
+      <p class="kicker">Each tribe is a culture, a philosophy, a way of being as much as a species.</p>
     </header>
 
     <h4 class="subheading">At a glance</h4>
     <div class="glance-grid">
       <article class="glance-card tribe elf">
         <div class="gc-head"><span class="tribe-sigil">${SIGIL.elf}</span><h4>Elves<small>Blessed Nation</small></h4></div>
-        <p class="gc-tagline">"Those without beauty are Lorwyn's greatest tumor." — Eidren, perfect of Lys Alana</p>
+        <p class="gc-tagline">"Those without beauty are Lorwyn's greatest tumor." <cite>Eidren, perfect of Lys Alana</cite></p>
         <dl><dt>Magic</dt><dd>Moonglove poison, vinebred control, hunting order.</dd>
         <dt>Home</dt><dd>The Gilt Leaf Wood; the city of Lys Alana and its tiered Dawn's Light Palace.</dd>
         <dt>Mood</dt><dd>Haughty, ritualistic, merciless.</dd></dl>
@@ -106,22 +109,22 @@ const CONTENT = `
       <article class="glance-card tribe kithkin">
         <div class="gc-head"><span class="tribe-sigil">${SIGIL.kithkin}</span><h4>Kithkin<small>The Thoughtweft</small></h4></div>
         <p class="gc-tagline">No kithkin is ever alone.</p>
-        <dl><dt>Magic</dt><dd>The ${TERM('Mindweft','thoughtweft')} — a shared psychic bond spanning a clachan.</dd>
-        <dt>Home</dt><dd>Village-towns — open clachans in Lorwyn, fortified douns in Shadowmoor.</dd>
+        <dl><dt>Magic</dt><dd>The ${TERM('Mindweft','thoughtweft')} (the mindweft in Shadowmoor), a shared psychic bond spanning a clachan.</dd>
+        <dt>Home</dt><dd>Village-towns: open clachans in Lorwyn, fortified douns in Shadowmoor.</dd>
         <dt>Mood</dt><dd>Communal, cheerful → paranoid, defensive.</dd></dl>
       </article>
       <article class="glance-card tribe faerie">
         <div class="gc-head"><span class="tribe-sigil">${SIGIL.faerie}</span><h4>Faeries<small>Cliques of Glen Elendra</small></h4></div>
-        <p class="gc-tagline">"Dreams are fleeting. Reality even more so." — Oona</p>
+        <p class="gc-tagline">"Dreams are fleeting. Reality even more so." <cite>Oona</cite></p>
         <dl><dt>Magic</dt><dd>Glamers, dreamstuff harvesting, telepathy within a ${TERM('Clique','clique')}.</dd>
-        <dt>Home</dt><dd>Glen Elendra — hidden by glamers so strong outsiders forget they came.</dd>
+        <dt>Home</dt><dd>Glen Elendra, hidden by glamers so strong outsiders forget they came.</dd>
         <dt>Mood</dt><dd>Chittering mischief with complete absence of conscience.</dd></dl>
       </article>
       <article class="glance-card tribe merrow">
         <div class="gc-head"><span class="tribe-sigil">${SIGIL.merrow}</span><h4>Merrow<small>Schools of the Wanderwine</small></h4></div>
         <p class="gc-tagline">"There is nowhere on Lorwyn that the Merrow Lanes cannot go."</p>
         <dl><dt>Magic</dt><dd>${TERM('Shapewater')}, glamers for diplomacy, river-line navigation.</dd>
-        <dt>Home</dt><dd>Crannogs — the dock hides a city below the waterline.</dd>
+        <dt>Home</dt><dd>Crannogs: the dock hides a city below the waterline.</dd>
         <dt>Mood</dt><dd>Mercantile, inquisitive, subtly manipulative.</dd></dl>
       </article>
       <article class="glance-card tribe flamekin">
@@ -133,7 +136,7 @@ const CONTENT = `
       </article>
       <article class="glance-card tribe treefolk">
         <div class="gc-head"><span class="tribe-sigil">${SIGIL.treefolk}</span><h4>Treefolk<small>Elders of the Wood</small></h4></div>
-        <p class="gc-tagline">"Changes far greater than the turning of the leaves await us." — Colfenor</p>
+        <p class="gc-tagline">"Changes far greater than the turning of the leaves await us." <cite>Colfenor</cite></p>
         <dl><dt>Magic</dt><dd>Slow, deep sylvan magic; memory stored in rings.</dd>
         <dt>Home</dt><dd>Anywhere a forest has stood long enough.</dd>
         <dt>Mood</dt><dd>Patient, secretive, knowing more than they tell.</dd></dl>
@@ -149,7 +152,7 @@ const CONTENT = `
         <div class="gc-head"><span class="tribe-sigil">${SIGIL.giant}</span><h4>Giants<small>Wanderers of the Heights</small></h4></div>
         <p class="gc-tagline">Slow, enormous, dreaming surnames out of sleep.</p>
         <dl><dt>Magic</dt><dd>Prophetic dreams and the Name Sleep; world-shaking strength.</dd>
-        <dt>Home</dt><dd>The ridges above the world — and the clouds above those.</dd>
+        <dt>Home</dt><dd>The ridges above the world, and the clouds above those.</dd>
         <dt>Mood</dt><dd>Distant, philosophical, occasionally apocalyptic.</dd></dl>
       </article>
     </div>
@@ -172,54 +175,53 @@ const CONTENT = `
 
     ${ART_BLEED('art/lorwyn/creatures/elves/gilt_leaf_ambush.png', 'center 40%')}
 
-    <p class="lede">The elves of Lorwyn are the plane's aristocracy. They believe themselves to be the living embodiment of beauty, and beauty to be the highest moral virtue. By extension, the ugly are to be destroyed — a philosophy they pursue with cheerful, ritualized violence.</p>
+    <p class="lede">The elves of Lorwyn are the plane's aristocracy. They believe themselves to be the living embodiment of beauty, and beauty to be the highest moral virtue. By extension, the ugly are to be destroyed, a philosophy they pursue with cheerful, ritualized violence.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/elves/elf_warrior_twilight.png', 'right')}
 
-    <p>The greatest tribe is the ${TERM('Gilt Leaf')} — masters of the Gilt Leaf Wood, dwelling in the spired city of Lys Alana. Their society is strictly caste-stratified by beauty. At the top are the ${TERM('Perfect','Perfects')} — the High Perfects, chosen from among them to rule for life, are what other tribes call the king and queen. Below them the ${TERM('Exquisite','Exquisites')} (taercenns, courtiers, artists), then the Immaculates (seedguides, diplomats), then the ${TERM('Faultless')} — the populous minimum of acceptable beauty, from whom most hunters are drawn. Lowest of all are the ${TERM('Eyeblight','eyeblights')} — elves stripped of status for disfigurement, deformity, or disgrace. An eyeblight ranks lower than a boggart in the elven accounting.</p>
+    <p>The greatest tribe is the ${TERM('Gilt Leaf')}, masters of the Gilt Leaf Wood, dwelling in the spired city of Lys Alana. Their society is strictly caste-stratified by beauty. At the top are the ${TERM('Perfect','Perfects')}; the High Perfects, chosen from among them to rule for life, are what other tribes call the king and queen. Below them the ${TERM('Exquisite','Exquisites')} (taercenns, courtiers, artists), then the Immaculates (seedguides, diplomats), then the ${TERM('Faultless')}, the populous minimum of acceptable beauty, from whom most hunters are drawn. Lowest of all are the ${TERM('Eyeblight','eyeblights')}: elves stripped of status for disfigurement, deformity, or disgrace. An eyeblight ranks lower than a boggart in the elven accounting.</p>
 
-<p class="table-color"><span>Cube-table color</span> The art: a hooded, wide-hatted elf stands with her arms folded tight across her chest, red hair streaming in the wind, a bare branch wound with curling tendrils beside her. The flavor text: <em>"No matter how adept our artistic skill, our effigies can never hope to capture the vibrant beauty of a living elf. Perhaps that is truly why we mourn."</em> One way to read it is that even elven grief is an aesthetic judgment, mourning the loss of beauty rather than the person. Ours; the sourced part is the caste-by-beauty society above. <em>Elvish Eulogist, Lorwyn #205, art by Ben Thompson.</em></p>
+    <p>Even elven grief is measured in beauty. The eulogists admit that their effigies can never hope to capture "the vibrant beauty of a living elf," and that perhaps this is truly why they mourn.${FN('Flavor text, <em>Elvish Eulogist</em>')} To an elf, a death is first a loss of beauty.</p>
 
-    <p>Elves ride ${TERM('Cervin','cervins')} — graceful antlered mounts whose bloodlines are themselves graded by caste. They hunt with ${TERM('Moonglove','moonglove')} poison, whose source plant embodies the tribe's core axiom: <em>the most beautiful things are also the most lethal.</em></p>
+    <p>Elves ride ${TERM('Cervin','cervins')}, graceful antlered mounts whose bloodlines are themselves graded by caste. They hunt with ${TERM('Moonglove','moonglove')} poison, whose source plant embodies the tribe's core axiom: <em>the most beautiful things are also the most lethal.</em></p>
 
     <div class="pull">
-      Treefolk and elves share a common interest in the forests — but really, the elves just feel at home with the view from above.
-      <cite>—Ambassador Oak</cite>
+      Treefolk and elves share a common interest in the forests, but really, the elves just feel at home with the view from above.
+      <cite>Ambassador Oak</cite>
     </div>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/elves/elf_moonglove.png', 'left')}
 
     <h4 class="subheading">How they fight</h4>
-    <p>Elf warfare is choreographed. A pack is led by a ${TERM('Daen')} — commander — and several packs answer to a ${TERM('Taercenn')}, the battlefield general. Packs are organized into ritualized hunting lines; in the field, a full Gilt Leaf ambush unfolds with the precision of a dance. ${TERM('Scarblade','Scarblades')} specialize in disfigurement rather than killing, because to an elf, being <em>marked</em> is worse than being dead: it costs you caste forever. Winnowers then hunt the marked down.</p>
+    <p>Elf warfare is choreographed. A pack is led by a ${TERM('Daen')}, its commander, and several packs answer to a ${TERM('Taercenn')}, the battlefield general. Packs are organized into ritualized hunting lines; in the field, a full Gilt Leaf ambush unfolds with the precision of a dance. ${TERM('Scarblade','Scarblades')} specialize in disfigurement rather than killing, because to an elf, being <em>marked</em> is worse than being dead: it costs you caste forever. Winnowers then hunt the marked down.</p>
 
-    <p>${TERM('Vinebred','Vinebred')} creatures — captured beasts implanted with controlling nettlevine — are the elves' living siege weapons. Many elves consider vinebreeding a high art form: the vine improves the creature, they insist, as a frame improves a painting.</p>
+    <p>${TERM('Vinebred','Vinebred')} creatures, captured beasts implanted with controlling nettlevine, are the elves' living siege weapons. Many elves consider vinebreeding a high art form: the vine improves the creature, they insist, as a frame improves a painting.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/elves/elf_thorn_scout.png', 'right')}
 
     <div class="callout">
       <p class="cal-head"><span class="dot"></span>In Shadowmoor: the Wilt-Leaf</p>
-      <p>After the Aurora, the Gilt Leaf becomes the ${TERM('Wilt-Leaf')} — vigilant protectors of beauty, not because they have grown kinder but because beauty has become desperately rare. Where a Lorwyn elf hunts the ugly for pleasure, a Wilt-Leaf elf guards the beautiful out of fear of loss. Same philosophy, inverted stance.</p>
+      <p>After the Aurora, the Gilt Leaf becomes the ${TERM('Wilt-Leaf')}, vigilant protectors of beauty.${FN('<em>Eventide</em>, Scott McGough')} They have not grown kinder; beauty has become desperately rare. Where a Lorwyn elf hunts the ugly for pleasure, a Wilt-Leaf elf guards the beautiful out of fear of loss. Same philosophy, inverted stance.</p>
     </div>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/elves/elf_moon_sorceress.png', 'left')}
 
-    <p>The Wilt-Leaf are fewer, quieter, and far more dangerous than their Lorwyn counterparts. In the card art, their armor has darkened to purples and pewters and their hair has gone long and white; their horns have sharpened the way winter sharpens a branch. They are beautiful in a way that can no longer be walked up to. The Perfects of the Blessed Nation would not recognize what their Shadowmoor selves have become — and those selves, who remember nothing of Lorwyn, would find the old finery gaudy.</p>
+    <p>The Wilt-Leaf are fewer and quieter than their Lorwyn counterparts, and no less dangerous. Every Wilt-Leaf elf is charged from birth with "a terrible duty: to strike back against the ugliness and darkness, even though they are all around and seemingly without end."${FN('Flavor text, <em>Wilt-Leaf Cavaliers</em>')} Where the Gilt Leaf ruled, the Wilt-Leaf endure, and their beauty has become something to protect rather than display.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/elves/elf_cervin_riders.png', 'right')}
 
-    <p>The cervins rode by the Wilt-Leaf are paler, swifter, horned, and far harder to kill. A Gilt Leaf patrol in Lorwyn was a fashion statement that happened to be lethal; a Wilt-Leaf patrol in Shadowmoor is a last stand choreographed across centuries. They do not hunt eyeblights any more. They tend the ${TERM('Dawnglow','dawnglove')} groves that supply the safeholds' healing, thin out whatever has come for the last pockets of beauty, and ride back to the safehold.</p>
+    <p>The cervins the Wilt-Leaf ride are horned, and the riders' work is rescue: <em>"Things of beauty are in constant peril. The riders whisk them to safety, ahead of the encroaching darkness."</em>${FN('Flavor text, <em>Rune-Cervin Rider</em>')} They tend the ${TERM('Dawnglow','dawnglove')} groves, Shadowmoor's mirror of the moonglove plant, that supply the safeholds' healing potion, dawnglow.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Dawnglove and Dawnglow; <em>Shadowmoor</em> anthology')}</p>
 
     ${ART_BLEED('art/shadowmoor/creatures/elves/elf_hunter_stag.png', 'center 15%')}
 
     <h4 class="subheading">Key elves</h4>
     <div class="two-col">
       <div>
-        <p><strong>Rhys.</strong> Daen of the Hemlock Pack, and Colfenor's student for a third of his life. In the opening of the cycle a desperate spell of yew magic destroys his horns — and most of three Gilt Leaf packs — and he is ${TERM('Eyeblight','eyeblight')} by his own hand. His exile sets the entire plot in motion.</p>
+        <p><strong>Rhys.</strong> Daen of the Hemlock Pack, and Colfenor's student for a third of his life. In the opening of the cycle, with three Gilt Leaf packs overrun by a boggart frenzy, he unleashes a surge of yew magic he never learned and cannot explain. It destroys his horns and most of the three packs, and he is ${TERM('Eyeblight','eyeblight')} by his own hand.${FN('<em>Lorwyn</em>, ch. 8: "He had done this, and he did not know how."')} His exile sets the entire plot in motion.</p>
         <p><strong>Nath of the Gilt Leaf.</strong> The taercenn who led the doomed extermination, was marred in the same blast, and hunts Rhys for it. Rhys kills him in Kinsbaile at the first novel's end, and his corpse reveals the glamer that hid his own disfigurement. His second, Gryffid, takes up his sword and the hunt.</p>
       </div>
       <div>
-        <p><strong>Maralen.</strong> A Mornsong elf who claims to be cursed and knows far too much. There was a real Maralen once — Peradala's maid-in-waiting — and what happened to her is the cycle's buried secret.</p>
-        <p><strong>Gaddock Teeg.</strong> ${TERM('Cenn')} of Kinsbaile, Brigid's boss, and Colfenor's willing accomplice. The Hemlock pack's pursuit of Rhys runs straight through his clachan.</p>
+        <p><strong>Maralen.</strong> A Mornsong elf who claims to be cursed and knows far too much. There was a real Maralen once, Peradala's maid-in-waiting, and what happened to her is the cycle's buried secret.</p>
       </div>
     </div>
   </div>
@@ -241,34 +243,34 @@ const CONTENT = `
 
     ${ART_BLEED('art/lorwyn/places/goldmeadow.png')}
 
-    <p class="lede">Kithkin are halfling-like — short, round-faced, deeply communal. Their defining trait is the <strong>${TERM('Mindweft','thoughtweft')}</strong>: a shared psychic bond linking every member of a ${TERM('Clachan')}. A kithkin is never truly alone. Fear ripples through the weft; so does courage. When one clachan member lifts their chin, the whole village lifts with them.</p>
+    <p class="lede">Kithkin are halfling-like: short, round-faced, deeply communal. Their defining trait is the <strong>${TERM('Mindweft','thoughtweft')}</strong>, a shared psychic bond linking every member of a ${TERM('Clachan')}. Shadowmoor kithkin call it the mindweft.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, The Thoughtweft; <em>Eventide</em>, Scott McGough')} A kithkin is never truly alone. Fear ripples through the weft; so does courage. When one clachan member lifts their chin, the whole village lifts with them.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/kithkin/wizened_cenn.png', 'right')}
 
-    <p>Clachans are led by a ${TERM('Cenn')} — a mayor and anchor of the weft in one. The cenn's steadiness is the village's steadiness; their panic is the village's panic. The role is sacred and exhausting. Beneath the cenn, kithkin live an idyllic rural life: shepherding ${TERM('Springjack','springjacks')}, tending hedge-gardens, brewing, trading with merrow at the river crannogs. Kithkin keep their own archers for the village's defense, and a trap or two is never far from the door.</p>
+    <p>Clachans are led by a ${TERM('Cenn')}, a mayor and anchor of the weft in one. The cenn's steadiness is the village's steadiness; their panic is the village's panic. The role is sacred and exhausting. Beneath the cenn, kithkin live an idyllic rural life: shepherding ${TERM('Springjack','springjacks')}, tending hedge-gardens, brewing, trading with merrow at the river crannogs. Kithkin keep their own archers for the village's defense, and a trap or two is never far from the door.</p>
 
     <div class="pull">
-      The thoughtweft amplifies any small bud of courage — turning fear to resolve, daring to heroics.
-      <cite>—Gallant Fowlknight</cite>
+      The thoughtweft amplifies any small bud of courage, turning fear to resolve, daring to heroics.
+      <cite>Gallant Fowlknight</cite>
     </div>
 
     <h4 class="subheading">In Shadowmoor: the doun</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_sul_hooded.png', 'left')}
 
-    <p>After the Aurora, the clachan becomes the ${TERM('Doun')} — an armed fortress behind wrought-iron gates and stone ramparts, forever braced for attack. The thoughtweft survives, but it now broadcasts only the paranoia of every kithkin in the doun. A Shadowmoor kithkin is still bound to their kin — but now the bond feels like a noose they cannot cut. Watchers called ${TERM('Sul','Suls')} are elected monthly and locked into towers called ${TERM('Inslintur','inslinturs')} to stare outward at the night — isolation as sacred duty. The practice is recorded in the Eclipsed era rather than the Shadowmoor novels; we run it in both.</p>
+    <p>After the Aurora, the clachan becomes the ${TERM('Doun')}, an armed fortress behind wrought-iron gates and stone ramparts, forever braced for attack. The thoughtweft survives, but it now broadcasts only the paranoia of every kithkin in the doun. A Shadowmoor kithkin is still bound to their kin, but the bond feels like a noose they cannot cut. Each month a tribunal elects a watcher called a ${TERM('Sul')}, the eyes of the people, who is locked into a tower called an ${TERM('Inslintur','inslintur')} with a view of the whole village, watching for any sign of crime or treason. Isolation becomes a sacred duty.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Kithkin: Society')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_doun_band.png', 'right')}
 
-    <p>Where a Lorwyn kithkin fought to defend a neighbor, a Shadowmoor kithkin fights to <em>preempt</em>. Bands rove the heath at dusk with blades drawn and eyes glowing in the doun's shared paranoia — every glance outward is an accusation. In our reading, the cenn no longer soothes; she <em>points.</em> And whatever she points at, the thoughtweft has already agreed to kill.</p>
+    <p>Where a Lorwyn kithkin fought to defend a neighbor, a Shadowmoor kithkin fights to <em>preempt</em>. They leave the walls of their douns only to ward off attacks,${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Kithkin: History')} and the mindweft decides what counts as one: no dounsfolk will hear a single word that runs counter to its opinion.${FN('<em>Eventide</em>, Scott McGough')}</p>
 
 ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_whiteclay_priests.jpg', 'left')}
 
-    <p class="table-color"><span>Cube-table color</span> The art: a white-bearded kithkin priest with glowing green eyes and clay-streaked face holds a staff in a vaulted stone chamber, hooded kithkin with the same marks and eyes behind him. The flavor text: <em>Made from the clay of burial mounds, the face paint of the priests is a sign of their respect for those whose rest they interrupt.</em> One way to read it is that even the doun that points at everything outside still owes the dead an apology. Ours, not canon. <em>Order of Whiteclay, Shadowmoor #16, art by Steven Belledin.</em></p>
+    <p>Respect for the dead survives in the doun, too. The priests of the Order of Whiteclay paint their faces with clay from burial mounds, <em>a sign of their respect for those whose rest they interrupt.</em>${FN('Flavor text, <em>Order of Whiteclay</em>')}</p>
 
     <h4 class="subheading">Key kithkin</h4>
-    <p><strong>Brigid Baeli.</strong> Hero of Kinsbaile, sharpshooter, tracker — and, on Colfenor's orders, a traitor to her own companions in the first novel. Morningtide is her search for redemption. At its end she takes the Crescent of Morningtide from Sygg's hands, and because she is holding it when the Aurora falls, she alone among kithkin remembers Lorwyn.</p>
-    <p><strong>Gaddock Teeg.</strong> ${TERM('Cenn')} of Kinsbaile, and the most famous kithkin in the cycle. Lean and tall for a kithkin, and formidable. He is dead by Morningtide.</p>
+    <p><strong>Brigid Baeli.</strong> Hero of Kinsbaile, sharpshooter, tracker, and, on Colfenor's orders, a traitor to her own companions in the first novel. Morningtide is her search for redemption. At its end she takes the Crescent of Morningtide from Sygg's hands, and because she is holding it when the Aurora falls, she alone among kithkin remembers Lorwyn.</p>
+    <p><strong>Gaddock Teeg.</strong> ${TERM('Cenn')} of Kinsbaile, Colfenor's willing accomplice, and the most famous kithkin in the cycle. Lean and tall for a kithkin, and formidable. The Hemlock pack's pursuit of Rhys runs straight through his clachan. He is dead by Morningtide.</p>
   </div>
 </section>
 
@@ -288,36 +290,36 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_whiteclay_priests.jpg',
 
     ${ART_BLEED('art/lorwyn/creatures/faeries/faerie_glamour.png', 'center 35%')}
 
-    <p class="lede">Lorwyn's faeries are not Tinkerbell. They are chittering, amoral sprites whose favorite amusements include deranging travelers, stealing dreams, and driving kithkin villages to quiet madness. They have no conscience at all — a fact they do not regard as a flaw.</p>
+    <p class="lede">Lorwyn's faeries are not Tinkerbell. They are chittering, amoral sprites whose favorite amusements include deranging travelers, stealing dreams, and driving kithkin villages to quiet madness. They have no conscience at all, a fact they do not regard as a flaw.</p>
 
-    <p>Faeries organize themselves into ${TERM('Clique','cliques')} — three or more bonded for life, most often a pair of twins and one odd sibling out, nearly always of a single sex. A clique functions as a single organism: several bodies, one emotional state. Break one faerie of a clique and the rest will find you. They live very short lives, which is why consequences never seem to apply to them.</p>
+    <p>Faeries organize themselves into ${TERM('Clique','cliques')}: three or more bonded for life, most often a pair of twins and one odd sibling out, nearly always of a single sex. A clique functions as a single organism, several bodies with one emotional state. Break one faerie of a clique and the rest will find you. They live very short lives, which is why consequences never seem to apply to them.</p>
 
     <div class="pull">
       "Dreams are fleeting. Reality even more so."
       <cite>Oona, Queen of the Fae</cite>
     </div>
 
-    <p>The queen of the fae is ${TERM('Oona')} — ancient, vast, and the secret engine of the entire Aurora cycle. Her home, ${TERM('Glen Elendra')}, is hidden by glamers so strong that non-fae who approach simply forget why they came. She harvests <strong>${TERM('Dreamstuff','dreamstuff')}</strong> — tangible dreams and rumors — from across the plane. What mortals don't know is that dreamstuff is not just Oona's food: it sustains the queen and powers the glamers that hide her glen.</p>
+    <p>The queen of the fae is ${TERM('Oona')}: ancient, vast, and the secret engine of the entire Aurora cycle. Her home, ${TERM('Glen Elendra')}, is hidden by glamers so strong that non-fae who approach simply forget why they came. She harvests <strong>${TERM('Dreamstuff','dreamstuff')}</strong> (tangible dreams and rumors) from across the plane. What mortals don't know is that dreamstuff is not just Oona's food: it sustains the queen and powers the glamers that hide her glen. The fae sustain themselves on dreamstuff too, and do not care for jobs.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')}</p>
 
-<p class="table-color"><span>Cube-table color</span> The art: a tiny faerie lounges on the nose of a huge grey-skinned creature, jabbing a barbed stick toward its open, snarling mouth. The flavor text: <em>The fae know when they're not wanted. That's precisely why they show up.</em> One way to read the pair is that the pestering is the point: the fae do not need a welcome, only an audience. Ours, not canon; the sourced note is only that the Nightshade Stinger flavor has Gaddock Teeg calling most faeries harmless pranksters. <em>Pestermite, Lorwyn #78, art by Christopher Moeller.</em></p>
+    <p>Their favorite targets are the biggest creatures they can find. A pestermite will perch on a giant's nose and cut at it with a barbed stick until the blood sprays, and then it is gone before the giant gets a hand up. <em>The fae know when they're not wanted. That's precisely why they show up.</em>${FN('Flavor text, <em>Pestermite</em>')} Gaddock Teeg, a kithkin, calls most faeries harmless pranksters.${FN('Flavor text, <em>Nightshade Stinger</em>')}</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/faeries/vendilion_clique/vendilion_clique_b.png', 'right')}
 
     <h4 class="subheading">Key faeries</h4>
-    <p><strong>The ${TERM('Vendilion Clique')}.</strong> Iliona, Veesa, and Endry — twin sisters and a brother, a mixed clique rare enough to be remarked on. Spies, guides, tormentors, and reluctant allies throughout the cycle. They will end the novels changed forever.</p>
-    <p><strong>Oona.</strong> Everywhere — and addressed directly in <a href="#oona">Part VIII: The Queen Beneath</a>.</p>
+    <p><strong>The ${TERM('Vendilion Clique')}.</strong> Iliona, Veesa, and Endry: twin sisters and a brother, a mixed clique rare enough to be remarked on. Spies, guides, tormentors, and reluctant allies throughout the cycle. They will end the novels changed forever.</p>
+    <p><strong>Oona.</strong> Everywhere, and addressed directly in <a href="#oona">Part VIII: The Queen Beneath</a>.</p>
 
     <h4 class="subheading">In Shadowmoor</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/faeries/faerie_bellflower_thief.png', 'left')}
 
-    <p>The Aurora does not break the faeries the way it breaks everyone else. The dreamstuff still flows to Oona, and Glen Elendra stays as lush as ever. In our reading, the fae were never <em>owned</em> by the queen so much as <em>paid</em> by her. In Shadowmoor they roam the ridges as always, stealing fire from paper-lanterns, wilting whole meadows for amusement, cupping bell-flowers in their claws as lures for anything dull enough to investigate.</p>
+    <p>The Aurora does not break the faeries the way it breaks everyone else. The dreamstuff still flows to Oona, and Glen Elendra stays as lush as ever. In Shadowmoor they roam the ridges as always, stealing fire from paper-lanterns, wilting whole meadows for amusement, cupping bell-flowers in their claws as lures for anything dull enough to investigate.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/faeries/faerie_witch_staff.png', 'right')}
 
-    <p>And many of them, now, ride. In the art, Shadowmoor fae look older and gaunter, sometimes antlered — witches on gnarled staves who pick their way across the twilight sky as if the wind owed them a favor. A clique in Lorwyn was siblings who finished each other's sentences. A clique in Shadowmoor is witches who finish each other's <em>curses</em>.</p>
+    <p>And many of them, now, ride. Shadowmoor fae look older and gaunter, and some grow horns like a stag beetle's, in keeping with their insect look. Witches on gnarled staves pick their way across the twilight sky as if the wind owed them a favor. A clique in Lorwyn was siblings who finished each other's sentences. A clique in Shadowmoor is witches who finish each other's <em>curses</em>.</p>
 
-    <p class="table-color"><span>Cube-table color</span> The witches are read off the art. The official line is that the fae are the one race the Aurora did not change at all, and that Glen Elendra stays lush while the rest of the plane sours.</p>
+
 
     ${ART_BLEED('art/shadowmoor/creatures/faeries/faerie_antlered_queen.png', 'center 30%')}
   </div>
@@ -333,34 +335,34 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/kithkin/kithkin_whiteclay_priests.jpg',
           <p class="tribe-label">Tribe IV · Schools of the Wanderwine</p>
           <h3>The Merrow <em>of the River</em></h3>
         </div>
-        <span class="tribe-tag">Blue · Green</span>
+        <span class="tribe-tag">Blue · Black</span>
       </div>
     </header>
 
     ${ART_BLEED('art/lorwyn/places/wanderwine_hub.png', 'center 15%')}
 
-    <p class="lede">Merrow are sleek, sharp-eyed, intensely mercantile. They rule the ${TERM('Wanderwine')} and its tributaries. Nothing moves on the river without their permission — or their fare. Their magic is ${TERM('Shapewater')}, which they use to shape solid, mobile water — ferries, bridges, reinforced banks, and the occasional shapewater prison.</p>
+    <p class="lede">Merrow are sleek, sharp-eyed, intensely mercantile. They rule the ${TERM('Wanderwine')} and its tributaries. Nothing moves on the river without their permission or their fare. Their magic is ${TERM('Shapewater')}, which they use to shape solid, mobile water: ferries, bridges, reinforced banks, and the occasional shapewater prison.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/merrow/sygg/sygg_a.png', 'right')}
 
-    <p>A crannog is the visible tip of a merrow settlement — a half-submerged trading post whose below-water city may be many times the size. When merrow deal with landwalkers they use ${TERM('Glamer','glamers')} to modulate voice and appearance — to put the customer at ease, and quietly to tilt the mood of the bargain. Merrow are not liars; they are simply ruthless about the <em>terms</em>.</p>
+    <p>A crannog is the visible tip of a merrow settlement, a half-submerged trading post whose below-water city may be many times the size. When merrow deal with landwalkers they use ${TERM('Glamer','glamers')} to modulate voice and appearance, to put the customer at ease and quietly to tilt the mood of the bargain. Merrow are not liars; they are simply ruthless about the <em>terms</em>.</p>
 
 ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'left')}
 
-    <p class="table-color"><span>Cube-table color</span> The art: a red-skinned, finned merrow rises waist-deep from a round pool, arms spread low and wide over shells, small bottles and trinkets scattered on the water around her. The flavor text: <em>"I should let you know, Longlake Clachan was very interested in that one, but I'm willing to entertain a better offer."</em> One way to read it is that her wares are the stage and a rival clachan is the prop: pressure is part of the stock. Ours, not canon. <em>Silvergill Peddler, Lorwyn Eclipsed #70, art by John Tedrick.</em></p>
+    <p>Pressure is part of the stock. A silvergill peddler spreads her wares across the water and mentions that a rival clachan has already shown interest: <em>"I should let you know, Longlake Clachan was very interested in that one, but I'm willing to entertain a better offer."</em>${FN('Flavor text, <em>Silvergill Peddler</em>')}</p>
 
     <div class="pull">
-      "I like to bask and watch its beauty — a reminder that we can't control the currents, but can know how to swim across them."
+      "I like to bask and watch its beauty, a reminder that we can't control the currents, but can know how to swim across them."
       <cite>Sygg, merrow ferryman</cite>
     </div>
 
-    <p><strong>${TERM('Sygg')}.</strong> A rudder — a merrow ferryman — who pilots a ${TERM('Shapewater','shapewater')} ferry along the Lanes. A seasoned hand who knows exactly when a deal has become acceptable and is willing to let you wait out the rest of the crossing in the current.</p>
+    <p><strong>${TERM('Sygg')}.</strong> A rudder, a merrow ferryman, who pilots a ${TERM('Shapewater','shapewater')} ferry along the Lanes. A seasoned hand who knows exactly when a deal has become acceptable and is willing to let you wait out the rest of the crossing in the current.</p>
 
     <h4 class="subheading">In Shadowmoor</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/merrow/merrow_rune_etched.png', 'left')}
 
-    <p>The Wanderwine does not run the same water after the Aurora. Where Lorwyn's merrow were mercantile, Shadowmoor's merrow are <em>territorial</em> — fewer glamers, more teeth. Their shapewater now carries old runes along their flanks like second skin, glowing green through weed-light. The schools no longer <em>negotiate</em>; they take. What was a trading fleet is a set of criminal gangs working the same water, and a Shadowmoor merrow will steal anything that is not held down — cargo, tackle, boots, the coin out of a drowned pocket.</p>
+    <p>The Wanderwine becomes the Wanderbrine after the Aurora.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Major Locations')} Where Lorwyn's merrow were mercantile, Shadowmoor's merrow are <em>territorial</em>, and they use their glamers almost exclusively to run cons.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Merrow')} Their shapewater now carries old runes along their flanks like second skin. The schools no longer <em>negotiate</em>; they take. What was a trading fleet is a set of criminal gangs working the same water, and a Shadowmoor merrow will steal anything that is not held down: cargo, tackle, boots, the coin out of a drowned pocket. <em>What the current doesn't take, they do.</em>${FN('Flavor text, <em>Cache Raiders</em>')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/merrow/merrow_horned_plunge.png', 'right')}
 
@@ -386,30 +388,30 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_BLEED('art/lorwyn/creatures/flamekin/flamekin_immolation.png')}
 
-    <p class="lede">Flamekin are living fire — humanoid shapes of flame and living stone who take the world as a place to be understood rather than commanded. Their defining tradition is the <strong>${TERM('Pilgrim','Path of Flame')}</strong>: a lifetime spiritual journey to find and commune with one's personal elemental spirit. A flamekin without a pilgrimage is an ember without purpose.</p>
+    <p class="lede">Flamekin are living fire, humanoid shapes of flame and living stone who take the world as a place to be understood rather than commanded. Their defining tradition is the <strong>${TERM('Pilgrim','Path of Flame')}</strong>: a lifetime spiritual journey to find and commune with one's personal elemental spirit. A flamekin without a pilgrimage is an ember without purpose.</p>
 
     <div class="pull">
-      "The Path of Flame is a flamekin's most personal journey. You must walk it for yourself — but you'll never walk alone."
+      "The Path of Flame is a flamekin's most personal journey. You must walk it for yourself, but you'll never walk alone."
       <cite>Zasharua, Brighthearth mentor</cite>
     </div>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/flamekin/ashling/ashling_leaping.png', 'right')}
 
-    <p>Flamekin build no great cities, but they are not homeless. They gather in small, ever-shifting towns called <em>flickers</em> that never grow large because flamekin wander, and in forge-villages whose smithies supply iron tools and weapons to the rest of Lorwyn — Flamekin Village on the slopes of Mount Tanufel, the birthplace of their kind, is the best known. Between towns they meet at festivals in calderas and burnt-out pits, drawn to the places where the plane itself is shifting. Their fires burn cool until they decide otherwise; a peaceful flamekin can cradle a child's hand without harm. An angry one can ignite a forest.</p>
+    <p>Flamekin build no great cities, but they are not homeless. They gather in small, ever-shifting towns called <em>flickers</em> that never grow large because flamekin wander, and in forge-villages whose smithies supply iron tools and weapons to the rest of Lorwyn. Flamekin Village on the slopes of Mount Tanufel, the birthplace of their kind, is the best known. Between towns they meet at festivals in calderas and burnt-out pits, drawn to the places where the plane itself is shifting. Their fires burn cool until they decide otherwise; a peaceful flamekin can cradle a child's hand without harm. An angry one can ignite a forest.</p>
 
-<p class="table-color"><span>Cube-table color</span> The art: a dark-bodied flamekin with a crown of flame and glowing patches across its chest works golden threads at a large loom, one hand raised holding something lit. The flavor text: <em>Few flamekin have the patience necessary to weave goldenglow moth silk. Those who do are highly revered, and highly rewarded.</em> One way to read it is the quiet other half of fire that burns cool until it decides otherwise: steady hands, and thread that goes unscorched. Ours; the sourced half is the line just above. <em>Flamekin Gildweaver, Lorwyn Eclipsed #140, art by Aurore Folny.</em></p>
+    <p>Craft is honored among them. Few flamekin have the patience to weave goldenglow moth silk, and those who do are highly revered and highly rewarded.${FN('Flavor text, <em>Flamekin Gildweaver</em>')}</p>
 
-    <p><strong>Ashling.</strong> The cycle's central flamekin. Her long ${TERM('Pilgrim','pilgrimage')} to find her elemental consumes the entire narrative. The Path of Flame has four stages — red, yellow, white, and a blue flame that consumes anyone who nears it; whoever reaches it and survives 'would become the stuff of legend.' Ashling will, over the course of the books, become the Destroyer the cinders hail as their Extinguisher — and, eventually, something new.</p>
+    <p><strong>Ashling.</strong> The cycle's central flamekin. Her long ${TERM('Pilgrim','pilgrimage')} to find her elemental consumes the entire narrative. The Path of Flame has four stages: red, yellow, white, and a blue flame that consumes anyone who nears it; whoever reaches it and survives 'would become the stuff of legend.' Ashling will, over the course of the books, become the Destroyer the cinders hail as their Extinguisher, and eventually something new.</p>
 
     <h4 class="subheading">In Shadowmoor: the Cinder</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/cinder_walker.png', 'left')}
 
-    <p>After the Aurora, flamekin become ${TERM('Cinder','cinders')} — half-dead creatures of coal and guttering ember, cold-hearted and cruel. The warm embers that once lit a pilgrim's way now smoulder in skeletal joints. A cinder that lays a hand on a child does not cradle; it <em>burns through.</em> Where a flamekin's fire was a search, a cinder's fire is a weapon.</p>
+    <p>After the Aurora, flamekin become ${TERM('Cinder','cinders')}: half-dead creatures of coal and guttering ember, cold-hearted and cruel. The warm embers that once lit a pilgrim's way now smoulder in skeletal joints. A cinder that lays a hand on a child does not cradle; it <em>burns through.</em> Where a flamekin's fire was a search, a cinder's fire is a weapon.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/cinder_flailing_heads.png', 'right')}
 
-    <p>Cinders do not walk the Path. Their legend says a traitor called the Extinguisher took their flames long ago, and their bitterness has only grown since. Their rituals are shriveled, spiteful echoes of the old pilgrim rites — they swing the skulls of their own as flails, bind flame into cruel fetishes, and raid the douns for fuel. The mentors and brightwardens of Lorwyn are, in Shadowmoor, just more coal to be broken apart and burned again.</p>
+    <p>Cinders do not walk the Path. Their legend says a traitor called the Extinguisher took their flames long ago, and their bitterness has only grown since. Their rituals are shriveled, spiteful echoes of the old pilgrim rites: they swing the skulls of their own as flails, bind flame into cruel fetishes, and raid the douns for fuel. The mentors and brightwardens of Lorwyn are, in Shadowmoor, just more coal to be broken apart and burned again.</p>
 
     <p>What the ${TERM('Cinder','cinders')} do still hold is a liturgy. They do not know who Ashling was. They know only that the Extinguisher of legend has returned as a colossus of living fire, and two cinders on a mountainside in Eventide recite what she means:</p>
 
@@ -417,10 +419,10 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
       In the darkness, she is the Destroyer, who shall cover the world with fire.<br>
       In the sea of flame she becomes the Extinguisher, who shall consume the fire that consumed the world.<br>
       And from the ashes, we are reborn.
-      <cite>—Cinder liturgy</cite>
+      <cite>Cinder liturgy</cite>
     </div>
 
-    <p>Destroyer, Extinguisher, reborn — one figure moving through three phases. 'First for her and then with her,' the golden cinder says. 'We will burn.' Everyone who is not a cinder simply calls her the Destroyer.</p>
+    <p>Destroyer, Extinguisher, reborn: one figure moving through three phases. 'First for her and then with her,' the golden cinder says. 'We will burn.' Everyone who is not a cinder simply calls her the Destroyer.</p>
 
     ${ART_BLEED('art/shadowmoor/creatures/flamekin/cinder_pack.png')}
   </div>
@@ -442,13 +444,13 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_BLEED('art/lorwyn/creatures/treefolk/ancient_singing_treefolk.png', 'center 10%')}
 
-    <p class="lede">Treefolk are the oldest thinking beings on Lorwyn. They move slowly, speak slowly, live for centuries — and remember everything. Their magic is the slowest kind, the kind that moves through roots and is stored in rings. A treefolk sage can recall events from eras no one else has even heard of.</p>
+    <p class="lede">Treefolk are the oldest thinking beings on Lorwyn. They move slowly, speak slowly, live for centuries, and remember everything. Their magic is the slowest kind, the kind that moves through roots and is stored in rings. A treefolk sage can recall events from eras no one else has even heard of.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/treefolk/colfenor/colfenor.png', 'right')}
 
-    <p>The most important treefolk in the cycle — perhaps the most important character, full stop — is <strong>${TERM('Colfenor')}, the great red yew</strong> — thought to be the only yew treefolk on the plane. He knows the Aurora is coming. He has been preparing for it longer than most of Lorwyn has been alive. He is mentor to Rhys, puppeteer of Brigid and Gaddock Teeg, and quietly orchestrates events no one else realizes are connected.</p>
+    <p>The most important treefolk in the cycle, perhaps the most important character, full stop, is <strong>${TERM('Colfenor')}, the great red yew</strong>, the last living yew on the plane.${FN('Eventide (novel), Colfenor: "I am the last living yew." The Lorwyn yew entry in the <em>Planeswalker\'s Guide to Lorwyn Eclipsed</em> says his only progeny was destroyed defeating Oona.')} He knows the Aurora is coming. He has been preparing for it longer than most of Lorwyn has been alive. He is mentor to Rhys, puppeteer of Brigid and Gaddock Teeg, and quietly orchestrates events no one else realizes are connected.</p>
 
-<p class="table-color"><span>Cube-table color</span> The art: a hunched treefolk peers from a dark hollow in its trunk, a glowing green face inside, one hand cradling a rounded mossy mass in a clearing of red flowers. The flavor text: <em>"Forget the elves, that meddling faerie queen, and those greasy machines. If you ask me, it's the generous who should be remembered."</em> One way to read it is that treefolk keep a different ledger, counting givers rather than rulers. Ours, not canon; that treefolk remember what others forget is sourced, above. <em>Great Forest Druid, Lorwyn Eclipsed #178, art by Pete Venters.</em></p>
+<p>Treefolk keep a different ledger from the elves and the faerie queen, and they count givers rather than rulers: <em>"Forget the elves, that meddling faerie queen, and those greasy machines. If you ask me, it's the generous who should be remembered."</em>${FN('Flavor text, <em>Great Forest Druid</em>')}</p>
 
     <div class="pull">
       "Changes far greater than the turning of the leaves await us at season's end."
@@ -459,19 +461,17 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/treefolk/treefolk_blighted_yew.png', 'left')}
 
-    <p>Colfenor is dead. The red yew burned himself on Ashling's fire at the end of the first novel so that his seed would wake 'ready to carry the old world into what comes after,' and the Aurora came down on a forest already missing its eldest tongue. What the Aurora finds in Shadowmoor's woods is grief without a speaker — mile on mile of bare, twisted sentinels leaning into a sunset that never goes dark. They are still awake. They are simply no longer answering. A kithkin who walks out to the edge of the treeline and calls a familiar elder's name will be heard, and will be remembered, and will not be replied to.</p>
+    <p>Colfenor is dead. The red yew burned himself on Ashling's fire at the end of the first novel so that his seed would wake 'ready to carry the old world into what comes after,' and the Aurora came down on a forest already missing its eldest tongue. Shadowmoor's treefolk are leafless and live in bitter resentment.${FN('Wizards of the Coast, <em>The Deepening Shadowmoor</em>')} Most have lost their faces, with only vestiges of their humanoid features remaining, and they live isolated and lonely.${FN('<em>Planeswalker\'s Guide to Lorwyn Eclipsed</em>, Society (Shadowmoor treefolk)')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/treefolk/treefolk_fruitburdened.png', 'right')}
 
-    <p>The younger treefolk took the turn worse. In the card art, wild magic pools in the bogs the way rain used to, and the saplings that rooted there have grown <em>burdened</em> — knuckled over with pods, fruiting heavy ropes of dream-rot, a single green eye blinking from under the moss. These are the <strong>fruit-hung</strong>, and what ripens on them is not to be eaten. Witches bargain with them by leaving gifts at the roots. Boggarts try to pick them anyway. The roots, mostly, are faster than the boggarts.</p>
+    <p>Some of the younger treefolk took the turn worse. They grow <strong>burdened</strong>, knuckled over with pods, a single green eye blinking from under the moss.</p>
 
-    <p>What every Shadowmoor treefolk carries, young or old, is the <strong>Canker</strong>: a rot in the heartwood that will not finish. They hate life — their own most of all — and they are afraid to die, and the two feelings hold each other in place for centuries.</p>
+    <p>What every Shadowmoor treefolk carries, young or old, is the <strong>Canker</strong>: a rot in the heartwood that will not finish. They hate life, their own most of all, and they are afraid to die, and the two feelings hold each other in place for centuries.</p>
 
     ${ART_BLEED('art/shadowmoor/creatures/treefolk/treefolk_woodfall_wrath.png', 'center 20%')}
 
-    <p>And when the elder trees finally <em>do</em> answer, the answer is not a word. A Woodfall elder wakes the way a cliff wakes: once, suddenly, and everything below it rearranges. Cinders burn at its feet and leave no mark; elves with moonglove daggers run for the moorland. The old treefolk have waited long enough to hear what the plane is doing without Colfenor in it, and they do not like what they've heard. The forests of Shadowmoor are not peaceful. The treefolk are bitter, vengeful guardians of the wood — and they are armed.</p>
-
-    <p class="table-color"><span>Cube-table color</span> The fruit-hung, the Woodfall wakings, and the mourning-and-armed reading are ours, drawn off the art. The sourced fact is the Canker.</p>
+    <p>The forests of Shadowmoor are not peaceful. The treefolk are vengeful guardians of nature against the ravages of the denizens of Shadowmoor,${FN('<em>Planeswalker\'s Guide to Lorwyn Eclipsed</em>, Society (Shadowmoor treefolk)')} and much of the nuance of their species has been lost in favor of a more violent approach.${FN('<em>Planeswalker\'s Guide to Lorwyn Eclipsed</em>, Society (Shadowmoor treefolk)')}</p>
   </div>
 </section>
 
@@ -491,45 +491,45 @@ ${ART_PORTRAIT('art/lorwyn/creatures/merrow/merrow_silvergill_peddler.jpg', 'lef
 
     ${ART_BLEED('art/lorwyn/creatures/boggarts/boggart_birth_rite.png', 'center 25%')}
 
-    <p class="lede">Boggarts are filthy, stupid, and — genuinely, unambiguously — having the best time on Lorwyn. They are a riot of appetite and curiosity, roaming the plane in warrens that feel less like tribes and more like delighted mobs. A boggart is not malicious in the way an elf is malicious. A boggart simply hasn't yet been convinced that the thing in front of it is not, in fact, food.</p>
+    <p class="lede">Boggarts are filthy, stupid, and genuinely having the best time on Lorwyn. They are a riot of appetite and curiosity, roaming the plane in warrens that feel less like tribes and more like delighted mobs. A boggart is not malicious the way an elf can be; it simply hasn't yet been convinced that the thing in front of it is not, in fact, food.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/boggarts/boggart_warren.png', 'right')}
 
-    <p>The fundamental boggart worldview: there are two kinds of thing in the world. <em>Things you can eat,</em> and <em>things you have to chase down and pummel before you can eat them.</em> Everything — giants, elves, weather, rocks — falls into one category or the other. This is not a metaphor; it is their operating principle.</p>
+    <p>The fundamental boggart worldview: there are two kinds of thing in the world. <em>Things you can eat,</em> and <em>things you have to chase down and pummel before you can eat them.</em> Everything (giants, elves, weather, rocks) falls into one category or the other. That is their operating principle.</p>
 
     <div class="pull">
-      Boggarts revel in discovering new sensations — from the texture of an otter pellet to the squeak of a dying warrenmate.
-      <cite>—Boggart Shenanigans</cite>
+      Boggarts revel in discovering new sensations, from the texture of an otter pellet to the squeak of a dying warrenmate.
+      <cite>Boggart Shenanigans</cite>
     </div>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/boggarts/boggart_close.png', 'left')}
 
-    <p>They live in warrens dug under hills and in the mire margins. A boggart warren has hierarchy only in the loosest sense — but it does have a head: an <em>auntie</em> (not always female), usually a boggart of great age who explains what puzzling things and sensations mean. The greatest of them, Auntie Grub, still guides boggart behavior through her tales. Everyone else is just whoever is holding the biggest stick.</p>
+    <p>They live in warrens dug under hills and in the mire margins, under the guidance and leadership of an <em>auntie</em>.${FN('<em>Planeswalker\'s Guide to Lorwyn Eclipsed</em>, Society (boggarts)')} An auntie is not always female (the Shadowmoor novel has "Auntie Geg" on his throne),${FN('Shadowmoor (novel): "Auntie Geg sat on his throne in the hollow of a gnarled..."')} usually a boggart of great age who explains what puzzling things and sensations mean. The greatest of them, Auntie Grub, still guides boggart behavior through her tales.</p>
 
-<p class="table-color"><span>Cube-table color</span> The art: two ragged boggarts, one with a hooked staff, creep past a post hung with bones, a dried fish and other trinkets, both grinning. The flavor text: <em>"What do they need all this stuff for? They're dead. We're alive. Simple enough."</em> One way to read it is that boggart sharing has no owner, living or dead: if it is found, it is the warren's. Ours, not canon; the sourced part is the share-everything rule on the Exiled Boggart card. <em>Warren Pilferers, Lorwyn #146, art by Wayne Reynolds.</em></p>
+    <p>Whatever the dead leave behind belongs to the warren: <em>"What do they need all this stuff for? They're dead. We're alive. Simple enough."</em>${FN('Flavor text, <em>Warren Pilferers</em>')}</p>
 
     ${ART_BLEED('art/lorwyn/creatures/boggarts/boggart_clan.png', 'center 30%')}
 
     <div class="callout">
       <p class="cal-head"><span class="dot"></span>In Shadowmoor</p>
-      <p>Boggarts survive the Aurora, but not their minds. They were already living in the dark and muck; Shadowmoor takes the tales, the rules, and the wits and leaves the appetite. Where a Lorwyn boggart is feral-joyful, a Shadowmoor boggart is a mindless eating machine in loose company with others. The joy remains. Nothing else does.</p>
+      <p>Boggarts survive the Aurora, but not their minds. Where a Lorwyn boggart is feral-joyful, a Shadowmoor boggart is no more than a mindless eating machine, traveling in loose gangs of nomadic feeding frenzies.${FN('Wizards of the Coast, <em>The Deepening Shadowmoor</em>')}</p>
     </div>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/boggarts/boggart_boar_rider.png', 'left')}
 
-    <p>The warrens are gone. What moves across Shadowmoor is a gang — nomadic, leaderless, a feeding frenzy with legs — and it travels alongside whatever animals it has not yet finished eating, teeth bared in a grin that has not stopped grinning since Lorwyn. A Lorwyn boggart would have made a story out of the boar. A Shadowmoor boggart eats the boar, and then whatever the boar was standing next to.</p>
+    <p>Shadowmoor boggarts live isolated. Their warrens are small and simple, with limited hierarchies supported by force, and no boggart warren has ever survived more than a generation.${FN('<em>Planeswalker\'s Guide to Lorwyn Eclipsed</em>, Society (Shadowmoor boggarts)')} The warriors hammer crude iron plates into their own bones.${FN('<em>Planeswalker\'s Guide to Lorwyn Eclipsed</em>, Society (Shadowmoor boggarts)')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/boggarts/boggart_brute_cleaver.png', 'right')}
 
-    <p>Nothing in a boggart gang enforces anything any more. Lorwyn boggarts had rules — appalling rules, but rules, argued over and handed down. Shadowmoor boggarts have no one left who can hold a rule in mind long enough to break it. They are not cruel and they are not clever. They arrive, they strip the ground, they move on, and no boggart present could tell you afterward where they had been.</p>
+    <p>The eldest aunties are cruel nomads and loners, and Shadowmoor boggarts tend to practice cursecasting.${FN('<em>Planeswalker\'s Guide to Lorwyn Eclipsed</em>, Society (Shadowmoor boggarts)')}</p>
 
 ${ART_PORTRAIT('art/shadowmoor/creatures/boggarts/boggart_hobgoblin_farm.jpg', 'left')}
 
-    <p class="table-color"><span>Cube-table color</span> The art: a grinning, red-crested goblin leans toward us gripping a pitchfork and a thin-bladed tool, a lit farmhouse window glowing on the dark horizon behind him. The flavor text: <em>Hobgoblins are best left alone. They sharpen their farm implements far more than is necessary for their work in the fields.</em> One way to read it is that Shadowmoor still has boggarts who keep a homestead, and the menace is in how well the tools are kept. Ours, not canon. <em>Hearthfire Hobgoblin, Eventide #141, art by Steven Belledin.</em></p>
+    <p>Shadowmoor's goblin creature type covers a few distinct entities: boggarts, hobgoblins and spriggans.${FN('Card type lines: <em>Hearthfire Hobgoblin</em> (Goblin Soldier), <em>Hobgoblin Dragoon</em> (Goblin Knight), <em>Hungry Spriggan</em> (Goblin Warrior), <em>Swirling Spriggan</em> (Goblin Shaman)')} Hobgoblins work the fields, and the menace is in how well they keep their tools: <em>Hobgoblins are best left alone. They sharpen their farm implements far more than is necessary for their work in the fields.</em>${FN('Flavor text, <em>Hearthfire Hobgoblin</em>')}</p>
 
     ${ART_BLEED('art/lorwyn/creatures/boggarts/boggart_raid.png', 'center 25%')}
 
-    <p class="aside-note">▶ For the flavor of boggart life on both sides of the Aurora, see <a href="https://youtu.be/mCQ5EF69rSQ?si=MRgOaAcJl07dxX3j" target="_blank" rel="noopener"><em>A Boggart Ballad</em> — Lorwyn Eclipsed trailer</a>, a Jim Henson Studios collaboration depicting a Lorwyn boggart meeting its Shadowmoor counterpart.</p>
+    <p class="aside-note">▶ For the flavor of boggart life on both sides of the Aurora, see <a href="https://youtu.be/mCQ5EF69rSQ?si=MRgOaAcJl07dxX3j" target="_blank" rel="noopener"><em>A Boggart Ballad</em>, Lorwyn Eclipsed trailer</a>, a Jim Henson Studios collaboration depicting a Lorwyn boggart meeting its Shadowmoor counterpart.</p>
   </div>
 </section>
 
@@ -557,47 +557,47 @@ ${ART_PORTRAIT('art/shadowmoor/creatures/boggarts/boggart_hobgoblin_farm.jpg', '
 
     <div class="pull">
       A giant can brood over a grudge for decades, and woe to those who interrupt him.
-      <cite>—Lairwatch Giant</cite>
+      <cite>Lairwatch Giant</cite>
     </div>
 
     <h4 class="subheading">The Name Sleep</h4>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_cloudgoat_herder.png', 'left')}
 
-    <p>Giants practice a custom called <strong>${TERM('Name Sleep','the Name Sleep')}</strong>: on sudden trauma — or sudden abundance — a giant lies down wherever they stand and enters a slumber that may last days or seasons. What they dream becomes their surname. A giant caught out on a hillside by bad news might wake up weeks later, blink, and announce themselves <em>Thunderbrow</em> or <em>Meanderer</em> or <em>Stoutarm</em>. Not every giant keeps the new name — some stay with a family or clan name — and Rosheen has woken from three Name Sleeps still <em>Meanderer</em>. But a Name Sleep is always a fresh start.</p>
+    <p>Giants practice a custom called <strong>${TERM('Name Sleep','the Name Sleep')}</strong>. Triggered by a sudden change such as trauma or abundance, a giant lies down wherever they stand and enters a slumber that may last days or seasons.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} What they dream becomes their surname. A giant caught out on a hillside by bad news might wake up weeks later, blink, and announce themselves <em>Thunderbrow</em> or <em>Meanderer</em> or <em>Stoutarm</em>. Not every giant keeps the new name; some stay with a family or clan name, and Rosheen has woken from three Name Sleeps still <em>Meanderer</em>.${FN('<em>Morningtide</em>, Cory J. Herndon and Scott McGough')} But a Name Sleep is always a fresh start.</p>
 
-    <p>The giantess <strong>${TERM('Rosheen Meanderer','Rosheen')}</strong> is the cycle's oldest and largest giant — a famously mad seer. When Rhys finds her in <em>Morningtide</em> she is asleep in a valley, muttering prophecy in the timbre of slow weather. Her cloudgoat <em>Mr. Choppers</em> — a huge white beast — keeps a standoffish vigil in the clouds high above. Her mumbled fragments hold prophetic truths that, in the right hands, could change the course of history.</p>
+    <p>The giantess <strong>${TERM('Rosheen Meanderer','Rosheen')}</strong> is the cycle's oldest and largest giant and a famously mad seer. When Rhys finds her in <em>Morningtide</em> she is asleep in a valley, muttering prophecy in the timbre of slow weather. Her cloudgoat <em>Mr. Choppers</em>, a huge white beast, keeps a standoffish vigil in the clouds high above. Her mumbled fragments hold prophetic truths that, in the right hands, could change the course of history.</p>
 
     <h4 class="subheading">Giants and the small folk</h4>
 
     ${ART_BLEED('art/lorwyn/creatures/giants/giants_destroy_village.png', 'center 10%')}
 
-    <p>Most giants are indifferent to smaller tribes the way a storm is indifferent to a puddle: not cruel, merely scaled wrong. A giant crossing the moors will flatten six boggart burrows and a kithkin orchard without noticing, not because they don't care — many giants care quite a lot — but because by the time they've looked down, the damage is already old news. Clachans that sit near giant pathways post watchers for this exact reason, and the cenn's thoughtweft will ripple with the message <em>move the children, a slow one is coming</em> sometimes hours before the first footfall.</p>
+    <p>Most giants are indifferent to smaller tribes the way a storm is indifferent to a puddle: not cruel, merely scaled wrong. A giant crossing the moors will flatten six boggart burrows and a kithkin orchard without noticing, not because they don't care (many giants care quite a lot) but because by the time they've looked down, the damage is already old news. Clachans that sit near giant pathways post watchers for this exact reason, and the cenn's thoughtweft will ripple with the message <em>move the children, a slow one is coming</em> sometimes hours before the first footfall.</p>
 
-<p class="table-color"><span>Cube-table color</span> The art: three small armored figures run across a sunlit clearing at the feet of a giant cropped at the knees, one raising a short blade; the giant's face is never shown. The flavor text: <em>Sometimes a curious giant singles out a "little one" to follow for a few days, never realizing the effect it will have on the little one's life.</em> One way to read it is that the picture gives the small folk's angle: a giant is legs and feet, and whatever it does to a life, it does without looking down. Ours, not canon. <em>Kithkin Greatheart, Lorwyn #25, art by Greg Staples.</em></p>
+    <p>Some giants take an interest in the small folk instead of overlooking them. <em>Sometimes a curious giant singles out a "little one" to follow for a few days, never realizing the effect it will have on the little one's life.</em>${FN('Flavor text, <em>Kithkin Greatheart</em>')} The effect lands on the little one; the giant never learns of it.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_ladybug_palm.png', 'right')}
 
-    <p>A giant with time on their hands, though, is a different creature. Curiosity runs deep in the Cloud Crags. Many a giant will scoop up a handful of something small — beetles, moonberries, a particularly confused faerie — and study it for a whole afternoon, perfectly still, brow furrowed in enormous concentration. The faerie may or may not be released. The beetles, in the giants' defence, are usually eaten.</p>
+    <p>A giant with time on their hands, though, is a different creature. Curiosity runs deep in the Cloud Crags. Many a giant will scoop up a handful of something small (beetles, moonberries, a particularly confused faerie) and study it for a whole afternoon, perfectly still, brow furrowed in enormous concentration. The faerie may or may not be released. The beetles, in the giants' defence, are usually eaten.</p>
 
 ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left')}
 
-    <p class="table-color"><span>Cube-table color</span> The art: a young giantess with pigtails and a wide grin holds a rough pale lump up in her open palm, a basket at her side and a headed tool in her other hand. The flavor text: <em>The giants believe the fossils they find in Lorwyn's rocky heights are dreams frozen in time, and they treasure them.</em> One way to read it is that this is the Name Sleep logic again, dreams treated as things that leave traces in the world, and she is simply delighted. Ours; the Name Sleep above is the sourced half. <em>Hillcomber Giant, Lorwyn #20, art by Ralph Horsley.</em></p>
+    <p>Giants also collect. <em>They believe the fossils they find in Lorwyn's rocky heights are dreams frozen in time, and they treasure them.</em>${FN('Flavor text, <em>Hillcomber Giant</em>')} That fits a people whose dreams during the Name Sleep give them direction and purpose.</p>
 
     <div class="pull">
       The gentle giant fumbled the tiny thing in his hand as he spoke to it. "Sorry, sorry," he said, "can you repeat that? I lost you among my fingers."
-      <cite>—Giant Harbinger</cite>
+      <cite>Giant Harbinger</cite>
     </div>
 
     <h4 class="subheading">When a giant fights</h4>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_charging.png', 'left')}
 
-    <p>Giants rarely make war — their internal disputes play out across decades, at geologic tempo — but when a giant is roused, the result is not a skirmish, it is a <em>fact of geography</em>. Forests are restructured. Rivers change course. Whole boggart warrens are rearranged into hills of a slightly different shape. A charging giant levels ground the way a flood levels ground: without theory, without strategy, and without anyone left to debate whether it was fair.</p>
+    <p>Giants rarely make war; their internal disputes play out across decades, at geologic tempo. But when a giant is roused, the result is a <em>fact of geography</em> rather than a skirmish. Forests are restructured. Rivers change course. Whole boggart warrens are rearranged into hills of a slightly different shape. A charging giant levels ground the way a flood levels ground: without theory, without strategy, and without anyone left to debate whether it was fair.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_axe.png', 'right')}
 
-    <p>Their weapons are scaled to match: axes hewn from whole oaks, mauls tipped with boulders, chains long enough to drag a crannog off its moorings. A few giants — the so-called <strong>Hearthcage</strong> lineage — have learned to carry flame the way a flamekin does, swinging a burning fist that is equal parts cudgel and meteor. They are, by giant standards, hotheads. By anyone else's standards they are a natural disaster with opinions.</p>
+    <p>Their weapons are scaled to match: axes hewn from whole oaks, mauls tipped with boulders, chains long enough to drag a crannog off its moorings. A few giants, the so-called <strong>Hearthcage</strong> lineage, have learned to carry flame the way a flamekin does, swinging a burning fist that is equal parts cudgel and meteor. They are, by giant standards, hotheads. By anyone else's standards they are a natural disaster with opinions.</p>
 
     ${ART_BLEED('art/lorwyn/creatures/giants/giant_chained_firefist.png', 'center 5%')}
 
@@ -605,22 +605,22 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_eater.png', 'left')}
 
-    <p>Not every giant is wise. The kin of the high ridges — the Arbiters, the Meanderers, the cloudgoat-herders — tend to oracular thoughtfulness and long, mild lives. Red giants, who turn their feelings outward, are coarser, hungrier, and markedly less philosophical. Boggarts and hill-ogres have a fraught and mostly edible relationship: the boggart sees the ogre as a walking pantry with legs, and the ogre sees the boggart as a shrieking snack that has to be caught before it ducks into a hole.</p>
+    <p>Not every giant is wise. The kin of the high ridges (the Arbiters, the Meanderers, the cloudgoat-herders) tend to oracular thoughtfulness and long, mild lives. Red giants, who turn their feelings outward, are coarser, hungrier, and markedly less philosophical. Boggarts and hill-ogres have a fraught and mostly edible relationship: the boggart sees the ogre as a walking pantry with legs, and the ogre sees the boggart as a shrieking snack that has to be caught before it ducks into a hole.</p>
 
     <div class="pull">
       Though giants are mortal, they live so long and on such a grand scale that many small folk don't believe they ever truly die.
-      <cite>—Arbiter of Knollridge</cite>
+      <cite>Arbiter of Knollridge</cite>
     </div>
 
     <h4 class="subheading">Key giants</h4>
     <div class="two-col">
       <div>
-        <p><strong>${TERM('Rosheen Meanderer','Rosheen Meanderer')}.</strong> Oracular, wandering giantess — oldest and largest of the giants. Prophesies in mutters; keeps the cloudgoat Mr. Choppers; carries a scroll that holds her personal journal, which many seek.</p>
-        <p><strong>Brion Stoutarm.</strong> A giant of the high crags who hires out his fists — Rhys pays him and his brother Kiel to break boggarts in the first novel. Brion is the living proof that giants can be bargained with, provided you respect the scale. He is murdered with moonglove by the taercenn Eidren in Morningtide; his daughter Bre has not forgiven the elves.</p>
+        <p><strong>${TERM('Rosheen Meanderer','Rosheen Meanderer')}.</strong> Oracular, wandering giantess, oldest and largest of the giants. Prophesies in mutters; keeps the cloudgoat Mr. Choppers; carries a scroll that holds her personal journal, which many seek.</p>
+        <p><strong>Brion Stoutarm.</strong> A giant of the high crags who hires out his fists. Rhys pays him and his brother Kiel to break boggarts in the first novel. Brion shows that giants can be bargained with, provided you respect the scale. He is murdered with moonglove by the taercenn Eidren in Morningtide.</p>
       </div>
       <div>
         <p><strong>The Arbiters of Knollridge.</strong> Giant arbiters are trusted by the smaller races to settle hard disputes from their lofty perspective; the greatest, Galanda Feudkiller, holds court in a mountain amphitheater, and her judgment is swift and absolute. Their verdicts are not always wise. They are always final.</p>
-        <p><strong>The Hearthcage line.</strong> In our reading, a line of fire-handed giants — red giants, whose feelings go outward. Brief of fuse, large of fist, short of retirement plan.</p>
+        <p><strong>The Hearthcage line.</strong> A line of fire-handed giants, red giants whose feelings go outward. Brief of fuse, large of fist, short of retirement plan.</p>
       </div>
     </div>
 
@@ -628,22 +628,22 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <div class="callout">
       <p class="cal-head"><span class="dot"></span>In Shadowmoor</p>
-      <p>After the Aurora, giants change less than most tribes — they were already slow, already indifferent, already old. The difference is that the sky stops being kind to them. Shadowmoor giants are gaunter, quieter, and spend even more time asleep; their Name Sleeps now yield darker surnames, and they wake furred with moss. Rosheen, far from sleeping, tears across Shadowmoor in a prophetic frenzy; in the anthology a whole doun must flee her path.</p>
+      <p>After the Aurora, giants change less than most tribes. They were already slow, already indifferent, already old. Shadowmoor giants are hibernators: long weeks of sleep leave them covered in moss and plants, and over the ages their skin shrinks over muscle that magic keeps intact.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} They are lazier than malicious, fighting only when driven to extremes, and so oblivious they never redirect their feet away from a village. They are also closer to nature, often harnessing wild magic in ways other creatures find awe-inspiring. Rosheen, far from sleeping, tears across Shadowmoor in a prophetic frenzy; in the anthology a whole doun must flee her path.${FN('<em>Shadowmoor</em> anthology, "Ode to Mistmeadow Jack"')}</p>
     </div>
 
-<p class="table-color"><span>Cube-table color</span> The art: a moss-wrapped giantess sits cross-legged and still among black rock spires, a dull orange glow low on the horizon. The flavor text: <em>Night after night, Rosheen babbled about a bygone sunlit world, her every word dismissed as a madwoman's ravings.</em> One way to read it is that the frenzy is only the part other tribes see; the rest of the time the one voice that remembers Lorwyn is dismissed. Ours, not canon; the frenzy is sourced to the Shadowmoor novel. <em>Rosheen Meanderer, Shadowmoor #214, art by Aleksi Briclot.</em></p>
+    <p>The one voice among them that remembers the old world goes unheard: <em>Night after night, Rosheen babbled about a bygone sunlit world, her every word dismissed as a madwoman's ravings.</em>${FN('Flavor text, <em>Rosheen Meanderer</em>')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/giants/giant_purpleflame_rage.png', 'left')}
 
-    <p>And yet — when a Shadowmoor giant <em>does</em> wake, the sky is not kind to anyone else either. In the art, the Hearthcage giants have taken the worst of the turn: their fire has gone wrong-colored, a bruise-violet flame that does not warm, does not cook, does not comfort. A Hearthcage giant in rage is no longer a natural disaster with opinions; it is a natural disaster with a grudge, and the grudge is usually against something very small that ran very fast.</p>
+    <p>Shadowmoor fire runs wrong-colored. On the giants it burns as a bruise-violet flame that does not warm, does not cook, does not comfort, and an enraged giant is a natural disaster with a grudge.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/giants/giant_hex_cursed.png', 'right')}
 
-    <p>Some giants did not wake at all; the Name Sleep took them, and the wild magic of Shadowmoor grew in after. In our reading, these are the <strong>hex-struck</strong> — moss-bearded sleepers whose bodies have become curse-vessels, red runes flickering across their skin in the dark. They dream aloud, and what they dream crawls out of them. Witches of the bog-covens hike up the ridges specifically to listen at their mouths. The Name Sleep, for a hex-struck giant, never ends; the surname, when it arrives, will be spoken by someone else.</p>
+    <p>Some giants lie so long that the wild magic of Shadowmoor grows in with the moss: red runes flicker across their skin in the dark. The Name Sleep of such a giant may never end.</p>
 
     ${ART_BLEED('art/shadowmoor/creatures/giants/giant_cagekeeper.png', 'center 3%')}
 
-    <p>And at the foot of the crags, some giants have gone into the cage-keeping trade. In the art, a Shadowmoor giant drags a kithkin raiding party back to its lair in iron bars it wove itself, one captive at a time, and opens the cage only to feed. The boggarts still try to steal them out.</p>
+    <p>Not every Shadowmoor giant sleeps through the small folk. Some carry iron cages, and the small folk run before them.</p>
   </div>
 </section>
 
@@ -658,14 +658,14 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/lorwyn/creatures/changelings/changeling_crib_switched.png', 'right')}
 
-    <p>If you've played Magic before, some Lorwyn creatures will look oddly familiar — until you notice what's changed.</p>
+    <p>If you've played Magic before, some Lorwyn creatures will look oddly familiar, until you notice what's changed.</p>
 
     <div class="two-col">
       <div>
         <h4 class="subheading">Goblins, restyled</h4>
-        <p>Boggarts <em>are</em> goblins, in mechanics and role — but the flavor is entirely new. No gunpowder, no engineers, no gears. Lorwyn's boggarts are muck-dwelling goblins: filthy, giggling, and hungry for every new sensation.</p>
+        <p>Boggarts <em>are</em> goblins, in mechanics and role, but the flavor is entirely new. No gunpowder, no engineers, no gears. Lorwyn's boggarts are muck-dwelling goblins: filthy, giggling, and hungry for every new sensation.</p>
         <h4 class="subheading">Halflings, weaponized</h4>
-        <p>Kithkin are small round folk from the Shire — if the Shire kept a militia, forged the best weapons around, and wired every neighbor's moods together through an empathic bond.</p>
+        <p>Kithkin are small round folk from the Shire, but this Shire keeps a militia, forges the best weapons around, and wires every neighbor's moods together through an empathic bond.</p>
         <h4 class="subheading">Elves, unrecognizable</h4>
         <p>Forget Tolkien's wistful moral paragons. Lorwyn elves have <em>horns</em> and <em>cloven hooves</em>. They are aristocrats of aesthetics to the point of lunacy: beauty is moral worth, ugliness is the worst thing a person can be, and the ugly, called eyeblights, are shunned at best and hunted, enslaved, or poisoned with moonglove at worst. They are the plane's apex predators and they know it.</p>
       </div>
@@ -673,7 +673,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
         <h4 class="subheading">Elementals, personal</h4>
         <p>Elementals here are not weather. They are the spirits flamekin pilgrims seek. Greater elementals are living embodiments of ideas, and a flamekin on the Path of Flame spends a life seeking one: a goal very few reach, since it ends in a fiery death.</p>
         <h4 class="subheading">Fae, without mercy</h4>
-        <p>Forget any image of faeries as twinkling and benevolent. They are vain, petty, and carelessly cruel — petulant children at play, tiny and capricious, with a talent for stealing dreams and a very short attention span.</p>
+        <p>Forget any image of faeries as twinkling and benevolent. They are vain, petty, and carelessly cruel: petulant children at play, tiny and capricious, with a talent for stealing dreams and a very short attention span.</p>
       </div>
     </div>
   </div>
@@ -691,17 +691,17 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
     <h4 class="subheading">Changelings</h4>
     ${ART_BLEED('art/lorwyn/places/velis_vel.png')}
 
-    <p>We do not know very much about changelings, and the changelings are not helping. They emerge from <em>Velis Vel</em> — a quartz-lined grotto where, once a year, sunlight through a hole in the roof sets the whole cavern flashing — and they take the shape of whatever is near — poorly. The mechanical answer is that a changeling counts as every creature type. The flavor answer is that you cannot trust one to stay shaped like whatever it was shaped like thirty seconds ago.</p>
+    <p>Little is known about changelings. They emerge from <em>Velis Vel</em>, a quartz-lined grotto where, once a year, sunlight through a hole in the roof sets the whole cavern flashing, and they take the shape of whatever is near, poorly.${FN('Lorwyn Survival Guide, Velis Vel')} The mechanical answer is that a changeling counts as every creature type. The flavor answer is that you cannot trust one to stay shaped like whatever it was shaped like thirty seconds ago.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/changelings/changeling_kithkin_impostor.png', 'right')}
 
-    <p>In Lorwyn they are mild, mindless mimics. Cube-table color, ours and not canon: picture the children's stories full of them: the extra kithkin at the harvest who turned out not to be anyone's cousin, the merrow on the barge who laughed at the wrong joke, the elf scout who, when looked at too closely, resolved into several smaller things that wandered off in different directions. Elves in particular are disdainful of them; to an elf, something that is nominally every tribe is nominally <em>every possible eyeblight at once</em> (our joke, not the lore's).</p>
+    <p>In Lorwyn they are mild, mindless mimics, and every species has its own outlook on them.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')}</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/changelings/changeling_traveler_spyglass.png', 'left')}
 
-    <p>In Shadowmoor the play drops away. What a Lorwyn changeling did for amusement — switched a crib, mimicked a voice, sat at the edge of a campfire unnoticed — a Shadowmoor changeling does for <em>appetite</em>. They are still shapeless. They are now also hungry. A Shadowmoor changeling becomes a mimic: a cruel creature that mocks its victims by taking the appearance of their loved ones before ending their lives.</p>
+    <p>In Shadowmoor the play drops away. A changeling that enters Shadowmoor becomes a mimic: a cruel creature that mocks its victims by taking the appearance of their loved ones before ending their lives.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')}</p>
 
-    <p>Two plain facts sit under all this. First, changelings are poor at disguise: their opalescent, translucent skin gives them away at once,. Second, since Oona's fall they stay in Lorwyn unless they are driven into Shadowmoor against their will. You will rarely see one, in any case. When Rhys finds Rosheen in <em>Morningtide</em> there are dozens, maybe hundreds of them settled on the sleeping giantess, blank-eyed and shimmering blue, and he notes that very few in Lorwyn had ever seen a changeling at all.</p>
+    <p>Two plain facts sit under all this. First, changelings are poor at disguise: their opalescent, translucent skin gives them away at once.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} Second, since Oona's fall they stay in Lorwyn unless they are driven into Shadowmoor against their will. You will rarely see one, in any case. When Rhys finds Rosheen in <em>Morningtide</em> there are dozens, maybe hundreds of them settled on the sleeping giantess, blank-eyed and shimmering blue, and he notes that very few in Lorwyn had ever seen a changeling at all.${FN('<em>Morningtide</em>, Cory J. Herndon and Scott McGough')}</p>
 
     <h4 class="subheading">Elementals (Shadowmoor)</h4>
     <p>Greater elementals still lurk in Shadowmoor, but twisted into embodiments of fears and nightmares: terrifying, uncommunicative things that ignore the other species and command the land that bore them.</p>
@@ -710,89 +710,78 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/scarecrows/scarecrow_tattered_king.png', 'right')}
 
-    <p>Very little is certain about Shadowmoor's scarecrows, and this is itself the most interesting thing about them. They are animated. They are kithkin constructs, typically made from the wood of dead treefolk, per the Planeswalker's Guide. In the art they read as straw, sticks, hooks and scrap lashed together, whatever was lying in the field when the Aurora came down. (The look is ours; the wood is sourced.) They <em>walk</em>. Kithkin make them and kithkin wake them, and what comes up out of the lashed wood and straw is never quite what the doun-wright had in mind: a scarecrow is a parody of its builder's intent, carrying out the instruction and mocking it in the same motion.</p>
+    <p>Very little is certain about Shadowmoor's scarecrows, and this is itself the most interesting thing about them. They are animated kithkin constructs, typically made from the wood of dead treefolk, with no real intelligence; they act in parody of their builders' intent.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} <em>Once a tool of kithkin farmers, scarecrows of all shapes now skitter and lurch across Shadowmoor, animated by residual rustic magics.</em>${FN('Flavor text, <em>Scrapbasket</em>')} They <em>walk</em>. Kithkin make them and kithkin wake them, and what comes up out of the lashed wood and straw is rarely what the builder had in mind: a scarecrow carries out the instruction and mocks it in the same motion.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/scarecrows/scarecrow_antlered_reaper.png', 'left')}
 
-    <p>In the books they are aimless, mindless raiders: a whole crowd of them presses against the fogbank around Mistmeadow, trying to break through. Cube-table color, ours: we picture the tamer ones standing watch at a doun's threshold — gaunt antler-crowned things leaning into the wheat, eyes where eyes should not be, patient in a way nothing patient should be. They are the last thing raiders see before the doun wakes up. What task each scarecrow was given is usually something only its maker knew, and half the makers are dead. The scarecrow is still carrying out the task, in the letter and never in the spirit.</p>
+    <p>In the anthology they are aimless and mindless. Jack Chierdagh's own scarecrow, built outside Mistmeadow, scuttles off into the fog; later he meets almost a score of wild ones on a path, which seem to have woven themselves bodies from marsh trash and shuffle toward him in what looks like silent consensus.${FN('<em>Shadowmoor</em> anthology, "Ode to Mistmeadow Jack"')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/scarecrows/scarecrow_chained.png', 'right')}
 
-    <p>Some go wrong. A scarecrow that begins acting on its own accord — walking when it has not been sent walking, taking what it has not been told to take — is by kithkin custom chained to a standing stone and left to think about it. Their animosity, as the old line has it, outlives the chains.</p>
+    <p>Some go wrong, and the ones judged too malevolent to roam free are chained to standing stones.</p>
 
     <div class="pull">
       Scarecrows deemed too malevolent to roam free are shackled to boulders or dolmen stones. Their animosity usually outlives the chains.
-      <cite>—Chainbreaker</cite>
+      <cite>Chainbreaker</cite>
     </div>
 
-    <p>If scarecrows have a ruler, it is the Reaper, and nobody agrees where it came from. One account has a scarecrow that rebelled against its maker and grew strange under Shadowmoor's moon. The other has an amalgam of many scarecrows, all built from the remains of a single treefolk whose vengeful spirit held them together. The Planeswalker's Guide notes that scarecrows are "typically made from the wood of dead treefolk," so the second story is not far-fetched. Its fate after the planes merged is in <a href="#eclipsed">Part XII</a>.</p>
+    <p>If scarecrows have a ruler, it is the Reaper, and nobody agrees where it came from. One account has a scarecrow that rebelled against its maker and grew strange under Shadowmoor's moon. The other has an amalgam of many scarecrows, all built from the remains of a single treefolk whose vengeful spirit held them together.${FN('The Legends of Lorwyn Eclipsed, The Reaper, King No More')} The second story fits the fact that scarecrows are typically made from the wood of dead treefolk. Its fate after the planes merged is in <a href="#eclipsed">Part XII</a>.</p>
 
     <h4 class="subheading">Spiritual beings</h4>
     <p>Lorwyn's supernatural life is mostly elemental: greater elementals, the purest essence of dreams and ideas, which the kithkin study as portents. Most are quiet.</p>
 
     <h4 class="subheading">Bairns</h4>
 
-    <div class="callout">
-      <p class="cal-head"><span class="dot"></span>Cube-table color</p>
-      <p>The lore says almost nothing about bairns, ouphes, hags, or gwyllions. On the cards a bairn is a kind of ouphe, with a child-like trick-or-treat rhyme and a warning about glowing trinkets for flavor. The hooded, pail-carrying collectors below are read from the art. They are ours, not canon.</p>
-    </div>
+    <p>The lore says almost nothing about bairns. On the cards a bairn is a kind of ouphe, with a child-like trick-or-treat rhyme (<em>Tricks and treats, souls and sweets! On wooded path, whom shall we meet?</em>${FN('Flavor text, <em>Glimmer Bairn</em>')}) and a warning about glowing trinkets: <em>Do the glowing trinkets show it the way home, or do they set a twisted path for someone else to follow?</em>${FN('Flavor text, <em>Gilder Bairn</em>')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/bairns/bairn_raccoon_gempail.png', 'left')}
 
-    <p>In the long dusk between douns you will sometimes meet a <strong>bairn</strong> — a small hooded figure in a stitched-animal cowl, ember-eyed, carrying a pail. They are the smallest haunting Shadowmoor produces, and no one is quite sure what they are. They are not kithkin children. They are not faeries. They speak, occasionally, and what they say is usually a perfectly polite request for a shiny thing.</p>
+    <p>In the long dusk between douns you will sometimes meet a <strong>bairn</strong>, a small hooded figure in a stitched-animal cowl, carrying a pail. They are the smallest haunting Shadowmoor produces, and no one is quite sure what they are. They are not kithkin children. They are not faeries. They speak, occasionally, and what they say is usually a perfectly polite request for a shiny thing.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/bairns/bairn_bear_wisppail.png', 'right')}
 
-    <p>Bairns collect, and bairns <em>distribute</em>. A raccoon-hood bairn will follow a stream for days filling its pail with river-gems and then, solemnly, set one on the shell of a passing frog. A bear-hood bairn will pluck a firesprite out of a withered oak, carry it home in a wisp-pail, and tuck it into the belly of a sleeping turtle for reasons no one has ever gotten a straight answer about. They take, they place, they move on. Cinders leave them alone. Boggarts have tried to rob them once and, as the phrase goes in the douns, <em>do not try a second time</em>. Most kithkin will set out a small bowl of pebbles on the doun wall at dusk and not ask questions when it is gone by dawn — or when, some mornings, there is something new in it.</p>
+    <p>Bairns collect, and bairns <em>distribute</em>. A raccoon-hood bairn will follow a stream for days filling its pail with river-gems and then, solemnly, set one on the shell of a passing frog. A toad-hood bairn will pluck a glowing wisp from a gnarled branch, carry it home in a wisp-pail, and set it on the shell of a sleeping turtle for reasons no one has ever gotten a straight answer about. They take, they place, they move on. <em>We'll leave this one here and that one there. Then wait and see who comes to share.</em>${FN('Flavor text, <em>Glister Bairn</em>')} Most kithkin will set out a small bowl of pebbles on the doun wall at dusk and not ask questions when it is gone by dawn, or when, some mornings, there is something new in it.</p>
 
     <div class="pull">
-      A bairn was seen to take a single gold coin, leave a toad in its place, and curtsy before disappearing into the hedge.
-      <cite>—our invention: a doun night-ledger</cite>
+      Do the glowing trinkets show it the way home, or do they set a twisted path for someone else to follow?
+      <cite>Gilder Bairn</cite>
     </div>
 
     <h4 class="subheading">Ouphes</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/ouphes/ouphe_sprite_hunt.png', 'right')}
 
-    <div class="callout">
-      <p class="cal-head"><span class="dot"></span>Cube-table color</p>
-      <p>Sourced: ouphes lurk in Shadowmoor's far reaches, they trade favors that bind ("Accept one favor from an ouphe, and you're doomed to accept another"), and Auntie Grub wants ouphe liver for potions. The black many-armed hunters, the kitchen raiders and the rainbow-mouthed giant are read from the art and are ours.</p>
-    </div>
+    <p>Ouphes lurk in Shadowmoor's far reaches.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} They trade in favors that bind: <em>Accept one favor from an ouphe, and you're doomed to accept another.</em>${FN('Flavor text, <em>Kitchen Finks</em>')} Auntie Grub wants them for potion stock: <em>Coin's no good. A potion for an ouphe liver or else you join my supply stock.</em>${FN('Flavor text, <em>Blood Crypt (Shadowmoor side)</em>')}</p>
 
-    <p>Bairns are, on the cards, a kind of ouphe, but most <strong>ouphes</strong> are not so polite. An ouphe is a long, black, many-armed thing with too many teeth and a grudge against anything that flies. They hunt firesprites and faeries across the moor at dusk, snatching them out of the air with fingers that bend wrong. A clique of faeries can usually outsmart a single ouphe; an ouphe rarely hunts alone.</p>
+    <p>Bairns are, on the cards, a kind of ouphe, but most <strong>ouphes</strong> are not so polite. The hunters among them are black and long-limbed, with ram-like horns, two arms and clawed fingers, and the firesprites and faeries of the moor are their quarry. <em>They spawn from shadow, wreaking chaos until shadow claims them again.</em>${FN('Flavor text, <em>Dusk Urchins</em>')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/ouphes/ouphe_kitchen_raiders.png', 'left')}
 
-    <p>The smaller ouphes are worse houseguests than boggarts. They slip into a kithkin kitchen through the hedge-gap, scatter the milk, crack the eggs, and dance on the pot-rack. They are not trying to <em>feed</em>, exactly — they are trying to be witnessed. An ouphe that has not been seen has not had a good night. Douns hang copper bells at the pantry door not to scare them off but to give them the satisfaction and, in theory, hurry them along.</p>
+    <p>The smaller ouphes turn up in kithkin kitchens, and the favor is the hook: the milk gets spilled, the eggs get cracked, the tub gets scrubbed by hands nobody invited, and the debt is the part that stays.</p>
 
-    ${ART_BLEED('art/shadowmoor/creatures/ouphes/ouphe_rainbow_king.png')}
 
-    <p>And somewhere in the deepest mires is the <strong>rainbow-mouthed</strong> — an ouphe the size of a barn, violet-scaled, its jaws leaking prismatic slaver that hardens into strange quick-stones when it strikes the mud. No one has seen it twice. Witches claim it is the first ouphe, or the last, or the same one in two moods; ouphes have no opinion on the matter, which for ouphes is unusual.</p>
 
     <h4 class="subheading">Hags &amp; Gwyllions</h4>
 
-    <div class="callout">
-      <p class="cal-head"><span class="dot"></span>Cube-table color</p>
-      <p>Sourced: hags and gwyllions steal bones and spirits (hobs bury their dead far from home to keep them away), gwyllions dance victims into endless revels, rattle open full graveyards, and bait vanity-mirror traps. The hollow-dwelling brewers, totem-keepers and scythe-fighters below are read from the art and are ours.</p>
-    </div>
+    <p>Hags and gwyllions steal what the dead leave behind. Hobs bury their kin far from home because <em>they believe the dry, open ground keeps hags from stealing the bones and gwyllions from stealing the spirits.</em>${FN('Flavor text, <em>Rugged Prairie</em>')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/hags/hag_dandelion_crone.png', 'left')}
 
-    <p>Every few miles of Shadowmoor moor, there is a <strong>hag</strong>. She is old — older than the woods around her, certainly older than the doun downwind. She lives alone in a hollow, brews in iron, and is paid by travelers who cannot afford to be haunted by what they need doing. A hag is not exactly evil. A hag is simply someone who has made her peace with being asked for the wrong thing. The dandelion-heads she collects are seed-spells: blown across a threshold, they can sour milk, call rain, or spoil a vow.</p>
+    <p>Hags are found in the far reaches of Shadowmoor.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} They rob graves and hunt: <em>Loose earth is not a burial but an appetizer.</em>${FN('Flavor text, <em>Desecrator Hag</em>')} <em>Her hunt is silent until a bone snaps or flesh tears. Her victims never know to scream.</em>${FN('Flavor text, <em>Stalker Hag</em>')}</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/hags/hag_fetish_witch.png', 'right')}
 
-    <p>Some hags keep totems — bundles of bone, tooth, rag, and nail strung on a crooked stick and hung from their hut's lintel. Every totem is a debt owed <em>to</em> her, not by her. The hag does not collect on debts directly; she lets the totem do it, in its own time. A kithkin who cheats a hag at barter will find, four nights later, their barn door will not shut. A cinder who stiffs a hag on payment will find its embers will not stay lit. The totems never lose interest.</p>
+    <p>Some hags carry bone totems, bundles of bone and tooth strung on a crooked stick.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/hags/hag_scythewielder.png', 'left')}
 
-    <p>When a hag <em>fights</em>, she does not cast spells. She swings. The scythe-bladed staves hags carry are not ceremonial; a hag will split a cinder in half with one stroke and be back at her cauldron before the embers land. Boggart warrens that stumble into a hag's hollow by accident come out one boggart lighter, at best, and frequently none. The hags of the bog-covens are the oldest fighters on the plane after the giants, and they fight without any of the giants' slowness.</p>
+    <p>Others carry a scythe-bladed staff into the bog.</p>
 
     ${ART_BLEED('art/shadowmoor/creatures/hags/gwyllion_death_dance.png', 'center 12%')}
 
-    <p>And among the hags are the <strong>gwyllions</strong>, who steal spirits and lure the unwary into revels that never end. Cube-table color, ours: we picture the oldest of them as a hag who danced once with the reaper in her own wheat-field and came back up from the dance still on her own feet — beautiful again, in a way, and terrible for it; her hair is fire-red, her skin is young, and her touch stops a heart as gently as a mother's. Kithkin mothers tell their children that a gwyllion walks the stubble-fields after harvest collecting what the scythe missed. This is not a metaphor. The kithkin mothers are, as usual, correct.</p>
+    <p>Among the hags are the <strong>gwyllions</strong>, who steal spirits. <em>When a graveyard is full, the gwyllions rattle the tombs and unleash the spirits into the sky.</em>${FN('Flavor text, <em>Beckon Apparition</em>')} Their favorite trap is the vanity mirror: <em>a bewitched piece of glass traps the looker's soul and does away with the body.</em>${FN('Flavor text, <em>Unmake</em>')} They can also be civil, after a fashion: <em>once your life and all your worldly possessions have been surrendered to her, a gwyllion can be surprisingly civilized.</em>${FN('Flavor text, <em>Nip Gwyllion</em>')} The Harvest Gwyllion <em>speaks only in vile epithets, spitting out curses and obscenities that harm others just by the hearing,</em>${FN('Flavor text, <em>Harvest Gwyllion</em>')} and her card shows her in a wheat field reaching toward a skeleton with a scythe.</p>
 
-<p class="table-color"><span>Cube-table color</span> Noggles, the donkey-eared thieves of Shadowmoor, are not otherwise covered here. The art: a violet-blue noggle hangs from a rope in a gilded archway among glowing foliage, clutching a glowing jewelled pendant. The flavor text: <em>Noggles have no concept of money, but they do have a high affinity for "shiny."</em> One way to read it is theft as delight, reached for rather than planned. Ours, not canon. <em>Noggle Robber, Lorwyn Eclipsed #237, art by Steve Ellis.</em></p>
+    <p>Noggles, the donkey-eared thieves of Shadowmoor, <em>believe that they were the first race ever to walk Shadowmoor. They don't "steal." They just take back what's rightfully theirs.</em>${FN('Flavor text, <em>Noggle Bandit</em>')} <em>Noggles have no concept of money, but they do have a high affinity for "shiny."</em>${FN('Flavor text, <em>Noggle Robber</em>')}</p>
   </div>
 </section>
 
@@ -802,7 +791,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
     <header class="part-head">
       <p class="roman">Part VI</p>
       <h2>A Schematic <em>of the Plane</em></h2>
-      <p class="kicker">Not to scale. The plane has no real cardinal directions — Lorwyn's geography is a rumor that agrees with itself only about halfway.</p>
+      <p class="kicker">Not to scale. The plane has no real cardinal directions, and Lorwyn's geography is a rumor that agrees with itself only about halfway.</p>
     </header>
 
     <div class="map-wrap">
@@ -831,7 +820,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
         <!-- title + compass row -->
         <text x="50" y="50" font-family="Cormorant Unicase" font-size="16" letter-spacing="4" fill="currentColor" opacity=".7">LORWYN</text>
-        <text x="50" y="66" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="currentColor" opacity=".55">— a schematic, not to scale —</text>
+        <text x="50" y="66" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="currentColor" opacity=".55">a schematic, not to scale</text>
 
         
 
@@ -976,8 +965,8 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
         <text x="640" y="418" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="var(--merrow-ink)" opacity=".7">(tributary)</text>
         <text x="440" y="440" font-family="Cormorant Garamond" font-style="italic" font-size="10" fill="var(--merrow-ink)" opacity=".6">oxbow</text>
 
-        <!-- edge scribble: "here be larger things" — the unknown beyond -->
-        <text x="500" y="630" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="9" fill="currentColor" opacity=".4">— the map fades at its margins; the plane does not —</text>
+        <!-- edge scribble: "here be larger things", the unknown beyond -->
+        <text x="500" y="630" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="9" fill="currentColor" opacity=".4">the map fades at its margins; the plane does not</text>
       </svg>
 
       <div class="map-legend">
@@ -1043,7 +1032,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <div class="tl-item above" style="left: 94%">
         <div class="tl-era">Era III</div>
         <div class="tl-title">Eclipsed</div>
-        <div class="tl-blurb">About forty years later: the balance frays and Lorwyn and Shadowmoor bleed into one another. A third state appears — and calcifies those who linger.</div>
+        <div class="tl-blurb">About forty years later: the balance frays and Lorwyn and Shadowmoor bleed into one another. A third state appears, and it calcifies those who linger.</div>
         <div class="tl-connector"></div>
       </div>
     </div>
@@ -1064,11 +1053,11 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_BLEED('art/lorwyn/creatures/faeries/oona/oona_clouds.png', 'center 20%')}
 
-    <p class="lede">Everything that happens in the Lorwyn cycle — Colfenor's patient scheming, Rhys's exile, Ashling's long pilgrimage, the Aurora itself — plays out on a plane that one being has been shaping for centuries — and Colfenor's scheming is aimed squarely at her. That being is ${TERM('Oona')}, Queen of the Fae, and for most of the novels neither the heroes nor the reader quite understand how much of the plane she owns.</p>
+    <p class="lede">Everything that happens in the Lorwyn cycle (Colfenor's patient scheming, Rhys's exile, Ashling's long pilgrimage, the Aurora itself) plays out on a plane that one being has shaped for millennia, and Colfenor's scheming is aimed squarely at her. That being is ${TERM('Oona')}, Queen of the Fae, and for most of the novels neither the heroes nor the reader quite understand how much of the plane she owns.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society: Oona "used the Great Aurora to perserve her memories and body between the cycles and grant herself control of the plane"')}</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/faeries/oona/oona_bloom.png', 'right', 'center 25%')}
 
-    <p>Oona is not a single body. She is a presence, worn outward through her court and her avatars; the face you see, if you ever see one, is not her, only an aspect she is wearing that afternoon. Her home, ${TERM('Glen Elendra')}, is wrapped in glamers so dense that nearly anyone who approaches simply forgets why they came. Faeries return there the way blood returns to a heart — routinely, unconsciously, and on business no outsider is allowed to understand.</p>
+    <p>Oona is a presence more than a single body, worn outward through her court and her avatars. Her home, ${TERM('Glen Elendra')}, is wrapped in glamers so dense that nearly anyone who approaches forgets why they came. Faeries return there routinely and unconsciously, on business no outsider is allowed to understand.</p>
 
     <div class="pull">
       "Dreams are fleeting. Reality even more so."
@@ -1077,27 +1066,27 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <h4 class="subheading">Dreamstuff, and why she wants it</h4>
 
-    <p>Her fae collect <strong>${TERM('Dreamstuff','dreamstuff')}</strong> — the raw material of dreams, rumors, half-thoughts, stories whispered on a pillow — from every corner of Lorwyn and route it back to Glen Elendra. Every fae in the cycle is, in some measure, a tax collector. Oona is a queen who taxes in <em>sleep</em>.</p>
+    <p>Her fae collect <strong>${TERM('Dreamstuff','dreamstuff')}</strong>, a substance distilled from the minds of sleepers, from every corner of Lorwyn and route it back to Glen Elendra, where it sustains the queen and the fae themselves.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society: faeries "distill dreams into a sparkling energy that they can carry around like a bee carries pollen. This is used to sustain and power the queen and themselves."')}</p>
 
-    <p>What Lorwyn does not realise is how much the queen has shaped the turning of the plane. The Aurora is a natural cycle — in her own words, "my formation of the natural world" — but she has stretched each day and each night to last centuries, and she has never let it change her. What she does with all that dreamstuff is not spelled out; the novel says only that she "used it however she pleased," much of it to wrap Glen Elendra in glamers.</p>
+    <p>What Lorwyn does not realise is how much the queen has shaped the turning of the plane. The Aurora is a natural cycle (in her own words, "my formation of the natural world"), but she has stretched each day and each night to last centuries, and she has never let it change her. What she does with all that dreamstuff is not spelled out; the novel says only that she "used it however she pleased," much of it to wrap Glen Elendra in glamers.</p>
 
     <h4 class="subheading">Avatars</h4>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/faeries/oko/oko_lorwyn_liege.png', 'left', 'center 8%')}
 
-    <p>When Oona wants to act in the world without being <em>in</em> the world, she grows a vessel. The vessel looks like a person. It has a face and a name and, most importantly, a will it believes is its own. Oko — now known across the Multiverse as the trickster planeswalker — was her first, made to enact her will whenever the plane turned to Shadowmoor. His Lorwyn side rebelled almost at once; he sparked, left, and Lorwyn's trouble has been leaking into other planes ever since.</p>
+    <p>When Oona wants to act in the world without being <em>in</em> the world, she grows a vessel. The vessel looks like a person. It has a face and a name and, most importantly, a will it believes is its own. Oko, now known across the Multiverse as the trickster planeswalker, was her first, made to enact her will whenever the plane turned to Shadowmoor. His Lorwyn side rebelled almost at once; he sparked, left, and Lorwyn's trouble has been leaking into other planes ever since.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/faeries/maralen/maralen_fae_ascendant.png', 'right')}
 
-    <p>${TERM('Maralen')} is the second. A hundred years before the Aurora was due, Oona felt a disaster from beyond the plane that would bring it early — and for the first time, she feared the change might touch her. So she built someone to take it for her. She chose a template: a real Mornsong elf named Maralen, maid-in-waiting to the Perfect Peradala, whose bridal party the fae swallowed on a forest road. Oona killed her and grew a copy. The copy was not supposed to remember, or to want things, or to inherit the dead elf's stubbornness. Like Oko before her, she develops exactly the will she was not given — and it is that borrowed will, with the dead elf's moonglove in its hand, that kills the queen.</p>
+    <p>${TERM('Maralen')} is the second. A hundred years before the Aurora was due, Oona felt a disaster from beyond the plane that would bring it early, and for the first time she feared the change might touch her. So she built someone to take it for her. She chose a template: a real Mornsong elf named Maralen, maid-in-waiting to the Perfect Peradala, whose bridal party the fae swallowed on a forest road. Oona killed her and grew a copy. The copy was not supposed to remember, or to want things, or to inherit the dead elf's stubbornness. Like Oko before her, she develops exactly the will she was not given, and that borrowed will, with the dead elf's moonglove in its hand, kills the queen.</p>
 
     <p>The Lorwyn novel opens on that murder. The bride's train halts at a Gilt Leaf road marker, and the maid is sent to find fresh moonglove for the marker-carving. While she is gone, vines wrap the throats of the whole Mornsong party and a false Peradala rises from the tangle. Maralen holds the vines off with the crushed flower, because they fear it, until a vine hauls her back from the river and stinging things overhead leave her bound and answering questions. Hold that image. Oona's own weapon was afraid of moonglove, and the elf who carried it did not know she still had it.</p>
 
     <h4 class="subheading">What she is, underneath</h4>
 
-    <p>Strip away the court, the glamers, the cliques, the dreamstuff, the avatars — and what is Oona? The books are careful never quite to answer. She is older than the current Aurora cycle; the Planeswalker's Guide says she has been bending the Great Aurora to her use for millennia. In the books she is the Great Mother, the Queen of the Fae, and even Maralen, made from her, never learns what Oona truly looks like. <em>The Queen Beneath</em> is our own name for her — beneath the world, beneath the dream, beneath the sentence you are currently thinking.</p>
+    <p>Strip away the court, the glamers, the cliques, the dreamstuff and the avatars, and what is Oona? The books are careful never quite to answer. She is older than the current Aurora cycle: she has been bending the Great Aurora to her use for millennia.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} In the books she is the Great Mother, the Queen of the Fae, and even Maralen, made from her, never learns what Oona truly looks like.</p>
 
-    <p>By the end of Eventide Oona's body is destroyed and Maralen sits in her chair with what was left of Oona's power inside her. But the fae of the Eclipsed age will tell you a body is not the whole of a queen. Where her flower was buried in the Creakwood, a forest of blossoming trees grew up — the Grove of the Aurora Queen — and her consciousness, the Planeswalker's Guide says plainly, remains hidden, slowly recovering strength in secret while she searches for a way back to her throne. Maralen's power grows toward the queen's a little every day, and Rhys stands beside her with a moonglove dagger for the day it grows too far.</p>
+    <p>By the end of Eventide Oona's body is destroyed and Maralen sits in her chair with what was left of Oona's power inside her. The queen is not entirely gone. Where her flower was buried in the Creakwood, a forest of blossoming trees grew up, the Grove of the Aurora Queen, and her consciousness remains hidden, slowly recovering strength in secret while she searches for a way back to her throne.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')} Maralen took the mantle of queen and bound herself to Rhys with a death pact: if there is ever a sign that Oona might return, Rhys is to kill Maralen.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Society')}</p>
 
     ${ART_BLEED('art/lorwyn/creatures/faeries/oona/oona_queen.png', 'center 15%')}
   </div>
@@ -1114,22 +1103,22 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_BLEED('art/lorwyn/places/island_twilight.png')}
 
-    <p class="lede">The novels open with Rhys, a Gilt Leaf ${TERM('Daen','daen')}, sent with his Hemlock Pack against boggarts who have gone inexplicably mad. He makes the controversial decision to hire the giant brothers Brion and Kiel as muscle, and his ${TERM('Taercenn','taercenn')} Nath is not impressed. Nath escalates to a three-pack extermination in Porringer Valley, and it goes catastrophically wrong: the packs are overrun, and Rhys, with his dying friend Gryffid in his arms, calls on Colfenor's power. The answering blast of yew magic kills the boggarts, most of the elves, and Rhys's horns. He is ${TERM('Eyeblight','eyeblight')}. Nath, marred in the same blast, will hunt him — and when Rhys kills Nath in Kinsbaile at the novel's end — snapping his neck, and exposing the glamer that had hidden the taercenn's own disfigurement — Gryffid takes up the hunt in his place.</p>
+    <p class="lede">The novels open with Rhys, a Gilt Leaf ${TERM('Daen','daen')}, sent with his Hemlock Pack against boggarts who have gone inexplicably mad. He makes the controversial decision to hire the giant brothers Brion and Kiel as muscle, and his ${TERM('Taercenn','taercenn')} Nath is not impressed. Nath escalates to a three-pack extermination in Porringer Valley, and it goes catastrophically wrong: the packs are overrun, and Rhys, with his dying friend Gryffid in his arms, calls on Colfenor's power. The answering blast of yew magic kills the boggarts, most of the elves, and Rhys's horns. He is ${TERM('Eyeblight','eyeblight')}. Nath, marred in the same blast, hunts him. When Rhys kills Nath in Kinsbaile at the novel's end, snapping his neck and exposing the glamer that had hidden the taercenn's own disfigurement, Gryffid takes up the hunt in his place.</p>
 
     ${ART_PORTRAIT('art/lorwyn/creatures/elves/rhys_the_exiled.png', 'right')}
 
-    <p>Rhys flees the Gilt Leaf toward his old mentor, the ancient yew ${TERM('Colfenor')}, who has been waiting for him. Colfenor offers cryptic counsel and a role Rhys does not yet understand in a plan decades in the making — one that ends, at the first novel's climax, with the yew burning himself alive on Ashling's fire so that a sapling carrying his memory can rise in the world to come.</p>
+    <p>Rhys flees the Gilt Leaf toward his old mentor ${TERM('Colfenor')}, the last of the yews, who has been waiting for him. Colfenor offers cryptic counsel and a role Rhys does not yet understand in a plan decades in the making. The plan ends, at the first novel's climax, with the yew burning himself alive on Ashling's fire so that a sapling carrying his memory can rise in the world to come.</p>
 
-    <p>Around Rhys's exile, the plot accretes. The flamekin pilgrim ${TERM('Ashling')} is on the Path — seeking her elemental in a years-long spiritual journey. The kithkin archer ${TERM('Brigid Baeli')}, on her cenn's orders, is shadowing Ashling — and will betray her own companions before the book is out. The merrow ${TERM('Sygg')} is ferrying everyone on the Wanderwine, keeping careful track of who owes what. And the ${TERM('Vendilion Clique')} — three faerie spies — are watching it all.</p>
+    <p>Around Rhys's exile, the plot accretes. The flamekin pilgrim ${TERM('Ashling')} is on the Path, seeking her elemental in a years-long spiritual journey. The kithkin archer ${TERM('Brigid Baeli')}, on her cenn's orders, is shadowing Ashling, and will betray her own companions before the book is out. The merrow ${TERM('Sygg')} is ferrying everyone on the Wanderwine, keeping careful track of who owes what. And the ${TERM('Vendilion Clique')}, three faerie spies, are watching it all.</p>
 
-    <p>At the centre of the web sits ${TERM('Maralen')} — a Mornsong elf who says she is cursed, knows what no elf should know, and draws the others to her. She was made, it will turn out, by Oona herself, from the body of a real Mornsong elf of that name whom the fae murdered in the novel's prologue: a vessel built a century early so that the Aurora would change the copy and not the queen. But the vessel is developing a will of her own — the dead elf's will.</p>
+    <p>At the centre of the web sits ${TERM('Maralen')}, a Mornsong elf who says she is cursed, knows what no elf should know, and draws the others to her. She was made, it will turn out, by Oona herself, from the body of a real Mornsong elf of that name whom the fae murdered in the novel's prologue: a vessel built a century early so that the Aurora would change the copy and not the queen. But the vessel is developing a will of her own, the dead elf's will.</p>
 
     <div class="pull">
-      Maralen sent Veesa, Endry, and Iliona — the Vendilion clique — on the gravest of tasks.
-      <cite>—flavor text, Maralen of the Mornsong</cite>
+      Maralen sent Veesa, Endry, and Iliona, the Vendilion clique, on the gravest of tasks.
+      <cite>Maralen of the Mornsong</cite>
     </div>
 
-    <p>At the climax of Morningtide, the Aurora arrives — a century ahead of schedule. Ashling reaches her elemental at last and merges with it. The world turns. Sun becomes moon. Summer becomes winter. Nearly every mind on the plane forgets what it was — all but Oona, her vessel, the Vendilion clique, and one kithkin clutching a bone crescent.</p>
+    <p>At the climax of Morningtide, the Aurora arrives a century ahead of schedule. Ashling reaches her elemental at last and merges with it. The world turns. Sun becomes moon. Summer becomes winter. Nearly every mind on the plane forgets what it was, all but Oona, her vessel, the Vendilion clique, and one kithkin clutching a bone crescent.</p>
   </div>
 </section>
 
@@ -1144,16 +1133,16 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_BLEED('art/shadowmoor/places/forest_twilight_sunset.png')}
 
-    <p class="lede">Shadowmoor is Lorwyn, but at the wrong end of the year. The sun never rises; the night never ends. Wild magic saturates the land and misfires constantly. The clachan becomes the ${TERM('Doun')}. The flamekin become ${TERM('Cinder','cinders')}. The kithkin's thoughtweft curdles into a shared paranoia; the elves of the ${TERM('Wilt-Leaf')} become desperate guardians of beauty rather than its enforcers — the practical difference smaller than they would like to believe.</p>
+    <p class="lede">Shadowmoor is Lorwyn, but at the wrong end of the year. The sun never rises; the night never ends. Wild magic saturates the land and misfires constantly. The clachan becomes the ${TERM('Doun')}. The flamekin become ${TERM('Cinder','cinders')}. The kithkin's thoughtweft becomes the mindweft, a shared paranoia.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Kithkin')} The elves of the ${TERM('Wilt-Leaf')} become desperate guardians of beauty rather than its enforcers, though the practical difference is smaller than they would like to believe.</p>
 
     <div class="pull">
       The Aurora had lessened the kithkins' kindness, deepened their paranoia, and dulled their sense of pain.
-      <cite>—Endure</cite>
+      <cite>Endure</cite>
     </div>
 
-    <p>Almost no one remembers Lorwyn. Almost no one remembers being anything other than what they are now. They fight as if they have always fought. The wild magic in the land is both everywhere and unreliable — anyone can draw on it, and any use risks catastrophic backlash. Scarecrows walk. The faeries alone are unchanged: they still harvest dreams for Oona, and Glen Elendra stays as lush as ever.</p>
+    <p>Almost no one remembers Lorwyn. Almost no one remembers being anything other than what they are now. They fight as if they have always fought. The wild magic in the land is both everywhere and unreliable: anyone can draw on it, and any use risks catastrophic backlash. Scarecrows walk. The faeries alone are unchanged: they still harvest dreams for Oona, and Glen Elendra stays as lush as ever.</p>
 
-    <p>Shadowmoor has no novel of its own; it is an anthology of nine stories. The longest, 'Ode to Mistmeadow Jack,' follows Brigid — the one kithkin who remembers — with Maralen, Sygg, and the Vendilion clique in the fortified ${TERM('Doun','doun')} of Mistmeadow. Rhys and Ashling do not appear in it at all. Colfenor is dead. But his plan is not.</p>
+    <p>Shadowmoor has no novel of its own; it is an anthology of nine stories. The longest, 'Ode to Mistmeadow Jack,' follows Brigid, the one kithkin who remembers, with Maralen, Sygg, and the Vendilion clique in the fortified ${TERM('Doun','doun')} of Mistmeadow. Rhys and Ashling do not appear in it at all. Colfenor is dead. But his plan is not.</p>
   </div>
 </section>
 
@@ -1168,34 +1157,34 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_BLEED('art/shadowmoor/places/graven_cairns.png')}
 
-    <p class="lede">Shadowmoor is already burning when Eventide opens, less than a year after the Aurora. ${TERM('Ashling')}, having merged with her elemental at the turning, has become something else: the Destroyer, a colossus of living fire at the head of a ${TERM('Cinder','cinder')} horde that hails her as their Extinguisher. Whole douns are gone. Brigid — the one kithkin who remembers Lorwyn — holds Mistmeadow against her. Rhys remembers nothing: he is Second Safewright Rhys of the ${TERM('Wilt-Leaf')}, an honored elf of the safeholds, until the Sapling of Colfenor and the faerie Endry find him.</p>
+    <p class="lede">Shadowmoor is already burning when Eventide opens, less than a year after the Aurora. ${TERM('Ashling')}, having merged with her elemental at the turning, has become something else: the Destroyer, a colossus of living fire at the head of a ${TERM('Cinder','cinder')} horde that hails her as their Extinguisher. Whole douns are gone. Brigid, the one kithkin who remembers Lorwyn, holds Mistmeadow against her. Rhys remembers nothing: he is Second Safewright Rhys of the ${TERM('Wilt-Leaf')}, an honored elf of the safeholds, until the Sapling of Colfenor and the faerie Endry find him.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/ashling/ashling_extinguisher.png', 'left')}
 
-    <p>${TERM('Maralen')}, meanwhile, has stopped running. She has the Vendilion Clique as her agents, the <em>Crescent of Morningtide</em> by way of Brigid, and a rebellion of fae who have turned from their queen. She carries three forms of power that were never meant to coexist in one vessel: her own nature as Oona's construct, a fragment of Ashling's elemental fire imprisoned in her body, and the Crescent's binding to the Source of the Wanderwine. She is barely holding together — and she is done hiding.</p>
+    <p>${TERM('Maralen')}, meanwhile, has stopped running. She has the Vendilion Clique as her agents, the <em>Crescent of Morningtide</em> by way of Brigid, and a rebellion of fae who have turned from their queen. She carries three forms of power that were never meant to coexist in one vessel: her own nature as Oona's construct, a fragment of Ashling's elemental fire imprisoned in her body, and the Crescent's binding to the Source of the Wanderbrine. She is barely holding together, and she is done hiding.</p>
 
     <h4 class="subheading">Cayr Ulios</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/scarecrows/reaper_king/reaper_king_a.png', 'right')}
 
-    <p>The Wilt-Leaf capital, seat of the elf king and queen. Oona's vines have laced the whole city and hung every elf in it from the rafters, dreaming — Gryffid's returning pack finds the palace vestibule full of them. Above the city Oona greets Maralen in a puppet body wearing Maralen's own face: 'It seemed only fair. As the kithkin might say: I want to give you a sporting chance.' She confirms it all. A century before the Aurora was due she felt a disaster from beyond the world; she built a vessel to take the change in her place; and she has since decided the vessel was 'an unnecessary precaution… an ambitious error.' Maralen's answer is that Oona chose the wrong template — the dead elf's strength lives on in her — and she leaves the decoy behind and flies for Glen Elendra.</p>
+    <p>The Wilt-Leaf capital, seat of the elf king and queen. Oona's vines have laced the whole city and hung every elf in it from the rafters, dreaming. Gryffid's returning pack finds the palace vestibule full of them. Above the city Oona greets Maralen in a puppet body wearing Maralen's own face: 'It seemed only fair. As the kithkin might say: I want to give you a sporting chance.' She confirms it all. A century before the Aurora was due she felt a disaster from beyond the world; she built a vessel to take the change in her place; and she has since decided the vessel was 'an unnecessary precaution… an ambitious error.' Maralen's answer is that Oona chose the wrong template, because the dead elf's strength lives on in her, and she leaves the decoy behind and flies for Glen Elendra.</p>
 
     <div class="pull">
       I am this world, my dear.
-      <cite>—Oona, to Maralen</cite>
+      <cite>Oona, to Maralen</cite>
     </div>
 
-    <p>It is in this same conversation that she explains the Aurora. It is "not my creation so much as my formation of the natural world. Night into day, day into night. I've just stretched the days—" and Maralen finishes the thought: "And the night as well." That is the whole secret of the long Lorwyn summer and the long Shadowmoor night, from the one who did it. It also explains why Maralen's closing joke, an Aurora every twelve hours, has teeth.</p>
+    <p>It is in this same conversation that she explains the Aurora. It is "not my creation so much as my formation of the natural world. Night into day, day into night. I've just stretched the days…" and Maralen finishes the thought: "And the night as well." That is the whole secret of the long Lorwyn summer and the long Shadowmoor night, from the one who did it. It also explains why Maralen's closing joke, an Aurora every twelve hours, has teeth.</p>
 
         <p>Meanwhile Gryffid, whom Rhys talked into turning back to save the city, has reached the palace. In the throne room the elf king and queen hang in the vines like the rest, but their vines keep growing upward, as if something were drawing off their light. Gryffid decides Oona is feeding on them and that the royals are all that is left. He leads a last charge, and his sword strikes home. The stored magic has nowhere to go. When the light clears there is nothing left of Gryffid or of the monarchs but ashes.</p>
 
     <p>At the Heart of Glen Elendra, Rhys, Ashling, and the Sapling make their assault. It goes badly. A vine from the Heart cuts the Sapling in two. Dying, she tells Rhys: 'Take my blood, and use it. This world must be allowed to find its own destiny without the interference of petty gods and old logs.'</p>
 
-    <p>Rhys drains the Sapling's corpse of every drop of yew poison. Ashling, no longer the Destroyer, reaches deep and joins with her elemental one last time. From opposite sides they pour killing magic into the Heart. And Maralen, carried in by the Crescent, goes inside it — and finishes Oona with the last petal of ${TERM('Moonglove','moonglove')} the murdered Maralen of the Mornsong was carrying on the day she was killed. Oona is dead. Kiel splits the corpse. Ashling's elemental departs and does not return.</p>
+    <p>Rhys drains the Sapling's corpse of every drop of yew poison. Ashling, no longer the Destroyer, reaches deep and joins with her elemental one last time. From opposite sides they pour killing magic into the Heart. And Maralen, carried in by the Crescent, goes inside it and finishes Oona with the last petal of ${TERM('Moonglove','moonglove')} the murdered Maralen of the Mornsong was carrying on the day she was killed. Oona is dead. Kiel splits the corpse. Ashling's elemental departs and does not return.</p>
 
     <p>One small betrayal sits inside that victory. As Rhys and Ashling pour their magic into the Heart, Oona calls her child Endry, the faerie who left the Clique to follow the sapling, and reminds him that he swore never to betray her. She had already reached into his mind once and made him forget it. This time he refuses: "You're not my mother. I'm the last of the groundlings now. I'm an outcast." His sisters took the other road. Veesa and Iliona stay with Maralen and her rebel fae, and Iliona still thinks of him as the traitor who left them to save a tree. The first voice he hears after Oona goes quiet is Maralen's, asking for help out of the Heart.</p>
 
-    <p>The summer world does not return. Neither does Shadowmoor hold. Glen Elendra blooms with newborn fae, and Maralen — 'I am Maralen. But what was left of Oona's power is within me' — is Queen of the Fae. She presses the last petal of moonglove into Rhys's hand: 'If I ever show signs of making day and night last for centuries at a time, you can feed it to me.' Then the horizon brightens. 'Think of it as having an Aurora every twelve hours or so.' Dawn comes to a world that is neither Lorwyn nor Shadowmoor, but something new. The Eclipsed era, nearly forty years later, finds that dawn unravelling — and Rhys still carrying the flower.</p>
+    <p>The summer world does not return. Neither does Shadowmoor hold. Glen Elendra blooms with newborn fae, and Maralen, who says 'I am Maralen. But what was left of Oona's power is within me,' is Queen of the Fae. She presses the last petal of moonglove into Rhys's hand: 'If I ever show signs of making day and night last for centuries at a time, you can feed it to me.' Then the horizon brightens. 'Think of it as having an Aurora every twelve hours or so.' Dawn comes to a world that is neither Lorwyn nor Shadowmoor, but something new. The Eclipsed era, nearly forty years later, finds that dawn unravelling, and Rhys still carrying the flower.</p>
   </div>
 </section>
 
@@ -1212,60 +1201,59 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <p class="lede">The <em>Lorwyn Eclipsed</em> era picks up years after Eventide. With the Aurora's pendulum broken, Lorwyn and Shadowmoor no longer cleanly alternate. Instead, they overlap. In some regions sun holds; in others, the moon; and in a few dangerous seams between, both hang motionless at once. These are the ${TERM('Eclipsed Realm','Eclipsed realms')}.</p>
 
-    <p>After Eventide, and before the eclipse of today, came a war. By the Planeswalker's Guide, the Phyrexian Invasion nearly broke the Lorwyn elves: the compleated ones kept their old cruelty, and the rest allied with the other peoples and made a stand at Lys Alana. Shadowmoor fought in scattered pieces, with boggart cavalry as the vanguard, and its isolationist kithkin led the last charge. The flamekin who turned inward and became rimekin, and the kithkin who cut themselves off from the thoughtweft, come out of that war.</p>
+    <p>After Eventide, and before the eclipse of today, came a war. The Phyrexian Invasion nearly broke the Lorwyn elves: the compleated ones kept their old cruelty, and the rest allied with the other peoples and made a stand at Lys Alana.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, The Phyrexian Invasion')} Shadowmoor fought in scattered pieces, with boggart cavalry as the vanguard, and its isolationist kithkin led the last charge. The flamekin who turned inward and became rimekin, and the kithkin who cut themselves off from the thoughtweft, come out of that war.</p>
 
-    <p>Linger too long in the eclipse and a person's two selves begin to merge. Everyone born on the plane has, in truth, lived twice — a sun-life in Lorwyn and a moon-life in Shadowmoor, two forms of one self, each remembering the other only murkily. The Aurora normally lets only one of those lives be "real" at a time. In the eclipsed seams, a person keeps the memories of the life outside and slowly regains the other's, and the two try to merge. The two selves cannot fully resolve, and the strain shows. The Planeswalker's Guide calls the afflicted ${TERM('Calciform','calciforms')}, and Star-Crossed names the process calcification: they lose their desires and emotions and end as husks that cease movement entirely.</p>
+    <p>Linger too long in the eclipse and a person's two selves begin to merge. Everyone born on the plane has, in truth, lived twice: a sun-life in Lorwyn and a moon-life in Shadowmoor, two forms of one self, each remembering the other only murkily. The Aurora normally lets only one of those lives be "real" at a time. In the eclipsed seams, a person keeps the memories of the life outside and slowly regains the other's, and the two try to merge. The two selves cannot fully resolve, and the strain shows. The afflicted are called ${TERM('Calciform','calciforms')},${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Calciforms')} and the story Star-Crossed names the process calcification: they lose their desires and emotions and end as husks that cease movement entirely.</p>
 
     <h4 class="subheading">Reliquaries, and the one cure</h4>
 
     <p>Star-Crossed shows what calcification does. Rhain, an elf of Lorwyn, was caught in an eclipsed realm when an aurora shifted. Three calcified lines scored his face, and stone veins crept toward his heart for years. The only cure was ${TERM('Dawnglow','dawnglove')}, which is sacred in Shadowmoor. Cerys, a Shadowmoor elf who had been writing to him, fed it to him, crossing into Lorwyn with a reliquary that was failing. Her own calcification came fast, and the two ended as stone together at the border.</p>
 
-    <p>The Planeswalker's Guide names the other defense. A ${TERM('Reliquary','reliquary')} is a rare, sacred lantern or pendant made from a piece of Eirdu or Isilu, and it lets its bearer keep body and memories across a crossing. A Reliquary of Dawn (Eirdu) resists Eventide; a Reliquary of Twilight (Isilu) resists Morningtide; carrying both is said to let you traverse eclipsed realms unchanged. Note the words: here Eventide and Morningtide are plain terms for the crossings themselves, Lorwyn to Shadowmoor and Shadowmoor to Lorwyn. In Episode 6 the elves march with torches topped in reliquaries that seem to cage sunlight.</p>
+    <p>The other defense is the ${TERM('Reliquary','reliquary')}, a rare, sacred lantern or pendant made from a piece of Eirdu or Isilu, which lets its bearer keep body and memories across a crossing.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Reliquaries')} A Reliquary of Dawn (Eirdu) resists Eventide; a Reliquary of Twilight (Isilu) resists Morningtide; carrying both is said to let you traverse eclipsed realms unchanged. Here Eventide and Morningtide are plain terms for the crossings themselves, Lorwyn to Shadowmoor and Shadowmoor to Lorwyn. In Episode 6 the elves march with torches topped in reliquaries that seem to cage sunlight.</p>
 
     <h4 class="subheading">The twin worldsouls</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/eclipsed/isilu_moon_worldsoul_crop.png', 'left')}
 
-    <p>The Aurora used to hand off sun and moon cleanly, once a phase. Broken, the handoff is now carried — physically — by two winged, six-legged worldsouls that step out of the plane's oldest places. <strong>${TERM('Isilu')}</strong> carries the moon on its head, and its wings are fused behind it into a long dragging tail (ours: and the furrows fill afterward with moonflowers). Where it walks, the frost sets; the bog firms; the fae grow still and attentive. It is not cruel, and it is not often awake — Isilu is supposed to be sleeping through most of the turning. It is simply the shape Shadowmoor needs in order to keep being Shadowmoor for one more hour.</p>
+    <p>The Aurora used to hand off sun and moon cleanly, once a phase. Broken, the handoff is now carried physically by two winged, six-legged worldsouls that step out of the plane's oldest places. <strong>${TERM('Isilu')}</strong> carries the moon on its head, and its wings are fused behind it into a long dragging tail. Where it walks, Shadowmoor's night spreads. Isilu is supposed to be sleeping through most of the turning; it is the shape Shadowmoor takes to keep being Shadowmoor.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/eclipsed/eirdu_sun_worldsoul_crop.png', 'right')}
 
-    <p><strong>${TERM('Eirdu')}</strong> carries the sun above its head and drags a long thorny tail behind it. It is red and white, with a gold sun above its head, and the color of a hearth at the exact moment it is about to fail, and the sun it bears is a lamp not much bigger than it is and not much less tired. Where it walks, the grass greens again; the frost gives up; the kithkin lift their heads. It is also not cruel. It is simply what Lorwyn needs in order to keep being Lorwyn for one more hour.</p>
+    <p><strong>${TERM('Eirdu')}</strong> carries the sun above its head and drags a long thorny tail behind it. Where it walks, Lorwyn's day spreads. It is the counterpart of Isilu, the shape Lorwyn takes to keep being Lorwyn.</p>
 
     ${ART_BLEED('art/shadowmoor/creatures/eclipsed/eirdu_isilu_conjunction.png')}
 
-    <p>And once a Pendulum Year, at our table, they meet. The two worldsouls cross in a menhir-ringed meadow that nobody alive remembers naming. Sun and moon hang in the sky together for as long as the crossing takes — a minute, a season, it depends on who is watching. This is the heart of the <em>eclipse proper</em>: not a place, not a time, but an encounter.</p>
+    <p>In the main story the two worldsouls meet once, on a battlefield (Episode 7). They circle and play-fight, Eirdu nuzzles Isilu, and Isilu heads home. Sun and moon share the sky while they are together, as they do in the eclipsed realms.</p>
 
-    <p class="table-color"><span>Cube-table color</span> The crossing in a menhir-ringed meadow once a Pendulum Year is ours. In the main story they meet once, on a battlefield (Episode 7): they circle and play-fight, Eirdu nuzzles Isilu, and Isilu heads home.</p>
 
     <h4 class="subheading">Those who worship them</h4>
 
-    <p>The worldsouls are indifferent, but plenty of people are not. The Planeswalker's Guide says many have taken to worshiping Eirdu and Isilu as deities. Eirdu's worshipers want the whole plane turned into Lorwyn. They wear armor with sunburst motifs and wings, and on cold days they hold the Festival of Idyllglare: a pyre at the center of an ancient dolmen, fed with crops and heirlooms while an Eirdu costume is paraded around it atop an elemental. Isilu's adherents want Shadowmoor everywhere. They wear moon-marked armor and clouded headwear, and keep vigils for their dead beneath the great stone structures. Every people holds those burial grounds sacred, and no violence is done there.</p>
+    <p>The worldsouls are indifferent, but plenty of people are not. Many have taken to worshiping Eirdu and Isilu as deities.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Worship of the Worldsouls')} Eirdu's worshipers want the whole plane turned into Lorwyn. They wear armor with sunburst motifs and wings, and on cold days they hold the Festival of Idyllglare: a pyre at the center of an ancient dolmen, fed with crops and heirlooms while an Eirdu costume is paraded around it atop an elemental. Isilu's adherents want Shadowmoor everywhere. They wear moon-marked armor and clouded headwear, and keep vigils for their dead beneath the great stone structures. Every people holds those burial grounds sacred, and no violence is done there.</p>
 
     <h4 class="subheading">Firdochs</h4>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/eclipsed/firdoch_moon_forge.png', 'left')}
 
-    <p>A ${TERM('Firdoch','firdoch')} is a stone creature of the kind that began wandering the land once Eirdu and Isilu emerged. They serve the two worldsouls in ways nobody has explained, carving paths and managing the boundaries between Lorwyn and Shadowmoor through elaborate wrestling. Card flavor gives the moment of waking: as Isilu drifts past in a swirl of shadow and moonlight, the strange, half-buried stones begin to wake. (Cube-table color, ours: we picture them as standing stones with faces, forging the seam between day and night.)</p>
+    <p>A ${TERM('Firdoch','firdoch')} is a stone creature of the kind that began wandering the land once Eirdu and Isilu emerged. They serve the two worldsouls in ways nobody has explained, carving paths and managing the boundaries between Lorwyn and Shadowmoor through elaborate wrestling. Card flavor gives the moment of waking: as Isilu drifts past in a swirl of shadow and moonlight, the strange, half-buried stones begin to wake.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/ashling/ashling_rekindled.png', 'left')}
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/ashling/ashling_rimebound.png', 'right')}
 
-    <p>And Ashling returns — but not the way anyone had feared.</p>
+    <p>And Ashling returns, though not the way anyone had feared.</p>
 
-    <p>For years after Eventide she is nowhere. The fire that consumed her as <strong>The Extinguisher</strong> had to exhaust itself somewhere, and when it did she was left in the wreckage of everything she had done as its host. Her actions under that name had been, in her own telling, heinous. The stories of the years afterward are sparse and second-hand: anguish over what her body had been used for — not for a few months, but for years, refusing comfort, refusing followers, refusing the name. What is actually recorded of her is a single line: at the start of the Pendulum Year, she departed the Blessed Nation.</p>
+    <p>Ashling was a key figure in the defeat of Oona, but her heinous actions as <strong>The Extinguisher</strong> caused her great anguish and suffering.${FN('The Legends of Lorwyn Eclipsed, Ashling')} At the start of the Pendulum Year, she departed the Blessed Nation.</p>
 
     <p>At the beginning of the ${TERM('Pendulum Year')} she departs the Blessed Nation in search of some way to reconcile her two selves and perhaps discover the fourth path, the stage beyond red, yellow and white flame that flamekin once only rumored. She travels to the <strong>Primal Beyond</strong>, the wild country beyond the old elf dominion, as a pilgrim yet again, seeking out an elemental force that might illuminate the truth. When she returns she has an answer.</p>
 
-    <p>The duality of the plane, she now understands, is not a contradiction to be resolved or a force to be resisted. It is a revelation: every being contains multitudes, and the clash of light and shadow — of the dancer and the reckoner — is the slow way a self arrives at deeper understanding. She has stopped trying to choose. Her form flickers between night and day with the plane, but her memory does not: "My memory is as unbroken as yours," she tells Maralen, and she is fluent now in both faces.</p>
+    <p>She has come to realize that the duality of the plane is something greater than a force to be resisted: a revelation that every being contains multitudes, and that the clash of light and shadow is the slow way a self arrives at deeper understanding.${FN('The Legends of Lorwyn Eclipsed, Ashling')} She has stopped trying to choose. Her form flickers between night and day with the plane, but her memory does not: "My memory is as unbroken as yours," she tells Maralen, and she is fluent now in both faces.</p>
 
-    <p>In sun she is <strong>Ashling, Rekindled</strong>: a return to the pilgrim and dancer she had been before any of this. Warm gold flame at her crown, ceremonial robes, fluent motion — running the length of the Wanderwine and back, carrying stories and secrets to the mountain (ours: trailing sparks that do no harm). The Rekindled is not The Extinguisher returning; in our reading it is the <em>original</em> flamekin, remembered and chosen again, with everything she now knows about where unexamined fire can go.</p>
+    <p>In sun she is <strong>Ashling, Rekindled</strong>, the pilgrim and dancer she had been before the Extinguisher.</p>
 
-    <p>In shadow she goes cold, and she has her own word for it. Stepping into Shadowmoor her flame turns blue and she says it plainly: <em>"By night, I'm what we call 'rimekin.'"</em> It is the same person with her conscience on the outside. This is not the nihilism of The Extinguisher, and it is not a return to the cinder horde — she has no interest in burning the world. The cold face is what her guilt looks like when it has to stand up and walk around. She goes where she thinks a reckoning is owed, and she pays it.</p>
+    <p>In shadow she goes cold, and she has her own word for it. Stepping into Shadowmoor her flame turns blue and she says it plainly: <em>"By night, I'm what we call 'rimekin.'"</em></p>
 
-    <p>The Path of Flame ended at a blue flame that consumed anyone who came near it, and one way to read that old prophecy is that the blue stage and the cold new word name the same thing: ${TERM('Rimekin','rimekin')} as the fourth path, flamekin who have turned their heat inward and burn blue-white and slow. The Planeswalker's Guide records that many flamekin of the modern era assume exactly this — that rimekin are the formerly unknown fourth path — though the old texts never said so. What is not in dispute is that the faction became visible. After Eventide, the <strong>Phyrexian Invasion</strong> made it permanent for many: flamekin whose emotions had grown too hot could not contain their flames, so they turned inward, went cold, and did not turn back. In our telling, a rimekin's scars are not on the skin. They're in the pauses before the rimekin speaks. Ashling reached the cold early (ours: and by choice) — but her passage through it gave the others a figure to study, and her Rekindled face is the proof most of them quietly hold onto: that the cold, in time and with honest work, does not have to be the last word.</p>
+    <p>The Path of Flame ended at a blue flame that consumed anyone who came near it. Many flamekin of the modern era assume that ${TERM('Rimekin','rimekin')} are the formerly unknown fourth path, though the old texts never said so.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Rimekin and Cinders')} The <strong>Phyrexian Invasion</strong> made the faction permanent for many: flamekin whose emotions had grown too hot to contain their flames turned inward, went cold, and did not turn back.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Rimekin and Cinders')}</p>
 
-    <p>In the Eclipsed era she runs the length of the Wanderwine and back again, carrying stories and secrets to the mountain, and she is glad to help strangers find their way. She fights when she has to. (Cube-table color, ours: she carries the memory of the Extinguisher the way other people carry a scar, and dances anyway.)</p>
+    <p>In the Eclipsed era she runs the length of the Wanderwine and back again, carrying stories and secrets to the mountain, and she is glad to help strangers find their way. She fights when she has to.</p>
 
     <h4 class="subheading">The Eclipsed story, briefly</h4>
 
@@ -1273,7 +1261,6 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <p>The faerie is Oko, Maralen's older brother and Oona's first avatar. He took Maralen for Oona reborn, tormented her, and brought outsiders to sow chaos. Rhys, sure that Oona is returning, wounds Maralen with moonglove; Kirol, Sanar and Lluwen take the dawnglow back from Morcant, and Oko uses it to heal her. Eirdu arrives and the two worldsouls wrestle without harm, Isilu heads home, Rhys's pact lapses and he dissolves into petals, and the visitors go back through an Omenpath, with Lluwen.</p>
 
-    <p class="table-color"><span>Cube-table color</span> The students appear here only as the people who fall into the plot. Ours: the cube leaves out the four students, so none of them has a card.</p>
 
     <h4 class="subheading">Where the old heroes are now</h4>
     <div class="now-grid">
@@ -1290,12 +1277,12 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <article class="now-card">
         <h4>Ashling, Rekindled</h4>
         <p class="now-role">Flamekin · Dancer · Rimekin by night</p>
-        <p>Back from a pilgrimage into the Primal Beyond. Wanders the Wanderwine corridor carrying stories, at peace with the plane's duality. The Extinguisher is laid down. In sun, a joyful pilgrim; by night, rimekin — the same person gone blue and cold.</p>
+        <p>Back from a pilgrimage into the Primal Beyond. Wanders the Wanderwine corridor carrying stories, at peace with the plane's duality. The Extinguisher is laid down. In sun, a joyful pilgrim; by night, rimekin, the same person gone blue and cold.</p>
       </article>
       <article class="now-card">
         <h4>Brigid</h4>
         <p class="now-role">Goldmeadow · Watch-Trainer</p>
-        <p>Trains the city watch in Goldmeadow and lives without the yoke of the elves. Gruff to strangers, close to those she trusts. Her Shadowmoor self closes the village to outsiders — but never raises a hand — and wistfully remembers the pirate years under Sygg.</p>
+        <p>Trains the city watch in Goldmeadow and lives without the yoke of the elves. Gruff to strangers, close to those she trusts. Her Shadowmoor self closes the village to outsiders, but never raises a hand, and wistfully remembers the pirate years under Sygg.</p>
       </article>
       <article class="now-card">
         <h4>Sygg, Schoolmaster</h4>
@@ -1305,17 +1292,17 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <article class="now-card">
         <h4>Auntie Grub</h4>
         <p class="now-role">Boggart Apothecary · Frog Familiar Smlurf</p>
-        <p>Survived Oona's age, the elf culls, and the Phyrexian Invasion. Her parables now power boggart ritual. Her Shadowmoor self isolates and hoards her knowledge, and her potions turn chaotic — more potent, far more deadly.</p>
+        <p>Survived Oona's age, the elf culls, and the Phyrexian Invasion. Her parables now power boggart ritual. Her Shadowmoor self isolates and hoards her knowledge, and her potions turn chaotic, more potent and far more deadly.</p>
       </article>
       <article class="now-card">
         <h4>Oko</h4>
         <p class="now-role">Oona's First Avatar · Planeswalker</p>
-        <p>Oona's first avatar, made before Maralen — and an abysmal failure. Rebelled, sparked, and has been the Multiverse's most notorious trickster ever since. His Shadowmoor self is calmer, quieter, and feeling responsible for the direction Lorwyn-Shadowmoor has taken in his absence.</p>
+        <p>Oona's first avatar, made before Maralen, and an abysmal failure. Rebelled, sparked, and has been the Multiverse's most notorious trickster ever since. His Shadowmoor self is calmer, quieter, and feeling responsible for the direction Lorwyn-Shadowmoor has taken in his absence.</p>
       </article>
       <article class="now-card">
         <h4>Eirdu &amp; Isilu</h4>
         <p class="now-role">Twin Worldsouls · Stewards of Balance</p>
-        <p>Emerged after Oona fell — though many suspect they were always here, merely returned from the Primal Beyond. While one sleeps, the other walks, spreading its domain. Unknowable to ordinary folk and heedless of ordinary lives; they seek only balance.</p>
+        <p>Emerged after Oona fell, though many suspect they were always here, merely returned from the Primal Beyond. While one sleeps, the other walks, spreading its domain. Unknowable to ordinary folk and heedless of ordinary lives; they seek only balance.</p>
       </article>
     </div>
 
@@ -1324,7 +1311,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <article class="now-card">
         <h4>High Perfect Morcant</h4>
         <p class="now-role">Lys Alana · Tyrant</p>
-        <p>De facto ruler of the elves, carrying the full weight of her people's fall. Harbours a covert ambition to yoke Lorwyn under elvish rule again. Her methods — bribery, assassination, misdirection — bear little fruit, and her circle grows smaller every year. When outworlders arrive, she smells leverage.</p>
+        <p>De facto ruler of the elves, carrying the full weight of her people's fall. Harbours a covert ambition to yoke Lorwyn under elvish rule again. Her methods of bribery, assassination and misdirection bear little fruit, and her circle grows smaller every year. When outworlders arrive, she smells leverage.</p>
       </article>
       <article class="now-card">
         <h4>Trystan</h4>
@@ -1339,7 +1326,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <article class="now-card">
         <h4>Bre of Clan Stoutarm</h4>
         <p class="now-role">Brion's Daughter · Herder</p>
-        <p>Slow to anger, at home in the pastures with her sheep. At peace with every people on the plane — except the elves, who killed her father. When she meets one, she throws them. Far.</p>
+        <p>Slow to anger, at home in the pastures with her sheep. At peace with every people on the plane except the elves, who killed her father. When she meets one, she throws them. Far.</p>
       </article>
       <article class="now-card">
         <h4>Auntie Ool</h4>
@@ -1349,7 +1336,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <article class="now-card">
         <h4>Doran, Silent Wanderer</h4>
         <p class="now-role">Shadowmoor Treefolk · Burdened Sage</p>
-        <p>In Lorwyn he was a wizened scholar who collected magical knowledge across the plane. His Shadowmoor self is its twisted reflection — voiceless, cursed, wandering the dark woods where no one dares approach him. He is afraid to step back into the light for fear his hoarded memories will not survive the crossing.</p>
+        <p>In Lorwyn he was a wizened scholar who collected magical knowledge across the plane. His Shadowmoor self is its twisted reflection: voiceless, cursed, wandering the dark woods where no one dares approach him. He is afraid to step back into the light for fear his hoarded memories will not survive the crossing.</p>
       </article>
       <article class="now-card">
         <h4>Ferrafor, Last Yew</h4>
@@ -1372,9 +1359,9 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <p><em>Much Ado About Thieving</em> is Auntie Grub telling a tale, not a heist of her own. Four young boggarts (Flib, Lugg, Ygril and Naance) rob the dolmen lair of the foul-tempered giant Boeb of Boldwyr, because the border has swallowed a gentler giant's lair. Ygril drinks a stolen potion and swells to giant size, an eagle named Marrja blinds Boeb, and the survivors go home with the loot.</p>
 
-    <p><em>Three Dreams, Three Truths</em> follows three treefolk (the rowan Erewaker, the ash Morecote and the elder Sigric) carrying a yew sapling to a Shadowmoor grove where dawnglove grows, to attempt a new Rising. Faeries who name themselves the Deffroad Clique goad Morecote into killing one of them, poison Sigric, and turn the ritual to their own ends. It resembles Ferrafor's origin on her card (ours: the story never names her, and there all three treefolk die rather than one ritualist).</p>
+    <p><em>Three Dreams, Three Truths</em> follows three treefolk (the rowan Erewaker, the ash Morecote and the elder Sigric) carrying a yew sapling to a Shadowmoor grove where dawnglove grows, to attempt a new Rising. Faeries who name themselves the Deffroad Clique goad Morecote into killing one of them, poison Sigric, and turn the ritual to their own ends. It resembles Ferrafor's origin on her card, though the story never names her and there all three treefolk die rather than one ritualist.</p>
 
-    <p>One more faerie fact from the Guide: many Lorwyn faeries worship Queen Oura, who proclaimed herself queen by mimicking Oona. Maralen leaves the upstart alone, lest she become more like Oona herself.</p>
+    <p>Many Lorwyn faeries worship Queen Oura, who proclaimed herself queen by mimicking Oona.${FN('Planeswalker\'s Guide to Lorwyn Eclipsed, Faeries')} Maralen leaves the upstart alone, lest she become more like Oona herself.</p>
   </div>
 </section>
 
@@ -1389,7 +1376,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <div class="callout">
       <p class="cal-head"><span class="dot"></span>A note on the cube</p>
-      <p>This cube is a love letter to the block many consider Magic's most beloved limited environment — and a welcome-back party for a plane we hadn't seen in nearly twenty years. <em>Eclipsed</em> was a joy to open, but it committed to only five of the block's archetypes; iconic tribes like Faeries were left on the sidelines. This 360 restores all eight tribes and nearly every viable color-pair archetype (only black-white sits out; its Lorwyn-era identity never quite coalesced), pulling from <em>Lorwyn</em>, <em>Morningtide</em>, <em>Shadowmoor</em>, <em>Eventide</em>, and <em>Eclipsed</em> so every pairing has a lane to draft and a distinct game plan to win with.</p>
+      <p>This cube is a love letter to the block many consider Magic's most beloved limited environment, and a welcome-back party for a plane that had gone unvisited for nearly twenty years. <em>Eclipsed</em> was a joy to open, but it committed to only five of the block's archetypes; iconic tribes like Faeries were left on the sidelines. This 360 restores all eight tribes and nearly every viable color-pair archetype (only black-white sits out; its Lorwyn-era identity never quite coalesced), pulling from <em>Lorwyn</em>, <em>Morningtide</em>, <em>Shadowmoor</em>, <em>Eventide</em>, and <em>Eclipsed</em> so every pairing has a lane to draft and a distinct game plan to win with.</p>
     </div>
 
     <div class="archetype-grid">
@@ -1402,8 +1389,8 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <article class="arch-card tribe merrow">
         <div class="arch-head"><span class="arch-tribe">Merrow</span><span class="arch-color-id">W / U</span></div>
         <p class="arch-archetype">Tap-matters + islandwalk</p>
-        <p>Merrow thrive on tap-and-untap. Lock down opposing creatures to slip through for damage, and squeeze extra value from tapping your own creatures as well — life gain, card selection, trigger chains. Islandwalk gives the tribe natural reach against any deck on blue sources.</p>
-        <p class="arch-tip">Watch for: opponents who don't care about creature combat — the engine needs targets to tap.</p>
+        <p>Merrow thrive on tap-and-untap. Lock down opposing creatures to slip through for damage, and squeeze extra value from tapping your own creatures as well: life gain, card selection, trigger chains. Islandwalk gives the tribe natural reach against any deck on blue sources.</p>
+        <p class="arch-tip">Watch for: opponents who don't care about creature combat, since the engine needs targets to tap.</p>
       </article>
       <article class="arch-card tribe faerie">
         <div class="arch-head"><span class="arch-tribe">Faeries</span><span class="arch-color-id">U / B</span></div>
@@ -1419,14 +1406,14 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       </article>
       <article class="arch-card tribe boggart">
         <div class="arch-head"><span class="arch-tribe">Boggarts</span><span class="arch-color-id">B / R</span></div>
-        <p class="arch-archetype">Recursive attrition <em>— not aggro</em></p>
+        <p class="arch-archetype">Recursive attrition, <em>not aggro</em></p>
         <p>The common trap: Boggarts <em>look</em> like a red-deck swarm, but this archetype grinds. Sacrifice creatures for value, bring them back from the graveyard, and trade one-for-one until their hand is empty and yours still isn't. You win on resources, not on the clock.</p>
-        <p class="arch-tip">Watch for: lifegain and exile effects. Drawing pure haste-lord cards? Wrong deck — reroute.</p>
+        <p class="arch-tip">Watch for: lifegain and exile effects. Drawing pure haste-lord cards? Wrong deck, so reroute.</p>
       </article>
       <article class="arch-card tribe flamekin">
         <div class="arch-head"><span class="arch-tribe">Flamekin / Cinders / Rimekin</span><span class="arch-color-id">U / R</span></div>
         <p class="arch-archetype">Evoke tempo, burn, and combos</p>
-        <p>The Elemental-people tribe has changed colors across the block — Flamekin were mono-red in Lorwyn, Cinders turned BR in Shadowmoor, and the Rimekin of <em>Eclipsed</em> settled into UR — but the UR shell is where the archetype cashes in. Cheap mana-fixing enables big evoke plays, and cost reducers let you cheat fatties onto the table ahead of curve.</p>
+        <p>The Elemental-people tribe has changed colors across the block: Flamekin were mono-red in Lorwyn, Cinders turned BR in Shadowmoor, and the Rimekin of <em>Eclipsed</em> settled into UR, but the UR shell is where the archetype cashes in. Cheap mana-fixing enables big evoke plays, and cost reducers let you cheat fatties onto the table ahead of curve.</p>
         <p class="arch-tip">Watch for: graveyard hate (shuts evoke loops) and 4+ toughness walls on the ground.</p>
       </article>
       <article class="arch-card tribe flamekin">
@@ -1451,7 +1438,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     <div class="callout">
       <p class="cal-head"><span class="dot"></span>General advice</p>
-      <p><strong>New to the cube?</strong> Pick a tribe you like and commit early. Hybrid mana lets you drift colors later, but the payoffs demand a critical mass of the right type line. <strong>Read signals</strong>: a late tribal lord or archetype engine means the lane is open. <strong>Changelings are glue</strong> — they count as every tribe, filling your ranks to cash in on tribal payoffs.</p>
+      <p><strong>New to the cube?</strong> Pick a tribe you like and commit early. Hybrid mana lets you drift colors later, but the payoffs demand a critical mass of the right type line. <strong>Read signals</strong>: a late tribal lord or archetype engine means the lane is open. <strong>Changelings are glue</strong>: they count as every tribe, filling your ranks to cash in on tribal payoffs.</p>
     </div>
   </div>
 </section>
@@ -1466,7 +1453,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
     </header>
 
     <div class="cube-controls">
-      <input type="search" id="cube-search" class="cube-search" placeholder="Search — a card name, a word in a type line…" aria-label="Search cube" />
+      <input type="search" id="cube-search" class="cube-search" placeholder="Search a card name or a word in a type line…" aria-label="Search cube" />
       <div id="cube-chips" class="cube-chips" role="toolbar" aria-label="Filter by tribe"></div>
       <p id="cube-totals" class="cube-totals"></p>
     </div>
@@ -1484,7 +1471,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <p class="kicker">Anything you saw marked <span class="term" data-term="Aurora">like this</span> earlier is defined below, and will fire a tooltip when hovered.</p>
     </header>
 
-    <input type="search" id="gloss-search" class="gloss-search" placeholder="Search glossary — try 'Aurora', 'Maralen', 'doun'…" aria-label="Search glossary" />
+    <input type="search" id="gloss-search" class="gloss-search" placeholder="Search the glossary: try 'Aurora', 'Maralen', 'doun'…" aria-label="Search glossary" />
 
     <div id="gloss-grid" class="gloss-grid"></div>
   </div>

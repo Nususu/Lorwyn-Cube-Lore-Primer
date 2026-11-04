@@ -1439,3 +1439,14 @@ h4.subheading {
 
 /* A callout that follows a floated portrait sits beside it instead of running under it */
 .portrait + .table-color { overflow: hidden; }
+
+/* Footnotes */
+sup.fn { line-height: 0; }
+sup.fn a { color: var(--accent); text-decoration: none; font-size: .72em; font-family: var(--mono); padding: 0 1px; }
+sup.fn a:hover { text-decoration: underline; }
+.notes-wrap { margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.notes-head { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft, var(--ink)); opacity: .7; margin: 0 0 8px; }
+ol.notes { margin: 0; padding-left: 22px; font-size: 14px; line-height: 1.5; opacity: .85; }
+ol.notes li { margin: 0 0 4px; }
+
+.glance-card .gc-tagline cite { display: block; margin-top: 6px; font-size: .78em; font-style: normal; opacity: .7; letter-spacing: .02em; }

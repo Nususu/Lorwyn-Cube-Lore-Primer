@@ -3,6 +3,31 @@
 // ============================================================
 function initPrimer() {
 
+  // ---- FOOTNOTES ----
+  // Each ${FN('...')} marker becomes a numbered link; the notes are listed at the end of its part.
+  document.querySelectorAll("section.sect").forEach((sect, si) => {
+    const marks = sect.querySelectorAll("sup.fn");
+    if (!marks.length) return;
+    const list = document.createElement("ol");
+    list.className = "notes";
+    marks.forEach((m, i) => {
+      const n = i + 1;
+      const id = `fn-${si}-${n}`;
+      const note = m.querySelector("span[hidden]");
+      const li = document.createElement("li");
+      li.id = id;
+      li.innerHTML = note ? note.innerHTML : "";
+      list.appendChild(li);
+      m.innerHTML = `<a href="#${id}" aria-label="Note ${n}">${n}</a>`;
+    });
+    const inner = sect.querySelector(".sect-inner") || sect;
+    const wrap = document.createElement("div");
+    wrap.className = "notes-wrap";
+    wrap.innerHTML = '<p class="notes-head">Notes</p>';
+    wrap.appendChild(list);
+    inner.appendChild(wrap);
+  });
+
   // ---- INTERACTIVE GLOSSARY ----
   const tip = document.getElementById("gloss-tip");
   const gloss = (window.GLOSSARY || []).reduce((m, g) => {
