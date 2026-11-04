@@ -710,7 +710,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/scarecrows/scarecrow_tattered_king.png', 'right')}
 
-    <p>Very little is certain about Shadowmoor's scarecrows, and this is itself the most interesting thing about them. They are animated. They are stitched together from straw, elfskin, fence-nails, scavenged parts of whatever was in the field when the Aurora came down. They <em>walk</em>. Kithkin make them and kithkin wake them, and what comes up out of the straw is never quite what the doun-wright had in mind: a scarecrow is a parody of its builder's intent, carrying out the instruction and mocking it in the same motion.</p>
+    <p>Very little is certain about Shadowmoor's scarecrows, and this is itself the most interesting thing about them. They are animated. They are kithkin constructs, typically made from the wood of dead treefolk, per the Planeswalker's Guide. In the art they read as straw, sticks, hooks and scrap lashed together, whatever was lying in the field when the Aurora came down. (The look is ours; the wood is sourced.) They <em>walk</em>. Kithkin make them and kithkin wake them, and what comes up out of the lashed wood and straw is never quite what the doun-wright had in mind: a scarecrow is a parody of its builder's intent, carrying out the instruction and mocking it in the same motion.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/scarecrows/scarecrow_antlered_reaper.png', 'left')}
 
@@ -1043,7 +1043,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
       <div class="tl-item above" style="left: 94%">
         <div class="tl-era">Era III</div>
         <div class="tl-title">Eclipsed</div>
-        <div class="tl-blurb">Nearly forty years later: the balance frays and Lorwyn and Shadowmoor bleed into one another. A third state appears — and calcifies those who linger.</div>
+        <div class="tl-blurb">About forty years later: the balance frays and Lorwyn and Shadowmoor bleed into one another. A third state appears — and calcifies those who linger.</div>
         <div class="tl-connector"></div>
       </div>
     </div>
@@ -1168,7 +1168,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
 
     ${ART_BLEED('art/shadowmoor/places/graven_cairns.png')}
 
-    <p class="lede">Shadowmoor is already burning when Eventide opens, less than a year after the Aurora. ${TERM('Ashling')}, having merged with her elemental at the turning, has become something else: the Destroyer, a colossus of living fire at the head of a ${TERM('Cinder','cinder')} horde that hails her as their Extinguisher. Whole douns are gone. Brigid — the one kithkin who remembers Lorwyn — holds Mistmeadow against her. Rhys remembers nothing: he is Second Safewright Rhys of the ${TERM('Wilt-Leaf')}, an honored elf of the safeholds, until the Sapling of Colfenor and the Vendilion Clique find him.</p>
+    <p class="lede">Shadowmoor is already burning when Eventide opens, less than a year after the Aurora. ${TERM('Ashling')}, having merged with her elemental at the turning, has become something else: the Destroyer, a colossus of living fire at the head of a ${TERM('Cinder','cinder')} horde that hails her as their Extinguisher. Whole douns are gone. Brigid — the one kithkin who remembers Lorwyn — holds Mistmeadow against her. Rhys remembers nothing: he is Second Safewright Rhys of the ${TERM('Wilt-Leaf')}, an honored elf of the safeholds, until the Sapling of Colfenor and the faerie Endry find him.</p>
 
     ${ART_PORTRAIT('art/shadowmoor/creatures/flamekin/ashling/ashling_extinguisher.png', 'left')}
 
@@ -1205,7 +1205,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
     <header class="part-head">
       <p class="roman">Part XII</p>
       <h2>Lorwyn <em>Eclipsed</em></h2>
-      <p class="kicker">Nearly forty years later. Two realms bleed into each other. A third emerges, and slowly turns those who stay in it to husks.</p>
+      <p class="kicker">About forty years later. Two realms bleed into each other. A third emerges, and slowly turns those who stay in it to husks.</p>
     </header>
 
     ${ART_BLEED('art/eclipsed/eclipsed_realms.png')}
