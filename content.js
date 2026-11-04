@@ -931,7 +931,7 @@ ${ART_PORTRAIT('art/lorwyn/creatures/giants/giant_hillcomber_fossil.jpg', 'left'
         <g opacity=".9">
           <path d="M 200 310 Q 250 305 280 340 Q 270 380 220 390 Q 180 380 190 340 Z"
                 fill="var(--kithkin)" opacity=".10" stroke="var(--kithkin-ink)" stroke-width=".7" stroke-dasharray="1 3"/>
-          <text x="230" y="362" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="var(--kithkin-ink)" opacity=".85">Porringer Vale</text>
+          <text x="230" y="362" text-anchor="middle" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="var(--kithkin-ink)" opacity=".85">Porringer Valley</text>
         </g>
 
         <!-- ============ VELIS VEL (changeling reach, SW) ============ -->
