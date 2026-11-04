@@ -522,6 +522,7 @@ h4.subheading {
 
 /* ============ FULL-BLEED ART PLACEHOLDER ============ */
 .art-bleed {
+  clear: both;
   margin: 60px -100vw;
   padding: 0 100vw;
   background: color-mix(in oklch, var(--bg), var(--ink) 6%);
@@ -1435,3 +1436,6 @@ h4.subheading {
   .cube-tip { width: 200px; }
   .cube-tip img { min-height: 280px; }
 }
+
+/* A callout that follows a floated portrait sits beside it instead of running under it */
+.portrait + .table-color { overflow: hidden; }
