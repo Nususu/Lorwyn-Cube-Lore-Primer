@@ -919,7 +919,9 @@ h4.subheading {
   border-radius: 4px;
   box-shadow: var(--shadow);
 }
-.map-svg { width: 100%; height: auto; display: block; }
+.map-figure { margin: 0; }
+.map-img { width: 100%; height: auto; display: block; border-radius: 3px; border: 1px solid var(--rule); }
+.map-figure figcaption { margin-top: 14px; font-size: 13.5px; font-style: italic; color: var(--ink-soft, inherit); opacity: .85; line-height: 1.5; }
 .map-legend {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
